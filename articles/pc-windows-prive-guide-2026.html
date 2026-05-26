@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configurer un PC Windows 100% privé en 2h | PrivéZone</title>
+<meta name="description" content="Bitwarden, Mullvad, VeraCrypt, désactivation télémétrie Windows… Le checklist complet et testé pour transformer ton PC en forteresse, sans rien casser.">
+<meta name="theme-color" content="#7c5cff">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="/" class="logo">Privé<span>Zone</span></a>
+    <div class="nav-links">
+      <a href="/articles/">Articles</a>
+      <a href="/about.html">À propos</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <article>
+
+    <header class="article-header">
+      <p class="article-meta">💻 Hardening PC • 14 min de lecture</p>
+      <h1>Configurer un PC Windows 100 % privé en 2 heures</h1>
+      <p class="subtitle">Le checklist complet pour transformer ton Windows en forteresse numérique : gestionnaire de mots de passe, chiffrement disque, VPN strict, télémétrie Microsoft désactivée, et navigateur durci. Sans casser tes usages quotidiens.</p>
+    </header>
+
+    <p>Windows 11 par défaut, c'est un PC qui appelle Microsoft toutes les 30 secondes, qui synchronise tes recherches en clair, et qui partage ton activité avec une dizaine de services publicitaires. C'est légal, c'est documenté, et c'est désactivable.</p>
+
+    <p>Voilà le protocole exact que j'applique sur tous mes PC. 2 heures de travail, et tu transformes une machine "ouverte" en machine "fermée par défaut".</p>
+
+    <h2>Phase 1 — Gestionnaire de mots de passe (15 min)</h2>
+
+    <p>Avant tout. Si tes mots de passe sont encore dans le navigateur ou dans un fichier Excel, tu commences par ça.</p>
+
+    <ol>
+      <li>Installe <strong>Bitwarden Desktop</strong> + l'extension navigateur</li>
+      <li>Crée un compte avec un email Proton (ou tout email perso fiable)</li>
+      <li><strong>Mot de passe maître</strong> : 25+ caractères, mémorisable mais imprévisible (genre une phrase qui veut rien dire : "<em>biscuit-mauve-3-saucisson-volcan</em>")</li>
+      <li>Active la <strong>2FA sur Bitwarden lui-même</strong> (avec Authy ou clé physique YubiKey)</li>
+      <li>Importe tes mots de passe depuis Chrome/Edge/Brave : Bitwarden a un outil d'import par CSV</li>
+      <li>Supprime ensuite les mots de passe sauvegardés dans tes navigateurs (Bitwarden les gère mieux)</li>
+    </ol>
+
+    <div class="affiliate-cta">
+      <h4>🔐 Bitwarden — le gestionnaire que tout le monde devrait utiliser</h4>
+      <p>Gratuit, open source, chiffrement côté client. La version gratuite suffit pour la majorité. Premium à 10 $/an pour le support, l'authenticator intégré et les rapports de sécurité.</p>
+      <a href="https://bitwarden.com/" class="btn" rel="noopener noreferrer">Découvrir Bitwarden</a>
+    </div>
+
+    <h2>Phase 2 — Chiffrement disque avec VeraCrypt (20 min)</h2>
+
+    <p>Si quelqu'un te vole ton PC ou y accède physiquement, sans chiffrement il ouvre tout en 5 minutes (boot depuis une clé USB Linux). Avec VeraCrypt, c'est mort.</p>
+
+    <ol>
+      <li>Installe <strong>VeraCrypt</strong> (gratuit, open source, audit reconnu)</li>
+      <li>Crée un <strong>conteneur chiffré</strong> de 10-50 Go pour tes documents sensibles (alternative au chiffrement full-disk qui peut être lourd)</li>
+      <li>Algorithme : <strong>AES-Twofish-Serpent</strong> (triple chiffrement, paranoid mais rapide)</li>
+      <li>Hash : SHA-512</li>
+      <li>Mot de passe : 20+ caractères (généré via Bitwarden, sauvegardé dans Bitwarden)</li>
+      <li>Monte le conteneur uniquement quand tu en as besoin → démonte avant de t'éloigner du PC</li>
+    </ol>
+
+    <h2>Phase 3 — VPN avec Lockdown (15 min)</h2>
+
+    <p>Voilà le maillon réseau. Sur Windows, le VPN doit :</p>
+    <ul>
+      <li>Démarrer avec Windows</li>
+      <li>Se connecter automatiquement</li>
+      <li>Bloquer tout trafic si le VPN tombe (kill switch / Lockdown)</li>
+    </ul>
+
+    <p>Avec <a href="https://mullvad.net/" rel="noopener noreferrer">Mullvad</a> :</p>
+
+    <ul>
+      <li>Settings → VPN settings → <strong>Launch on start-up : ON</strong></li>
+      <li><strong>Auto-connect : ON</strong></li>
+      <li><strong>Lockdown mode : ON</strong> (le réglage qui fait toute la différence côté PC)</li>
+      <li>Protocol : <strong>WireGuard</strong></li>
+      <li>DNS content blockers : Ads + Trackers + Malware <strong>ON</strong></li>
+    </ul>
+
+    <p>Test final : <a href="https://mullvad.net/check" rel="noopener noreferrer">mullvad.net/check</a> → trois feux verts (VPN actif, pas de fuite DNS, pas de fuite WebRTC).</p>
+
+    <h2>Phase 4 — Durcir Windows lui-même (30 min)</h2>
+
+    <h3>Désactiver la télémétrie</h3>
+
+    <p>Paramètres → Confidentialité et sécurité :</p>
+    <ul>
+      <li>Diagnostic et commentaires → <strong>Données de diagnostic facultatives : OFF</strong></li>
+      <li>Données de diagnostic affichées : OFF</li>
+      <li><strong>Expériences personnalisées : OFF</strong></li>
+      <li>Activité → <strong>Historique d'activité : OFF</strong></li>
+      <li>Recherche dans Windows → <strong>Recherche cloud : OFF</strong></li>
+      <li>ID de publicité → <strong>OFF</strong></li>
+    </ul>
+
+    <h3>Désactiver Cortana et Bing</h3>
+
+    <p>Le menu Démarrer envoie tes recherches à Bing. Pour couper :</p>
+    <ol>
+      <li>Ouvre l'éditeur de registre (Win+R → <code>regedit</code>)</li>
+      <li>Va à <code>HKCU\Software\Policies\Microsoft\Windows\Explorer</code></li>
+      <li>Crée une valeur DWORD <code>DisableSearchBoxSuggestions</code> = 1</li>
+      <li>Redémarre l'explorateur</li>
+    </ol>
+
+    <h3>Localisation</h3>
+
+    <p>Paramètres → Confidentialité → Localisation → <strong>OFF</strong> (sauf si tu utilises Maps natif).</p>
+
+    <h3>Microphone et caméra</h3>
+
+    <p>Désactive l'accès au micro/caméra pour toutes les apps qui n'en ont pas besoin. Tu peux laisser pour Zoom, Discord, WhatsApp, etc.</p>
+
+    <h2>Phase 5 — Le navigateur (15 min)</h2>
+
+    <p>Le navigateur, c'est par où passe 90 % de ton trafic. Choix recommandé :</p>
+
+    <ul>
+      <li><strong>Brave</strong> : Chromium-based, bloque pubs/trackers nativement, intégrations Tor (Private Window with Tor)</li>
+      <li><strong>Firefox + uBlock Origin + Privacy Badger</strong> : alternative légèrement plus respectueuse</li>
+    </ul>
+
+    <p><strong>À désinstaller</strong> : Chrome, Edge (si tu peux), tous les navigateurs Yandex/Yahoo/Opera.</p>
+
+    <p>Réglages Brave essentiels :</p>
+    <ul>
+      <li>Shields → <strong>Aggressive</strong> (sur tous les sites)</li>
+      <li>Block scripts : selon ton confort (Standard est OK)</li>
+      <li>Cookies : <strong>Block third-party cookies</strong></li>
+      <li>Fingerprinting : <strong>Strict</strong></li>
+      <li>Search engine : <strong>DuckDuckGo</strong> ou Brave Search</li>
+      <li>Clear cookies and site data on exit : <strong>ON</strong></li>
+    </ul>
+
+    <h2>Phase 6 — Désactiver TeamViewer et outils de prise en main à distance (5 min)</h2>
+
+    <p>Si tu as TeamViewer, AnyDesk, Chrome Remote Desktop installés et que tu ne t'en sers pas : <strong>désinstalle-les</strong>. Ce sont les vecteurs n°1 des arnaques "support Microsoft".</p>
+
+    <p>Si tu en as besoin, au minimum :</p>
+    <ul>
+      <li>Désactive le démarrage automatique avec Windows</li>
+      <li>Active la 2FA sur le compte</li>
+      <li>Mot de passe aléatoire à chaque connexion (pas de mot de passe fixe)</li>
+    </ul>
+
+    <h2>Phase 7 — Sauvegarde chiffrée (10 min)</h2>
+
+    <p>Une fois tout ça en place, tes données les plus précieuses doivent être sauvegardées <strong>chiffrées</strong>, pas en clair.</p>
+
+    <ul>
+      <li>Tes mots de passe : Bitwarden cloud (chiffré côté client → Bitwarden ne voit rien)</li>
+      <li>Tes documents sensibles : conteneur VeraCrypt + sauvegarde du conteneur sur disque externe</li>
+      <li>Tes mails Proton : restent chez Proton, chiffrés côté serveur</li>
+      <li>Tes documents perso non sensibles : iCloud ou OneDrive c'est OK</li>
+    </ul>
+
+    <h2>Vérification finale</h2>
+
+    <p>Une fois tout configuré, fais ces 3 tests :</p>
+    <ol>
+      <li><a href="https://mullvad.net/check" rel="noopener noreferrer">mullvad.net/check</a> — 3 feux verts</li>
+      <li><a href="https://browserleaks.com/webrtc" rel="noopener noreferrer">browserleaks.com/webrtc</a> — aucune IP locale visible</li>
+      <li><a href="https://haveibeenpwned.com" rel="noopener noreferrer">haveibeenpwned.com</a> — vérifie si tes emails apparaissent dans des fuites connues. Si oui, change ces mots de passe.</li>
+    </ol>
+
+    <p>2 heures, et ton PC est passé de "ouvert par défaut" à "fermé par défaut". Tu n'as pas perdu en confort — tes apps préférées marchent encore — mais Microsoft, Google, et les régies publicitaires ne te tracent plus.</p>
+
+    <div class="affiliate-cta">
+      <h4>🛡️ Le combo gagnant à mettre en place ce week-end</h4>
+      <p>Pour faire vite : <strong>Bitwarden</strong> (mots de passe) + <strong>Mullvad</strong> (VPN) + <strong>VeraCrypt</strong> (chiffrement disque). C'est gratuit pour les deux derniers, 0 € pour la version free de Bitwarden. Tu peux être prêt en 1 heure.</p>
+      <a href="https://bitwarden.com/" class="btn" rel="noopener noreferrer">Commencer avec Bitwarden</a>
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit. <a href="/about.html">À propos</a></p>
+</footer>
+
+</body>
+</html>

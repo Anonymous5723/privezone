@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloudflare Zero Trust sur iPhone : guide complet 2026 | PrivéZone</title>
+<meta name="description" content="Comment configurer un filtrage anti-malware Zero Trust niveau entreprise sur ton iPhone, gratuitement. Toutes les étapes, les pièges qui font tout planter, et comment vérifier que ça marche.">
+<meta name="theme-color" content="#7c5cff">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="/" class="logo">Privé<span>Zone</span></a>
+    <div class="nav-links">
+      <a href="/articles/">Articles</a>
+      <a href="/about.html">À propos</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <article>
+
+    <header class="article-header">
+      <p class="article-meta">🛡️ Sécurité mobile • 12 min de lecture</p>
+      <h1>Cloudflare Zero Trust sur iPhone : le guide complet 2026</h1>
+      <p class="subtitle">Comment utiliser une techno conçue pour les entreprises pour blinder ton iPhone perso — gratuitement, en 30 minutes, sans rien casser. Et surtout : comment éviter les pièges qui transforment une configuration "max sécu" en téléphone inutilisable.</p>
+    </header>
+
+    <p>WARP de Cloudflare, tu connais peut-être : c'est leur VPN gratuit, intégré dans l'app <strong>Cloudflare One Agent</strong> (anciennement <em>1.1.1.1</em>). Ce que beaucoup ignorent, c'est qu'au-dessus de WARP, Cloudflare propose <strong>Zero Trust</strong> — leur produit pro pour entreprises — qui est <strong>gratuit jusqu'à 50 utilisateurs</strong>.</p>
+
+    <p>Concrètement, ça veut dire que tu peux configurer pour <em>toi tout seul</em> le même filtrage anti-malware, anti-phishing, anti-cryptomining utilisé par des boîtes de 50 personnes. Et tout passe par ton iPhone, sans logiciel à installer ailleurs.</p>
+
+    <p>Voilà comment je l'ai configuré sur mon iPhone 14 cette semaine, avec les vraies étapes et les vrais pièges.</p>
+
+    <h2>1. Pourquoi tu veux ça (et pourquoi WARP seul ne suffit pas)</h2>
+
+    <p>WARP tout seul te donne :</p>
+    <ul>
+      <li>Un tunnel chiffré vers Cloudflare ✅</li>
+      <li>Du DNS over HTTPS (vie privée DNS) ✅</li>
+      <li>Une vitesse souvent meilleure que ta connexion brute (avec WARP+) ✅</li>
+    </ul>
+
+    <p>Mais WARP <strong>ne filtre pas les menaces</strong>. Si tu cliques sur un lien de phishing dans un SMS d'arnaque, WARP te laisse y aller.</p>
+
+    <p>Zero Trust en revanche, te permet de définir tes propres <strong>règles de filtrage DNS</strong> : malware, phishing, command & control, cryptomining, spyware, scam… tout est bloqué <strong>avant même que ton navigateur n'essaie de charger le site</strong>.</p>
+
+    <h2>2. Créer ton organisation Zero Trust (gratuit)</h2>
+
+    <p>Étapes côté ordinateur (le dashboard Zero Trust est lourd et bugue souvent sur mobile) :</p>
+
+    <ol>
+      <li>Va sur <a href="https://one.dash.cloudflare.com" rel="noopener noreferrer">one.dash.cloudflare.com</a></li>
+      <li>Connecte-toi avec ton compte Cloudflare (ou crée-en un — email + mot de passe)</li>
+      <li>Choisis un <strong>team name</strong> (nom d'équipe). Cloudflare le génère automatiquement (genre <code>plain-pine-9c0f</code>) ou tu peux mettre le tien.</li>
+      <li>Plan : <strong>Free</strong>. C'est suffisant pour un usage perso et jusqu'à 50 personnes.</li>
+    </ol>
+
+    <h2>3. Créer ta règle de filtrage DNS anti-menaces</h2>
+
+    <p>C'est la règle qui fait tout le boulot.</p>
+
+    <ol>
+      <li>Menu de gauche → <strong>Traffic policies → Firewall policies → onglet DNS</strong></li>
+      <li>Bouton <em>Add a policy</em></li>
+      <li>Configuration :
+        <ul>
+          <li><strong>Policy name</strong> : <code>Blocage menaces</code></li>
+          <li><strong>Selector</strong> : <em>Security Categories</em></li>
+          <li><strong>Operator</strong> : <em>in</em></li>
+          <li><strong>Value</strong> : coche <strong>All security risks</strong> (sélectionne tout d'un coup : Malware, Phishing, Command & Control, Cryptomining, Spyware, Scam, Spam, DGA, DNS Tunneling, etc.)</li>
+          <li><strong>Action</strong> : <em>Block</em></li>
+        </ul>
+      </li>
+      <li>Toutes les options à droite (TLS inspection, Modify gateway block behavior, etc.) → <strong>laisse OFF</strong>. C'est là que les gens cassent tout (voir section pièges plus bas).</li>
+      <li><em>Create policy</em></li>
+    </ol>
+
+    <h2>4. Créer la règle d'inscription d'appareil</h2>
+
+    <p>Sans cette règle, ton iPhone ne pourra pas s'inscrire dans ton organisation. C'est la cause numéro 1 de l'erreur <em>« enrollment request invalid »</em>.</p>
+
+    <ol>
+      <li>Menu de gauche → <strong>Team &amp; Resources → Devices → Management → Enrollment</strong></li>
+      <li><em>Create new policy</em></li>
+      <li>Configuration :
+        <ul>
+          <li><strong>Rule name</strong> : <code>Moi</code></li>
+          <li><strong>Include</strong> → Selector <em>Emails</em> → ton email (ou plus simple : <em>Everyone</em> si tu es seul sur le compte)</li>
+          <li><strong>Action</strong> : <em>Allow</em></li>
+          <li><strong>Session duration</strong> : <em>1 month</em> (pour ne pas avoir à se reconnecter constamment)</li>
+        </ul>
+      </li>
+      <li><em>Save</em> — et vérifie bien que la règle apparaît dans la liste sous l'onglet <em>Policies</em>.</li>
+    </ol>
+
+    <div class="callout warning">
+      <p>⚠️ <strong>Piège</strong> : si tu cliques sur l'onglet <em>Login methods</em> et que tu sauvegardes avant d'avoir ajouté la règle aux <em>Policies</em>, Cloudflare affiche <em>« Save Device enrollment with no assigned rules? »</em>. Clique <strong>Add a rule</strong> (et pas <em>Save without rules</em>) sinon ton iPhone restera bloqué.</p>
+    </div>
+
+    <h2>5. Activer toutes les méthodes de connexion</h2>
+
+    <p>Sur la même page (Device enrollment permissions), onglet <strong>Login methods</strong> :</p>
+
+    <ul>
+      <li>Active <strong>« Accept all available identity providers »</strong> (interrupteur sur ON)</li>
+      <li>Laisse <strong>« Apply instant authentication »</strong> sur ON</li>
+      <li><em>Save</em></li>
+    </ul>
+
+    <p>Ça t'évitera d'avoir à configurer un fournisseur d'identité externe — tu te connectes simplement par un code à usage unique envoyé sur ton email.</p>
+
+    <h2>6. Connecter ton iPhone</h2>
+
+    <p>Sur l'iPhone, depuis l'App Store, installe <strong>Cloudflare One Agent</strong> (Cloudflare, Inc., logo orange). Si tu avais l'ancienne app 1.1.1.1, supprime-la après installation de la nouvelle.</p>
+
+    <ol>
+      <li>Ouvre Cloudflare One Agent</li>
+      <li>Active le tunnel (gros interrupteur central) → autorise la config VPN quand iOS demande</li>
+      <li><strong>⚙️ Réglages → Account → Login with Cloudflare Zero Trust</strong></li>
+      <li>Team name : celui que tu as choisi sur le dashboard (ex. <code>plain-pine-9c0f</code>)</li>
+      <li>Un email de connexion (One-time PIN) arrive → tape le code</li>
+      <li>Statut dans l'app : <strong>Zero Trust</strong> ✅</li>
+    </ol>
+
+    <h2>7. Vérifier que tout marche</h2>
+
+    <p>Sur Safari de l'iPhone, ouvre <strong>cloudflare.com/cdn-cgi/trace</strong>. Cherche ces deux lignes :</p>
+
+    <pre><code>warp=on
+gateway=on</code></pre>
+
+    <p>Si tu vois les deux sur <code>on</code> → ton iPhone est officiellement en Zero Trust, et ton trafic DNS est filtré par tes règles. 🎯</p>
+
+    <p>Pour aller plus loin, teste un domaine malveillant : <code>malware.testcategory.com</code>. Tu dois voir une page de blocage Cloudflare (ou ton navigateur dit que le site est inaccessible — c'est aussi un signe que le DNS est bloqué).</p>
+
+    <h2>8. Les 3 pièges qui font tout planter (à éviter absolument)</h2>
+
+    <div class="callout danger">
+      <p><strong>1. TLS / HTTP inspection activée sans installer le certificat</strong> → ton iPhone refuse toutes les connexions HTTPS. La plupart des sites cassent. <strong>Laisse cette option désactivée</strong> sauf si tu sais installer un certificat de confiance sur iOS.</p>
+    </div>
+
+    <div class="callout danger">
+      <p><strong>2. « Lock WARP switch »</strong> → tu te verrouilles toi-même. Si jamais Zero Trust ne se connecte plus pour une raison X, tu n'as plus d'internet sur ton iPhone. <strong>Garde cette option désactivée.</strong></p>
+    </div>
+
+    <div class="callout danger">
+      <p><strong>3. Règle « Block all »</strong> trop large → tu bloques l'internet entier. Évite les actions « Block » sur des selectors larges (genre Content Categories → All). Reste sur Security Categories.</p>
+    </div>
+
+    <h2>Et la suite ?</h2>
+
+    <p>Avec cette configuration, ton iPhone est mieux protégé que 99 % des téléphones autour de toi. Les SMS de phishing, les liens malveillants dans Telegram, les URL d'arnaque dans les emails — tout est bloqué automatiquement avant même que ton navigateur ne tente de charger la page.</p>
+
+    <p>Pour aller plus loin :</p>
+
+    <ul>
+      <li>Ajouter une règle de blocage des <strong>publicités et trackers</strong> (Content Categories → Advertising &amp; Marketing → Block)</li>
+      <li>Activer <strong>Always-on WARP</strong> pour que le tunnel ne s'interrompe jamais</li>
+      <li>Pour les usages où tu veux changer de pays (Netflix US, etc.), Cloudflare WARP ne peut pas — il faut un VPN classique en complément.</li>
+    </ul>
+
+    <div class="affiliate-cta">
+      <h4>🌍 Pour le changement d'IP / pays — Mullvad VPN</h4>
+      <p>Cloudflare WARP ne change pas ton pays. Si tu veux pouvoir basculer ton trafic dans un autre pays (anonymat, contournement, streaming), <strong>Mullvad VPN</strong> est le choix le plus respectueux : 5 € par mois fixe, aucune création de compte (juste un numéro de compte généré aléatoirement), paiement possible en cash anonyme. C'est le VPN de référence des chercheurs en sécurité.</p>
+      <a href="https://mullvad.net/" class="btn" rel="noopener noreferrer">Découvrir Mullvad VPN</a>
+    </div>
+
+    <p>Tu peux faire tourner Zero Trust + Mullvad sur ton iPhone, mais iOS n'autorise <strong>qu'un VPN actif à la fois</strong>. Choisis lequel basculer selon ton usage : Zero Trust au quotidien (filtrage menaces), Mullvad ponctuellement (anonymat, changement de pays).</p>
+
+  </article>
+
+</main>
+
+<footer>
+  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit. <a href="/about.html">À propos</a></p>
+</footer>
+
+</body>
+</html>

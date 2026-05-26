@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tor Browser : guide débutant 2026 et les 10 erreurs qui te grillent | PrivéZone</title>
+<meta name="description" content="Tor n'est pas magique. Voilà ce qu'il fait vraiment, ce qu'il ne fait PAS, et toutes les conneries que les débutants font qui détruisent leur anonymat.">
+<meta name="theme-color" content="#7c5cff">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="/" class="logo">Privé<span>Zone</span></a>
+    <div class="nav-links">
+      <a href="/articles/">Articles</a>
+      <a href="/about.html">À propos</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <article>
+
+    <header class="article-header">
+      <p class="article-meta">🧅 Tor • 11 min de lecture</p>
+      <h1>Tor Browser : guide débutant et les 10 erreurs qui te grillent</h1>
+      <p class="subtitle">Tor n'est pas magique. Voilà ce qu'il fait vraiment, ce qu'il ne fait PAS, et toutes les conneries que les débutants font qui détruisent leur anonymat en quelques secondes.</p>
+    </header>
+
+    <p>Tor, c'est l'outil de référence pour la navigation anonyme. Mais c'est aussi un outil <strong>très facile à mal utiliser</strong>. Une connexion à un compte perso, une fenêtre redimensionnée, un PDF téléchargé — et ton anonymat tombe.</p>
+
+    <p>Voilà ce que Tor fait, ce qu'il ne fait pas, et la liste exhaustive des erreurs à ne pas commettre.</p>
+
+    <h2>Ce que Tor fait vraiment</h2>
+
+    <p>Tor (The Onion Router) route ton trafic à travers <strong>3 nœuds aléatoires</strong> dans le monde avant d'arriver à destination. Chaque nœud chiffre son segment, et aucun nœud ne connaît à la fois ton IP et la destination finale.</p>
+
+    <pre><code>Toi → Entry Node → Middle Node → Exit Node → Site web
+
+        (ton IP        (relais       (relais     (le site
+         vue ici)       chiffré)      chiffré)    voit cette IP)</code></pre>
+
+    <p>Résultat : le site visité voit l'IP du <em>Exit Node</em>, pas la tienne. Et personne d'autre que toi et le site final ne peut lire le contenu.</p>
+
+    <p><strong>Ce que Tor protège :</strong></p>
+    <ul>
+      <li>Ton IP réelle face aux sites visités</li>
+      <li>Le contenu de tes communications (chiffré entre les nœuds)</li>
+      <li>Le fait que tu visites tel site (face à ton FAI)</li>
+      <li>Accès aux sites <strong>.onion</strong> (impossibles à visiter sans Tor)</li>
+    </ul>
+
+    <h2>Ce que Tor NE fait PAS</h2>
+
+    <p><strong>Tor n'est pas un VPN.</strong> Tor n'est pas une application universelle. Tor ne te rend pas invisible à Google.</p>
+
+    <ul>
+      <li>❌ Tor <strong>ne cache pas</strong> à ton FAI le fait que tu utilises Tor (il voit le trafic vers les nœuds d'entrée connus). Pour ça, il faut <strong>Tor over VPN</strong>.</li>
+      <li>❌ Tor <strong>ne protège pas tes autres applis</strong> — seulement le navigateur Tor. Discord/Steam/Telegram envoient toujours ton vrai IP en parallèle.</li>
+      <li>❌ Tor <strong>ne te rend pas anonyme</strong> si tu te connectes à ton compte Google. Google sait que c'est toi (compte + cookies + fingerprint).</li>
+      <li>❌ Tor <strong>n'est pas plus rapide</strong> qu'internet — souvent plus lent (3 sauts à travers le monde).</li>
+      <li>❌ Tor <strong>ne te protège pas du malware</strong> que tu téléchargerais via Tor.</li>
+    </ul>
+
+    <h2>Installation et lancement (5 min)</h2>
+
+    <ol>
+      <li>Va sur <a href="https://www.torproject.org/" rel="noopener noreferrer">torproject.org</a> (et uniquement ce site — fais gaffe au phishing avec des typo-squats)</li>
+      <li>Télécharge Tor Browser pour ton OS</li>
+      <li>Vérifie la signature (avancé) ou au moins que le téléchargement est en HTTPS depuis le bon domaine</li>
+      <li>Lance Tor Browser → bouton <strong>Connect</strong></li>
+      <li>10-30 secondes plus tard, le tunnel est établi. Tu vois la page de bienvenue avec un test "Tor Network Working"</li>
+    </ol>
+
+    <h2>Les 10 erreurs qui te grillent</h2>
+
+    <h3>1. Te connecter à un compte personnel</h3>
+    <p>Tu te connectes à ton Gmail, Facebook, LinkedIn, Instagram dans Tor → ces services savent immédiatement que c'est toi (cookies + compte + fingerprint). Tor devient inutile. <strong>Règle</strong> : Tor = sites où tu ne te connectes PAS.</p>
+
+    <h3>2. Redimensionner la fenêtre Tor</h3>
+    <p>Tor Browser garde une fenêtre de taille standard exprès — tout le monde a la même fenêtre. Si tu la redimensionnes, ton fingerprint devient unique parmi les utilisateurs de Tor. <strong>Règle</strong> : garde la fenêtre à sa taille par défaut.</p>
+
+    <h3>3. Installer des extensions</h3>
+    <p>NoScript et HTTPS-Everywhere sont déjà installés. Toute autre extension casse l'anonymat (chaque extension est une signature unique). <strong>Règle</strong> : aucune extension ajoutée.</p>
+
+    <h3>4. Activer Flash, Java, ou autres plugins</h3>
+    <p>Ces technos communiquent en parallèle de Tor et peuvent révéler ton IP réelle. <strong>Règle</strong> : Tor Browser les bloque par défaut — laisse comme ça.</p>
+
+    <h3>5. Télécharger des documents et les ouvrir dans Tor</h3>
+    <p>Un PDF ou un .docx téléchargé peut contenir des éléments distants (image, font, lien) qui se chargent depuis ton IP réelle quand tu l'ouvres dans Adobe Reader / Word. <strong>Règle</strong> : si tu télécharges des docs via Tor, ouvre-les dans une VM isolée (Tails OS est conçu pour ça).</p>
+
+    <h3>6. Utiliser le mode "Standard" pour des sites sensibles</h3>
+    <p>Le niveau de sécurité Tor par défaut est <em>Standard</em>. Pour les sites vraiment sensibles, passe à <strong>Safer</strong> (désactive JS sur HTTP) ou <strong>Safest</strong> (désactive JS partout). Clique sur le bouclier en haut à droite pour changer.</p>
+
+    <h3>7. Cliquer sur des liens .onion non vérifiés</h3>
+    <p>Le phishing sur Tor est massif. Une seule lettre différente dans une adresse .onion = site copie qui vole tes infos. <strong>Règle</strong> : vérifie chaque adresse .onion <strong>via le site clearnet officiel du service</strong>. Pour DuckDuckGo, Proton, BBC, NYT — les adresses officielles sont publiées sur leurs sites normaux.</p>
+
+    <h3>8. Confondre "darknet markets" et "Tor"</h3>
+    <p>Tor n'a pas été créé pour acheter de la drogue. C'est un outil légal et essentiel pour les journalistes, lanceurs d'alerte, militants dans des pays autoritaires, et toute personne qui veut un anonymat technique. Les marketplaces illégales sont une utilisation marginale et risquée (saisies fréquentes par la police, scams omniprésents).</p>
+
+    <h3>9. Croire qu'on est invisible</h3>
+    <p>Même avec une utilisation parfaite, ton activité sur Tor peut être analysée par des techniques avancées (corrélation de trafic par des États). Tor te protège des observateurs occasionnels et des services commerciaux — mais pas de la NSA si tu es une cible de très haut niveau.</p>
+
+    <h3>10. Lancer plusieurs identités dans la même session Tor</h3>
+    <p>Si tu fais des recherches en tant que "moi" et d'autres en tant qu'"anonyme" dans la même session Tor, des correlations sont possibles (timing, fingerprint, cookies persistants malgré tout). <strong>Règle</strong> : pour changer d'identité, utilise <em>New Identity</em> (Ctrl+Shift+U) qui ferme tous les onglets et recrée des circuits frais.</p>
+
+    <h2>La combinaison ultime — Tor over VPN</h2>
+
+    <p>Pour maximum d'anonymat :</p>
+
+    <ol>
+      <li>Active <a href="https://mullvad.net/" rel="noopener noreferrer">Mullvad VPN</a> en premier</li>
+      <li>Puis lance Tor Browser</li>
+      <li>Résultat : ton FAI voit <strong>seulement Mullvad</strong>, jamais Tor. Mullvad voit <strong>du trafic Tor anonyme</strong>, jamais ce que tu fais.</li>
+    </ol>
+
+    <pre><code>Toi → Mullvad → Tor (3 nœuds) → Site web
+
+(ton ISP voit    (Mullvad voit    (le site voit
+ que Mullvad)    que du Tor)      une IP exit Tor)</code></pre>
+
+    <div class="affiliate-cta">
+      <h4>🧅 Mullvad + Tor — la combo des chercheurs en sécurité</h4>
+      <p>Mullvad à 5 €/mois est l'option la plus respectueuse pour faire du <em>Tor over VPN</em>. Pas d'email, pas de carte bancaire (paiement crypto/cash anonyme), audits no-logs. Combiné à Tor, tu as la couche d'anonymat maximum.</p>
+      <a href="https://mullvad.net/" class="btn" rel="noopener noreferrer">Voir Mullvad</a>
+    </div>
+
+    <h2>Sites .onion utiles à connaître</h2>
+
+    <p>Quelques services légitimes que tu peux visiter en .onion :</p>
+    <ul>
+      <li><strong>DuckDuckGo</strong> — moteur de recherche sans tracking</li>
+      <li><strong>BBC News</strong>, <strong>The New York Times</strong> — médias avec mirror .onion pour accès depuis pays censurés</li>
+      <li><strong>Proton Mail</strong> — version .onion de leur webmail</li>
+      <li><strong>SecureDrop</strong> — pour envoyer des fuites à des journalistes anonymement</li>
+      <li><strong>The Tor Project</strong> — leur propre site en .onion</li>
+    </ul>
+
+    <p>Les adresses changent parfois — toujours vérifier sur le site clearnet officiel du service avant de cliquer.</p>
+
+    <h2>En résumé</h2>
+
+    <ul>
+      <li>Tor = anonymat pour la navigation web seulement (pas tes autres apps)</li>
+      <li>Ne jamais s'y connecter à des comptes perso</li>
+      <li>Garder la fenêtre par défaut, pas d'extensions</li>
+      <li>Vérifier les adresses .onion via le site officiel clearnet</li>
+      <li>Pour le top niveau : Tor over VPN (Mullvad → Tor)</li>
+    </ul>
+
+    <p>Utilisé correctement, Tor reste l'outil d'anonymat le plus solide qui existe. Utilisé n'importe comment, c'est juste une fausse impression de sécurité.</p>
+
+  </article>
+
+</main>
+
+<footer>
+  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit. <a href="/about.html">À propos</a></p>
+</footer>
+
+</body>
+</html>
