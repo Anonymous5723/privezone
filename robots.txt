@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Pas de tracking, pas de cookies, pas de bullshit.
+
+Sitemap: https://privezone.pages.dev/sitemap.xml

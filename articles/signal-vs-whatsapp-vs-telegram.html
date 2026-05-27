@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal vs WhatsApp vs Telegram : quelle messagerie en 2026 | PrivéZone</title>
+<meta name="description" content="Comparatif technique des 3 messageries grand public. Chiffrement, métadonnées, propriétaires, et choix recommandé pour chaque profil d'usage.">
+<meta name="theme-color" content="#7c5cff">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="/" class="logo">Privé<span>Zone</span></a>
+    <div class="nav-links">
+      <a href="/articles/">Articles</a>
+      <a href="/about.html">À propos</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <article>
+
+    <header class="article-header">
+      <p class="article-meta">💬 Messageries • 10 min de lecture</p>
+      <h1>Signal vs WhatsApp vs Telegram : quelle messagerie pour la vie privée en 2026</h1>
+      <p class="subtitle">Comparatif technique honnête des 3 messageries que tout le monde a sur son téléphone. Chiffrement, métadonnées, propriétaires, juridiction. Et la recommandation finale pour chaque type d'utilisateur.</p>
+    </header>
+
+    <p>« WhatsApp est-il chiffré ? » « Telegram c'est mieux ? » « Pourquoi Signal ? »</p>
+
+    <p>Les 3 messageries grand public sont régulièrement comparées, et les confusions sont nombreuses. Voilà l'analyse technique honnête, sans parti pris ni hype.</p>
+
+    <h2>TL;DR — la matrice de décision</h2>
+
+    <table style="width:100%; border-collapse:collapse; margin:24px 0;">
+      <tr style="border-bottom: 1px solid var(--border);">
+        <th style="text-align:left; padding:10px 8px;">Ton besoin</th>
+        <th style="text-align:left; padding:10px 8px;">Choix</th>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding:10px 8px;">Vie privée maximale</td>
+        <td style="padding:10px 8px;"><strong>Signal</strong></td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding:10px 8px;">Famille / amis (tout le monde l'a)</td>
+        <td style="padding:10px 8px;"><strong>WhatsApp</strong> (acceptable côté chiffrement)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding:10px 8px;">Groupes nombreux / canaux publics</td>
+        <td style="padding:10px 8px;"><strong>Telegram</strong></td>
+      </tr>
+      <tr>
+        <td style="padding:10px 8px;">Pseudonymat (sans donner son numéro)</td>
+        <td style="padding:10px 8px;"><strong>Signal</strong> (usernames depuis 2024) ou <strong>Telegram</strong></td>
+      </tr>
+    </table>
+
+    <h2>Signal — le standard du chiffrement</h2>
+
+    <p><strong>Propriétaire</strong> : Signal Foundation (organisation à but non lucratif américaine)<br>
+    <strong>Open source</strong> : oui, code entièrement public et audité<br>
+    <strong>Modèle économique</strong> : dons uniquement</p>
+
+    <h3>Sécurité</h3>
+    <ul>
+      <li>✅ Chiffrement de bout en bout (protocole <strong>Signal Protocol</strong>, le gold standard)</li>
+      <li>✅ Chiffrement activé <strong>par défaut</strong>, impossible à désactiver</li>
+      <li>✅ <strong>Métadonnées minimales</strong> stockées (Signal ne sait pas qui parle à qui)</li>
+      <li>✅ Messages disparaissants natifs</li>
+      <li>✅ Verrouillage de l'app par PIN/biométrie</li>
+      <li>✅ Open source et audité par des experts indépendants</li>
+      <li>✅ Le <strong>Signal Protocol est utilisé</strong> par WhatsApp, Messenger et bien d'autres — preuve de sa solidité</li>
+    </ul>
+
+    <h3>Inconvénients</h3>
+    <ul>
+      <li>❌ Peu utilisé en France (cercle réduit de contacts)</li>
+      <li>❌ Moins de fonctionnalités "fun" (stickers limités, pas de bots)</li>
+      <li>❌ Demande un numéro de téléphone (mais propose désormais les <strong>usernames</strong> pour cacher ton numéro à tes contacts)</li>
+    </ul>
+
+    <h3>Pour qui ?</h3>
+    <p>Tous les usages où la vie privée est <strong>prioritaire</strong> : journalistes, lanceurs d'alerte, militants, professions sensibles (avocats, médecins, juges), ou simplement quiconque veut que ses conversations restent privées. <strong>C'est le choix par défaut côté sécurité.</strong></p>
+
+    <h2>WhatsApp — le compromis pragmatique</h2>
+
+    <p><strong>Propriétaire</strong> : Meta (Facebook, Instagram, WhatsApp)<br>
+    <strong>Open source</strong> : non<br>
+    <strong>Modèle économique</strong> : intégration dans l'écosystème publicitaire Meta</p>
+
+    <h3>Sécurité</h3>
+    <ul>
+      <li>✅ Chiffrement de bout en bout (utilise le <strong>Signal Protocol</strong> sous licence)</li>
+      <li>✅ Chiffrement activé par défaut</li>
+      <li>✅ Messages disparaissants depuis 2020</li>
+      <li>✅ Le contenu de tes messages est techniquement inaccessible à Meta</li>
+    </ul>
+
+    <h3>Problèmes</h3>
+    <ul>
+      <li>❌ <strong>Métadonnées massives</strong> remontées à Meta : qui te contacte, quand, à quelle fréquence, avec qui tu communiques le plus, depuis où, sur quel appareil…</li>
+      <li>❌ Ces métadonnées sont <strong>partagées avec Facebook et Instagram</strong> pour le ciblage publicitaire</li>
+      <li>❌ App propriétaire — on doit croire Meta sur parole pour le respect du chiffrement</li>
+      <li>❌ Sauvegarde iCloud / Google Drive <strong>non chiffrée par défaut</strong> (configurable depuis 2021 mais peu activé)</li>
+      <li>❌ Meta a montré historiquement peu de respect pour la vie privée</li>
+    </ul>
+
+    <h3>Pour qui ?</h3>
+    <p>Si <strong>tout ton entourage est dessus</strong> et que tu n'as pas de besoins de confidentialité critiques, WhatsApp est <strong>acceptable</strong>. Le chiffrement protège le contenu de tes messages, ce qui est déjà beaucoup mieux que les SMS. Active la sauvegarde chiffrée si tu y tiens.</p>
+
+    <p><strong>Pour les conversations sensibles, bascule sur Signal.</strong> Pas grave d'avoir les deux.</p>
+
+    <h2>Telegram — le malentendu de la vie privée</h2>
+
+    <p><strong>Propriétaire</strong> : Telegram FZ-LLC (Dubaï) — fondé par Pavel Durov (russe)<br>
+    <strong>Open source</strong> : applications oui, serveurs <strong>non</strong> (point critique)<br>
+    <strong>Modèle économique</strong> : abonnement Premium, publicité dans les canaux</p>
+
+    <h3>La vérité sur le chiffrement Telegram</h3>
+
+    <div class="callout warning">
+      <p>⚠️ <strong>Telegram n'est PAS chiffré de bout en bout par défaut.</strong> Les conversations normales ("Cloud Chats") sont chiffrées entre toi et les serveurs Telegram, mais <strong>Telegram peut techniquement les lire</strong>. Seules les "Secret Chats" — option cachée, manuelle, non disponible sur desktop, non disponible pour les groupes — sont chiffrées de bout en bout.</p>
+    </div>
+
+    <h3>Sécurité</h3>
+    <ul>
+      <li>🟡 Chiffrement client-serveur par défaut (Telegram peut lire)</li>
+      <li>🟡 E2E uniquement en "Secret Chat" — non disponible pour les groupes ni desktop</li>
+      <li>🟡 Protocole maison <strong>MTProto</strong>, critiqué par les cryptographes (pas dans les standards éprouvés)</li>
+      <li>❌ Serveurs propriétaires non auditables</li>
+      <li>✅ Authentification 2FA disponible</li>
+      <li>✅ Pavel Durov refuse historiquement de coopérer avec les autorités (avec des nuances depuis 2024)</li>
+    </ul>
+
+    <h3>Points forts uniques</h3>
+    <ul>
+      <li>✅ <strong>Groupes massifs</strong> (jusqu'à 200 000 personnes)</li>
+      <li>✅ <strong>Canaux publics</strong> (broadcasting style YouTube)</li>
+      <li>✅ <strong>Bots</strong> et écosystème développeur</li>
+      <li>✅ <strong>Username au lieu du numéro</strong> (anonymat des contacts)</li>
+      <li>✅ Stickers, fichiers volumineux (2 Go), réactions, sondages</li>
+    </ul>
+
+    <h3>Pour qui ?</h3>
+    <p>Telegram excelle pour <strong>la communication publique ou semi-publique</strong> : canaux d'information, groupes de communautés, contact d'inconnus via username. <strong>Pas pour la vraie confidentialité.</strong></p>
+
+    <p>Si tu veux faire passer un message confidentiel via Telegram, utilise <strong>Secret Chat</strong> (touche le nom du contact → "Start Secret Chat") — et uniquement sur mobile.</p>
+
+    <h2>Tableau récap</h2>
+
+    <table style="width:100%; border-collapse:collapse; margin:24px 0; font-size:0.95rem;">
+      <tr style="border-bottom: 1px solid var(--border);">
+        <th style="text-align:left; padding:10px 6px;">Critère</th>
+        <th style="text-align:left; padding:10px 6px;">Signal</th>
+        <th style="text-align:left; padding:10px 6px;">WhatsApp</th>
+        <th style="text-align:left; padding:10px 6px;">Telegram</th>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding:10px 6px;">E2E par défaut</td>
+        <td style="padding:10px 6px;">✅</td>
+        <td style="padding:10px 6px;">✅</td>
+        <td style="padding:10px 6px;">❌ (option Secret Chat seulement)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding:10px 6px;">Open source</td>
+        <td style="padding:10px 6px;">✅ tout</td>
+        <td style="padding:10px 6px;">❌</td>
+        <td style="padding:10px 6px;">🟡 app oui, serveur non</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding:10px 6px;">Métadonnées</td>
+        <td style="padding:10px 6px;">✅ minimales</td>
+        <td style="padding:10px 6px;">❌ massives (Meta)</td>
+        <td style="padding:10px 6px;">🟡 modérées</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding:10px 6px;">Numéro requis</td>
+        <td style="padding:10px 6px;">✅ (username dispo)</td>
+        <td style="padding:10px 6px;">✅</td>
+        <td style="padding:10px 6px;">✅ (username dispo)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding:10px 6px;">Groupes massifs</td>
+        <td style="padding:10px 6px;">🟡 1000 max</td>
+        <td style="padding:10px 6px;">🟡 1024 max</td>
+        <td style="padding:10px 6px;">✅ 200 000</td>
+      </tr>
+      <tr>
+        <td style="padding:10px 6px;">Juridiction</td>
+        <td style="padding:10px 6px;">🇺🇸 États-Unis</td>
+        <td style="padding:10px 6px;">🇺🇸 Meta (USA)</td>
+        <td style="padding:10px 6px;">🇦🇪 Dubaï</td>
+      </tr>
+    </table>
+
+    <h2>Le bon usage en pratique</h2>
+
+    <p>La plupart des gens n'ont pas à choisir UNE messagerie. Ils ont les 3 sur leur téléphone, chacune pour son usage :</p>
+
+    <ul>
+      <li><strong>Signal</strong> : conversations sensibles, partage de documents importants, contacts proches</li>
+      <li><strong>WhatsApp</strong> : famille élargie, amis qui ne migreront jamais ailleurs, groupes pro non sensibles</li>
+      <li><strong>Telegram</strong> : abonnements à des canaux d'info, communautés publiques, bots utiles</li>
+    </ul>
+
+    <p>C'est ce que je fais. Les 3 sont installées, chacune répond à un besoin différent. Ce qui compte, c'est de <strong>choisir consciemment</strong> où tu envoies quoi.</p>
+
+    <h2>Pour aller plus loin — encore plus privé</h2>
+
+    <p>Si même Signal te paraît insuffisant (cas de menace très élevée), il existe des messageries vraiment paranoïaques :</p>
+
+    <ul>
+      <li><strong>Session</strong> : pas de numéro de téléphone, basé sur du onion routing, totalement anonyme. Inconvénient : très peu d'utilisateurs.</li>
+      <li><strong>Briar</strong> : peer-to-peer, fonctionne même hors connexion (Wi-Fi direct, Bluetooth). Pour situations extrêmes.</li>
+      <li><strong>SimpleX</strong> : pas d'identifiant utilisateur, communication via "queues" temporaires.</li>
+    </ul>
+
+    <p>Pour 99 % des usages quotidiens, <strong>Signal couvre tous tes besoins de confidentialité</strong>. Les outils plus extrêmes sont pour des cas spécifiques (journalisme d'investigation, dissidence politique).</p>
+
+    <h2>Recommandation finale</h2>
+
+    <p><strong>Installe Signal aujourd'hui.</strong> Demande à 3-4 personnes proches de l'installer. C'est gratuit, c'est rapide, et tu ouvres la porte à des conversations vraiment privées.</p>
+
+    <p>Garde WhatsApp pour le reste de ton entourage qui ne bougera pas. Ce n'est pas optimal mais c'est acceptable.</p>
+
+    <p>Telegram, garde-le pour ce qu'il fait bien : les canaux et les groupes massifs. Ne l'utilise pas pour ta vie privée intime.</p>
+
+    <p>Et n'oublie jamais : <strong>la sécurité du contenu ne vaut rien si tes interlocuteurs ne sont pas aussi soucieux que toi</strong>. Une conversation Signal vers quelqu'un qui screenshote tout est aussi exposée qu'un SMS.</p>
+
+  </article>
+
+</main>
+
+<footer>
+  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit. <a href="/about.html">À propos</a></p>
+</footer>
+
+</body>
+</html>

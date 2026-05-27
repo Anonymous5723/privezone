@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>PrivéZone — Vie privée numérique sans bullshit</title>
+  <link>https://privezone.pages.dev</link>
+  <description>Guides honnêtes sur la vie privée en ligne, le chiffrement, les VPN, Tor et la sécurité de ton PC et smartphone. Tiré d'expériences réelles, pas de blabla marketing.</description>
+  <language>fr-FR</language>
+  <atom:link href="https://privezone.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>Signal vs WhatsApp vs Telegram : quelle messagerie pour la vie privée en 2026</title>
+    <link>https://privezone.pages.dev/articles/signal-vs-whatsapp-vs-telegram.html</link>
+    <description>Comparatif technique honnête des 3 messageries grand public. Chiffrement, métadonnées, propriétaires, et le choix pour chaque profil d'usage.</description>
+    <pubDate>Wed, 27 May 2026 02:00:00 +0200</pubDate>
+    <guid>https://privezone.pages.dev/articles/signal-vs-whatsapp-vs-telegram.html</guid>
+  </item>
+
+  <item>
+    <title>Bitwarden : le tutoriel complet 2026 — du compte aux passkeys</title>
+    <link>https://privezone.pages.dev/articles/bitwarden-tutoriel-complet-2026.html</link>
+    <description>Guide complet pour configurer Bitwarden de A à Z : création compte, mot de passe maître, 2FA, import depuis Chrome, passkeys, et tous les pièges à éviter.</description>
+    <pubDate>Wed, 27 May 2026 01:30:00 +0200</pubDate>
+    <guid>https://privezone.pages.dev/articles/bitwarden-tutoriel-complet-2026.html</guid>
+  </item>
+
+  <item>
+    <title>Tor Browser : guide débutant et les 10 erreurs qui te grillent</title>
+    <link>https://privezone.pages.dev/articles/tor-browser-guide-debutant.html</link>
+    <description>Tor n'est pas magique. Voilà ce qu'il fait vraiment, ce qu'il ne fait PAS, et toutes les conneries que les débutants font qui détruisent leur anonymat.</description>
+    <pubDate>Tue, 26 May 2026 23:00:00 +0200</pubDate>
+    <guid>https://privezone.pages.dev/articles/tor-browser-guide-debutant.html</guid>
+  </item>
+
+  <item>
+    <title>Configurer un PC Windows 100% privé en 2 heures</title>
+    <link>https://privezone.pages.dev/articles/pc-windows-prive-guide-2026.html</link>
+    <description>Bitwarden, Mullvad, VeraCrypt, désactivation télémétrie Windows… Le checklist complet pour transformer ton PC en forteresse, sans rien casser.</description>
+    <pubDate>Tue, 26 May 2026 22:00:00 +0200</pubDate>
+    <guid>https://privezone.pages.dev/articles/pc-windows-prive-guide-2026.html</guid>
+  </item>
+
+  <item>
+    <title>Mullvad vs NordVPN vs Proton VPN : comparatif honnête 2026</title>
+    <link>https://privezone.pages.dev/articles/mullvad-vs-nordvpn-vs-proton-vpn.html</link>
+    <description>J'ai testé les trois pendant des mois. Lequel pour quoi, pourquoi tu n'as PAS besoin du plus cher, et le piège du Lockdown mode.</description>
+    <pubDate>Tue, 26 May 2026 21:00:00 +0200</pubDate>
+    <guid>https://privezone.pages.dev/articles/mullvad-vs-nordvpn-vs-proton-vpn.html</guid>
+  </item>
+
+  <item>
+    <title>Cloudflare Zero Trust sur iPhone : le guide complet 2026</title>
+    <link>https://privezone.pages.dev/articles/cloudflare-zero-trust-iphone-2026.html</link>
+    <description>Comment configurer un filtrage anti-malware niveau entreprise sur ton iPhone, gratuitement. Toutes les étapes, et les pièges qui font tout planter.</description>
+    <pubDate>Tue, 26 May 2026 20:00:00 +0200</pubDate>
+    <guid>https://privezone.pages.dev/articles/cloudflare-zero-trust-iphone-2026.html</guid>
+  </item>
+
+  <item>
+    <title>J'ai reset mon iPhone par erreur — comment j'ai tout récupéré en 30 min</title>
+    <link>https://privezone.pages.dev/articles/reset-iphone-recuperation-comptes.html</link>
+    <description>Guide étape par étape pour retrouver l'accès à tes comptes (Revolut, Gmail, banque…) après une réinitialisation complète.</description>
+    <pubDate>Tue, 26 May 2026 19:00:00 +0200</pubDate>
+    <guid>https://privezone.pages.dev/articles/reset-iphone-recuperation-comptes.html</guid>
+  </item>
+
+</channel>
+</rss>

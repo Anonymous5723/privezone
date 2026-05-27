@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitwarden : le tutoriel complet 2026 — du compte aux passkeys | PrivéZone</title>
+<meta name="description" content="Guide complet pour configurer Bitwarden de A à Z : création compte, mot de passe maître, 2FA, import depuis Chrome, passkeys, et tous les pièges à éviter.">
+<meta name="theme-color" content="#7c5cff">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="/" class="logo">Privé<span>Zone</span></a>
+    <div class="nav-links">
+      <a href="/articles/">Articles</a>
+      <a href="/about.html">À propos</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <article>
+
+    <header class="article-header">
+      <p class="article-meta">🔐 Mots de passe • 15 min de lecture</p>
+      <h1>Bitwarden : le tutoriel complet 2026 — du compte aux passkeys</h1>
+      <p class="subtitle">Tout ce qu'il faut savoir pour passer à Bitwarden en 30 minutes : création de compte, mot de passe maître bétonné, 2FA, import depuis Chrome/Edge, passkeys, partage familial. Et les 5 erreurs qui ruinent la sécurité d'un gestionnaire.</p>
+    </header>
+
+    <p>Bitwarden, c'est le gestionnaire de mots de passe que je recommande à 95 % des gens. Open source, audit indépendant, version gratuite généreuse, chiffrement de bout en bout. Mais l'installer mal — c'est se mettre en danger plus que de tout laisser dans Chrome.</p>
+
+    <p>Voilà le tutoriel exact que je suis quand je configure Bitwarden chez un proche, avec les vraies bonnes pratiques et les vrais pièges.</p>
+
+    <h2>Pourquoi Bitwarden (et pas un autre)</h2>
+
+    <p>Trois raisons qui font la différence :</p>
+    <ul>
+      <li><strong>Open source</strong> : le code est public, audité, vérifié par des experts indépendants. Tu n'as pas à faire confiance "sur parole" comme avec 1Password ou LastPass.</li>
+      <li><strong>Vraie version gratuite</strong> : mots de passe illimités, appareils illimités, synchronisation cloud — pour 0 €. Beaucoup de concurrents (Dashlane, Keeper, NordPass) imposent un abonnement payant pour utiliser sur plus d'un appareil.</li>
+      <li><strong>Chiffrement côté client</strong> : Bitwarden ne peut <em>pas</em> lire tes mots de passe, même s'ils le voulaient. Le chiffrement se fait dans ton navigateur/app avant l'envoi au serveur.</li>
+    </ul>
+
+    <div class="affiliate-cta">
+      <h4>🔐 Démarre maintenant avec Bitwarden</h4>
+      <p>La version gratuite suffit pour 95 % des gens. La version Premium à 10 $/an ajoute le rapport de sécurité, l'authenticator intégré et le stockage de fichiers chiffrés.</p>
+      <a href="https://bitwarden.com/" class="btn" rel="noopener noreferrer">Créer un compte Bitwarden</a>
+    </div>
+
+    <h2>Étape 1 — Création du compte (5 min)</h2>
+
+    <ol>
+      <li>Va sur <a href="https://vault.bitwarden.com/#/register" rel="noopener noreferrer">vault.bitwarden.com</a></li>
+      <li>Renseigne :
+        <ul>
+          <li><strong>Email</strong> : utilise ton email principal (perso ou Proton)</li>
+          <li><strong>Name</strong> : ton prénom (ou rien, peu importe)</li>
+          <li><strong>Master password</strong> : <strong>LE point critique</strong> — voir section suivante</li>
+        </ul>
+      </li>
+      <li>Coche les conditions et clique <em>Create Account</em></li>
+    </ol>
+
+    <h2>Étape 2 — Le mot de passe maître (le truc le plus important)</h2>
+
+    <p>Ton mot de passe maître Bitwarden, c'est la <strong>clé qui chiffre tous tes autres mots de passe</strong>. Si tu le perds, tu perds TOUT (Bitwarden ne peut pas te le récupérer, par design — c'est ça qui fait que tu peux leur faire confiance). Si quelqu'un le devine, il a accès à toute ta vie numérique.</p>
+
+    <p><strong>Les règles d'un bon mot de passe maître :</strong></p>
+    <ul>
+      <li>✅ <strong>Long</strong> : 20 caractères minimum, idéalement 25-30</li>
+      <li>✅ <strong>Mémorisable</strong> : si tu dois te le noter sur ton frigo, t'as perdu</li>
+      <li>✅ <strong>Imprévisible</strong> : pas ta date de naissance, pas le nom de ton chat</li>
+      <li>✅ <strong>Unique</strong> : jamais utilisé ailleurs</li>
+    </ul>
+
+    <p><strong>La méthode qui marche</strong> — la passphrase :</p>
+
+    <p>Choisis <strong>4 à 6 mots aléatoires</strong> sans rapport entre eux, séparés par des tirets ou des chiffres. Par exemple :</p>
+
+    <pre><code>biscuit-mauve-3-saucisson-volcan</code></pre>
+
+    <p>C'est <strong>plus long et plus mémorisable</strong> que <code>P@ssw0rd!2024</code>, et <strong>statistiquement bien plus dur à craquer</strong>. Une passphrase de 5-6 mots avec séparateurs résiste à des milliers d'années de brute force.</p>
+
+    <div class="callout danger">
+      <p>🚨 <strong>Note ton mot de passe maître sur du PAPIER une fois.</strong> Plie la feuille, range-la dans un endroit sûr (coffre, tiroir avec clé). Pas dans un fichier sur ton PC, pas sur ton téléphone. Ce papier, tu le détruiras dans 1-2 mois quand tu seras sûr de le mémoriser.</p>
+    </div>
+
+    <h2>Étape 3 — Activer la 2FA sur Bitwarden lui-même</h2>
+
+    <p>Sans 2FA, même un mot de passe maître bétonné peut être brute-forcé si Bitwarden se fait pirater (peu probable, mais...) ou si quelqu'un te le subtilise (phishing, keylogger).</p>
+
+    <p><strong>Procédure :</strong></p>
+    <ol>
+      <li>Connecte-toi à <a href="https://vault.bitwarden.com" rel="noopener noreferrer">vault.bitwarden.com</a></li>
+      <li>Settings → <strong>Security → Two-step Login</strong></li>
+      <li>Choisis ta méthode :
+        <ul>
+          <li><strong>Email</strong> (gratuit, simple) — code à 6 chiffres envoyé à ton email à chaque login. Bon point d'entrée pour débuter.</li>
+          <li><strong>Authenticator app</strong> (gratuit aussi) — Google Authenticator, Authy ou Microsoft Authenticator. <strong>Recommandé.</strong></li>
+          <li><strong>YubiKey</strong> (Premium nécessaire) — clé physique, le plus sécurisé. Optionnel.</li>
+        </ul>
+      </li>
+      <li>Active la méthode choisie</li>
+      <li><strong>SAUVEGARDE LE CODE DE RÉCUPÉRATION</strong> que Bitwarden te montre → imprime-le ou note-le à côté de ton mot de passe maître. Sans ce code, si tu perds ton authenticator, tu ne peux plus récupérer ton compte.</li>
+    </ol>
+
+    <h2>Étape 4 — Installer Bitwarden sur tous tes appareils</h2>
+
+    <ul>
+      <li><strong>Extension navigateur</strong> (Brave, Chrome, Firefox, Edge) : <a href="https://bitwarden.com/download/" rel="noopener noreferrer">bitwarden.com/download</a>. La plus utile au quotidien.</li>
+      <li><strong>App Desktop Windows/Mac</strong> : pour gérer ton vault au calme</li>
+      <li><strong>App iOS / Android</strong> : pour autofill sur mobile</li>
+      <li><strong>Web vault</strong> : <a href="https://vault.bitwarden.com" rel="noopener noreferrer">vault.bitwarden.com</a></li>
+    </ul>
+
+    <p>Connecte-toi sur chaque appareil avec ton email + mot de passe maître. Activation 2FA à chaque nouvel appareil.</p>
+
+    <h2>Étape 5 — Importer tes mots de passe existants</h2>
+
+    <p>Depuis Chrome, Edge ou Firefox :</p>
+
+    <h3>Chrome / Edge / Brave</h3>
+    <ol>
+      <li>Ouvre <code>chrome://settings/passwords</code> (ou équivalent)</li>
+      <li>Clique sur les <code>⋯</code> à côté de "Mots de passe enregistrés" → <strong>Exporter</strong></li>
+      <li>Tu obtiens un fichier <code>.csv</code></li>
+      <li>Sur le vault Bitwarden web → <strong>Tools → Import data → Chrome CSV</strong></li>
+      <li>Upload le fichier → import en quelques secondes</li>
+      <li><strong>SUPPRIME LE FICHIER CSV</strong> immédiatement — il contient tous tes mots de passe en clair</li>
+    </ol>
+
+    <h3>Firefox</h3>
+    <p>Similaire : <code>about:logins</code> → menu <code>⋯</code> → <em>Exporter les identifiants</em>. Format Firefox CSV à choisir dans l'import Bitwarden.</p>
+
+    <h3>Après l'import — étape critique</h3>
+    <p>Une fois Bitwarden chargé avec tes anciens mots de passe :</p>
+    <ol>
+      <li>Va dans les paramètres de chaque navigateur</li>
+      <li><strong>Désactive</strong> l'option "Enregistrer les mots de passe"</li>
+      <li><strong>Supprime</strong> tous les mots de passe stockés (Bitwarden les gère mieux maintenant)</li>
+    </ol>
+
+    <h2>Étape 6 — Auditer et muscler tes mots de passe</h2>
+
+    <p>Avec Bitwarden Premium (10 $/an), tu as accès au <strong>Rapport de Sécurité</strong> :</p>
+    <ul>
+      <li><strong>Vault Health Report</strong> → liste des mots de passe faibles, réutilisés, dans des fuites connues</li>
+      <li>Pour chaque mot de passe problématique → clique → Bitwarden te génère un nouveau MDP fort et te guide pour le changer sur le site</li>
+    </ul>
+
+    <p>Même sans Premium, tu peux faire l'audit manuellement :</p>
+    <ol>
+      <li>Pour chaque compte important (banque, mail, réseaux sociaux), connecte-toi</li>
+      <li>Change le mot de passe pour un mot de passe généré par Bitwarden (clique sur l'icône 🔄)</li>
+      <li>Bitwarden remplit auto le nouveau et l'enregistre</li>
+      <li>Vise <strong>25+ caractères</strong>, mix lettres/chiffres/symboles</li>
+    </ol>
+
+    <h2>Étape 7 — Les Passkeys (nouveauté 2024-2026)</h2>
+
+    <p>Les passkeys remplacent progressivement les mots de passe. Au lieu d'un mot de passe, tu utilises une <strong>clé cryptographique</strong> stockée par Bitwarden. Plus sécurisé, plus rapide, immunisé au phishing.</p>
+
+    <p>Bitwarden supporte les passkeys depuis 2024. Sur les sites compatibles (Google, GitHub, Microsoft, eBay, etc.) :</p>
+    <ol>
+      <li>Va dans les paramètres de sécurité du site</li>
+      <li>Active <em>Passkey</em> / <em>Passwordless</em></li>
+      <li>Quand le navigateur demande où stocker la clé → choisis <strong>Bitwarden</strong></li>
+      <li>Lors des prochaines connexions, plus de mot de passe à taper → juste un déverrouillage Bitwarden + un clic</li>
+    </ol>
+
+    <h2>Étape 8 — Partage familial (Bitwarden Families, 3,33 $/mois)</h2>
+
+    <p>Si tu veux partager certains mots de passe avec ton conjoint, tes parents, etc. (compte Netflix, Wi-Fi maison, accès Amazon partagé...), Bitwarden Families permet jusqu'à <strong>6 comptes</strong> avec partage de "collections" de mots de passe pour ~40 $/an.</p>
+
+    <p>Excellent rapport qualité/prix pour une famille, vs des solutions à 5 €/mois <em>par utilisateur</em>.</p>
+
+    <h2>Les 5 erreurs qui ruinent tout</h2>
+
+    <div class="callout danger">
+      <p><strong>1. Réutiliser ton mot de passe maître ailleurs</strong> → si un autre site se fait pirater, ton MDP maître apparaît dans la fuite → ton vault Bitwarden tombe. Le MDP maître doit être <strong>UNIQUE au monde</strong>.</p>
+    </div>
+
+    <div class="callout danger">
+      <p><strong>2. Pas de 2FA sur Bitwarden lui-même</strong> → seul rempart entre un attaquant qui a ton MDP et toute ta vie numérique. À activer le premier jour.</p>
+    </div>
+
+    <div class="callout danger">
+      <p><strong>3. Stocker le MDP maître dans un fichier sur le PC</strong> → un malware peut le lire. Soit tu le mémorises, soit tu le notes sur papier physique.</p>
+    </div>
+
+    <div class="callout danger">
+      <p><strong>4. Garder l'extension navigateur connectée H24</strong> → si quelqu'un accède à ton PC déverrouillé, il a accès à TOUS tes mots de passe. Active le verrouillage automatique après 15 min d'inactivité.</p>
+    </div>
+
+    <div class="callout danger">
+      <p><strong>5. Ne pas sauvegarder le code de récupération 2FA</strong> → si ton authenticator est perdu, tu es bloqué dehors. Code de secours = imprimé + rangé en sécurité.</p>
+    </div>
+
+    <h2>En résumé</h2>
+
+    <p>Bitwarden bien configuré = <strong>la décision n°1 qui transforme ta sécurité numérique</strong>. Plus que tout VPN, plus que toute app de chiffrement. Parce que 80 % des piratages de comptes viennent de mots de passe faibles ou réutilisés.</p>
+
+    <p>30 minutes de configuration, et tu n'as plus à mémoriser que <strong>UN seul</strong> mot de passe (le maître). Tout le reste est généré, stocké, autofilled.</p>
+
+    <div class="affiliate-cta">
+      <h4>🚀 Crée ton compte Bitwarden maintenant</h4>
+      <p>Version gratuite suffisante pour 95 % des usages. Premium à 10 $/an pour le rapport de sécurité et l'authenticator intégré. Pas d'engagement, désinstallable en 1 clic.</p>
+      <a href="https://bitwarden.com/" class="btn" rel="noopener noreferrer">Commencer avec Bitwarden</a>
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit. <a href="/about.html">À propos</a></p>
+</footer>
+
+</body>
+</html>
