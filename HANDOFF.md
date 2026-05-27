@@ -28,7 +28,7 @@ Objectif : générer du revenu passif via **affiliation tech privacy** (VPN, pas
 - **SSL** : automatique Cloudflare
 - **CDN** : mondial via Cloudflare
 
-### Contenu (7 articles, ~12 000 mots)
+### Contenu (8 articles, ~14 000 mots)
 1. `articles/reset-iphone-recuperation-comptes.html` — récupération comptes après reset iPhone
 2. `articles/cloudflare-zero-trust-iphone-2026.html` — guide Zero Trust mobile
 3. `articles/mullvad-vs-nordvpn-vs-proton-vpn.html` — comparatif VPN
@@ -36,12 +36,22 @@ Objectif : générer du revenu passif via **affiliation tech privacy** (VPN, pas
 5. `articles/tor-browser-guide-debutant.html` — guide Tor
 6. `articles/bitwarden-tutoriel-complet-2026.html` — tuto Bitwarden complet
 7. `articles/signal-vs-whatsapp-vs-telegram.html` — comparatif messageries
+8. `articles/chiffrer-disque-externe-veracrypt.html` — tuto VeraCrypt disque externe
 
-### SEO
-- ✅ `sitemap.xml` à la racine (10 URLs)
+### SEO + Polish (v2 — 27 mai 2026)
+- ✅ `sitemap.xml` à la racine (11 URLs)
 - ✅ `robots.txt` à la racine
-- ✅ `rss.xml` (feed RSS complet)
-- ✅ Meta tags + Open Graph sur chaque page
+- ✅ `rss.xml` (feed RSS complet, 8 articles)
+- ✅ Meta tags + Open Graph + Twitter Cards sur chaque page
+- ✅ `og-image.svg` (image partage social)
+- ✅ `favicon.svg` (icône violette "P", lié sur toutes les pages)
+- ✅ Schema.org JSON-LD (Article) sur chaque article
+- ✅ Reading time + dates publication/maj sur chaque article
+- ✅ Section "Articles similaires" en fin de chaque article
+- ✅ Back-to-top button (`script.js`)
+- ✅ Custom 404 page (`404.html`)
+- ✅ About page enrichie avec 4 trust badges
+- ✅ Footer amélioré avec liens (About, Articles, RSS)
 - ✅ Verif fichier Google : `google3b55a1a91c652abc.html`
 
 ### Google Search Console
@@ -52,7 +62,7 @@ Objectif : générer du revenu passif via **affiliation tech privacy** (VPN, pas
 ### Affiliations
 | Programme | Status | Date |
 |-----------|--------|------|
-| **NordVPN** (via Impact) | ⏳ Pending approval | Soumis 27/05/2026 |
+| **NordVPN** (via Impact) | ✅ **APPROUVÉ** 27/05 — récupérer le lien sur app.impact.com | Soumis 27/05/2026 |
 | **Surfshark** (via Impact) | ⏳ Pending approval | Soumis 27/05/2026 |
 
 ### Sécurité utilisateur (perso, pas le site)
@@ -66,9 +76,10 @@ Objectif : générer du revenu passif via **affiliation tech privacy** (VPN, pas
 ## 🚀 Prochaines étapes (par priorité)
 
 ### 🔥 Immédiat (1ère heure de la prochaine session)
-1. **Postuler à ExpressVPN affiliate** : <https://www.expressvpn.com/affiliates>
-2. **Vérifier les emails** (NordVPN/Surfshark) pour réponses d'approbation
-3. **Si approuvé** → récupérer les liens affiliés et les insérer dans les articles
+1. **Récupérer le lien affilié NordVPN** sur <https://app.impact.com> → me l'envoyer
+2. Je remplace alors **TOUTES les mentions NordVPN** dans les articles par le lien affilié
+3. **Postuler à ExpressVPN affiliate** : <https://www.expressvpn.com/affiliates>
+4. **Vérifier email Surfshark** pour réponse d'approbation
 
 ### 📅 Court terme (1-2 sessions)
 4. **Article #8** : "Top 5 alternatives à Google (mail, drive, photos, agenda, recherche)" — gros potentiel SEO + multi-affiliations Proton
@@ -87,6 +98,22 @@ Objectif : générer du revenu passif via **affiliation tech privacy** (VPN, pas
 13. Vérifier le tracking fonctionne (clic test → apparaît dans dashboard Impact)
 
 ---
+
+## 🚨 Incident sécurité — 27 mai 2026
+
+L'user a subi une **tentative de phishing crypto** via Telegram :
+- Lien raccourci `is.gd/RSccUM` envoyé par un inconnu
+- Renvoyait vers un faux site Ledger
+- Téléchargement automatique de `Ledger.zip` (9.11 MB) dans Downloads
+- C'était un **wallet drainer / stealer malware**
+
+**Résolution** : Attaque déjouée. L'user n'a PAS exécuté le ZIP, n'a PAS tapé sa seed phrase, n'a PAS connecté son Ledger. Fonds Ledger Live intacts. PC scanné par Defender, aucune menace détectée. Fichier quarantiné puis supprimé.
+
+**À retenir pour Claude** : l'user est maintenant sensibilisé. Si jamais il dit "j'ai un souci crypto" ou "lien suspect", PRIORITÉ ABSOLUE = stopper l'attaque avant tout autre travail. Procédure :
+1. Vérifier soldes Ledger Live
+2. Vérifier si seed phrase tapée
+3. Quarantiner tout fichier suspect dans Downloads
+4. Scanner avec Windows Defender
 
 ## ⚠️ Pièges déjà rencontrés (NE PAS refaire)
 

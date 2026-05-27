@@ -8,6 +8,14 @@
   <atom:link href="https://privezone.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
+    <title>Chiffrer un disque externe avec VeraCrypt en 10 min (guide 2026)</title>
+    <link>https://privezone.pages.dev/articles/chiffrer-disque-externe-veracrypt.html</link>
+    <description>Tutoriel pas-à-pas pour chiffrer une clé USB ou un disque externe avec VeraCrypt. Anti-vol, anti-perte, gratuit, open source. 10 minutes chrono.</description>
+    <pubDate>Wed, 27 May 2026 23:00:00 +0200</pubDate>
+    <guid>https://privezone.pages.dev/articles/chiffrer-disque-externe-veracrypt.html</guid>
+  </item>
+
+  <item>
     <title>Signal vs WhatsApp vs Telegram : quelle messagerie pour la vie privée en 2026</title>
     <link>https://privezone.pages.dev/articles/signal-vs-whatsapp-vs-telegram.html</link>
     <description>Comparatif technique honnête des 3 messageries grand public. Chiffrement, métadonnées, propriétaires, et le choix pour chaque profil d'usage.</description>
