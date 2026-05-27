@@ -6,7 +6,12 @@
 <title>À propos | PrivéZone</title>
 <meta name="description" content="PrivéZone — guides honnêtes sur la vie privée numérique, tirés d'expériences réelles. Pas de blabla marketing, juste ce qui marche.">
 <meta name="theme-color" content="#7c5cff">
-<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/style.css">
+<meta property="og:title" content="À propos | PrivéZone">
+<meta property="og:description" content="Guides honnêtes sur la vie privée numérique, tirés d'expériences réelles. Pas de blabla marketing.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
 </head>
 <body>
 
@@ -34,6 +39,31 @@
     <p>La majorité des articles sur la vie privée numérique tombent dans deux catégories : (1) ultra-techniques et incompréhensibles pour les non-tech, (2) marketing déguisé qui te vend toujours le même VPN avec un code promo.</p>
 
     <p>PrivéZone se veut différent. Chaque article est tiré d'une <strong>expérience réelle</strong> — une galère vécue, une configuration faite et débuggée. Pas de copy-paste d'autres sites. Pas de "top 10 VPN" généré par IA.</p>
+
+    <h2>Nos principes</h2>
+
+    <div class="trust-grid">
+      <div class="trust-badge">
+        <div class="icon">🔬</div>
+        <h4>Tout testé en vrai</h4>
+        <p>Mullvad, Bitwarden, VeraCrypt, Cloudflare Zero Trust… tous installés sur mes propres machines. Si je le recommande, c'est que je l'utilise.</p>
+      </div>
+      <div class="trust-badge">
+        <div class="icon">💬</div>
+        <h4>Pas de blabla marketing</h4>
+        <p>Aucun article ne sera jamais une plaquette commerciale. On dit les défauts d'un outil aussi clairement que ses qualités.</p>
+      </div>
+      <div class="trust-badge">
+        <div class="icon">🆓</div>
+        <h4>Gratuit prioritaire</h4>
+        <p>Quand un outil gratuit fait le job, on le recommande avant le payant. Le but n'est pas de te faire dépenser pour dépenser.</p>
+      </div>
+      <div class="trust-badge">
+        <div class="icon">🔄</div>
+        <h4>Mis à jour</h4>
+        <p>Le monde de la vie privée évolue vite (lois RGPD, fuites, nouveaux protocoles). Les articles sont retouchés quand l'info devient obsolète.</p>
+      </div>
+    </div>
 
     <h2>La méthode</h2>
 
@@ -70,8 +100,15 @@
 </main>
 
 <footer>
-  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit. <a href="/about.html">À propos</a></p>
+  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit.</p>
+  <div class="footer-links">
+    <a href="/about.html">À propos</a>
+    <a href="/articles/">Tous les articles</a>
+    <a href="/rss.xml">Flux RSS</a>
+  </div>
 </footer>
+
+<script src="/script.js" defer></script>
 
 </body>
 </html>
