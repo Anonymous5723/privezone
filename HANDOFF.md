@@ -60,10 +60,21 @@ Objectif : générer du revenu passif via **affiliation tech privacy** (VPN, pas
 - ⏳ Indexation en cours (1-3 semaines pour apparaître dans les recherches)
 
 ### Affiliations
-| Programme | Status | Date |
-|-----------|--------|------|
-| **NordVPN** (via Impact) | ✅ **APPROUVÉ** 27/05 — récupérer le lien sur app.impact.com | Soumis 27/05/2026 |
-| **Surfshark** (via Impact) | ⏳ Pending approval | Soumis 27/05/2026 |
+| Programme | Status | Liens en place |
+|-----------|--------|----------------|
+| **NordVPN** | ✅ ACTIF (aff_id=148974) | Articles VPN comparatif + PC Windows hardening |
+| **NordPass** | ✅ ACTIF (aff_id=148974) | Article Bitwarden (alternative payante) |
+| **Nordlocker** | ✅ ACTIF (aff_id=148974) | Article VeraCrypt (cloud sync chiffré) |
+| **Surfshark** (via Impact) | ⏳ Pending approval | À ajouter quand approuvé |
+
+**Contact NordSecurity** : Romain Leglaive — `romain@nordvpnmedia.com` (Directeur Partenariats & Affiliation France)
+
+**Liens d'affiliation actifs** :
+- NordVPN  : `https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172`
+- NordPass : `https://go.nordpass.io/aff_c?offer_id=488&aff_id=148974&url_id=9356`
+- Nordlocker : `https://go.nordpass.io/aff_c?offer_id=489&aff_id=148974&url_id=9356`
+
+**⚠️ Règle NordSecurity** : INTERDIT d'acheter le nom de marque sur Google Adwords/Bing (PPC). On reste sur du SEO contenu = OK.
 
 ### Sécurité utilisateur (perso, pas le site)
 - iPhone 14 : Cloudflare WARP + Zero Trust + Mullvad dispo
