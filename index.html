@@ -47,6 +47,16 @@
     <p>Guides honnêtes, tirés d'expériences réelles. Pas de jargon, pas de bullshit marketing, juste ce qui marche vraiment pour protéger ton PC, ton téléphone et ton identité en ligne.</p>
   </section>
 
+  <section class="hero-cta">
+    <div class="hero-cta-content">
+      <span class="hero-cta-badge">⭐ NOTRE RECO 2026</span>
+      <h2>NordVPN — le meilleur VPN polyvalent</h2>
+      <p>110+ pays, débloque Netflix US / Disney+ / BBC iPlayer, Threat Protection anti-malware DNS intégré. Le meilleur compromis vie privée / vitesse / facilité d'usage.</p>
+      <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" class="btn btn-large" rel="noopener noreferrer sponsored">Découvrir l'offre NordVPN →</a>
+      <p class="hero-cta-fineprint">Offres dès 3 €/mois — Garantie 30 jours satisfait ou remboursé</p>
+    </div>
+  </section>
+
   <h2>Articles récents</h2>
   <div class="article-grid">
 
@@ -116,13 +126,18 @@
 
   </div>
 
-  <section class="newsletter">
-    <h3>1 email par semaine. Aucun spam.</h3>
-    <p>Reçois les nouveaux guides + des astuces concrètes pour ta vie privée numérique. Tu peux te désinscrire en 1 clic.</p>
-    <form action="#" method="post">
-      <input type="email" placeholder="ton@email.com" required>
+  <section class="newsletter" id="newsletter">
+    <h3>📬 1 email par semaine. Aucun spam, désinscription en 1 clic.</h3>
+    <p>Reçois les nouveaux guides + des astuces concrètes pour ta vie privée numérique.</p>
+    <form action="https://formsubmit.co/bastienpoitiers@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="📬 Nouvelle inscription newsletter PrivéZone">
+      <input type="hidden" name="_next" value="https://privezone.pages.dev/merci.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="email" name="email" placeholder="ton@email.com" required aria-label="Email">
       <button type="submit" class="btn">S'inscrire</button>
     </form>
+    <p style="font-size:0.82rem;margin-top:14px;color:var(--text-dim);">Préfères-tu le <a href="/rss.xml">flux RSS</a> ? C'est dispo aussi, sans email.</p>
   </section>
 
 </main>
