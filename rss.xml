@@ -8,6 +8,14 @@
   <atom:link href="https://privezone.pages.dev/rss.xml" rel="self" type="application/rss+xml" />
 
   <item>
+    <title>Configurer un Mac 100 % privé en 2 heures (guide 2026)</title>
+    <link>https://privezone.pages.dev/articles/mac-securise-prive-guide-2026.html</link>
+    <description>FileVault, Lockdown Mode, App Privacy, désactivation télémétrie Apple, VPN, password manager. Le checklist complet pour blinder ton Mac sans rien casser.</description>
+    <pubDate>Thu, 28 May 2026 12:00:00 +0200</pubDate>
+    <guid>https://privezone.pages.dev/articles/mac-securise-prive-guide-2026.html</guid>
+  </item>
+
+  <item>
     <title>Chiffrer un disque externe avec VeraCrypt en 10 min (guide 2026)</title>
     <link>https://privezone.pages.dev/articles/chiffrer-disque-externe-veracrypt.html</link>
     <description>Tutoriel pas-à-pas pour chiffrer une clé USB ou un disque externe avec VeraCrypt. Anti-vol, anti-perte, gratuit, open source. 10 minutes chrono.</description>
