@@ -156,7 +156,7 @@
     </div>
   </div>
 
-  <div class="step">
+  <div class="step with-mock">
     <div class="step-num">05</div>
     <div>
       <h3>Connecter ton iPhone</h3>
@@ -170,9 +170,40 @@
         <li>Statut dans l'app : <strong>Zero Trust ✓</strong></li>
       </ol>
     </div>
+    <div class="step-mock">
+      <div class="iphone-mock">
+        <div class="ios-screen">
+          <div class="ios-statusbar">
+            <span>9:41</span>
+            <span class="right">5G · VPN</span>
+          </div>
+          <div class="ios-title">Cloudflare</div>
+          <div class="ios-section" style="align-items:center;text-align:center;">
+            <div class="ios-app-icon cf" style="margin:6px auto 4px;">☁</div>
+            <div style="font-weight:700;font-size:11px;">One Agent</div>
+            <div style="font-size:9.5px;color:#8e8e93;">Tunnel actif</div>
+          </div>
+          <div class="ios-bigbtn connected">CONNECTED · Zero Trust</div>
+          <div class="ios-section">
+            <div class="ios-row">
+              <span class="label">Team</span>
+              <span class="value">plain-pine-9c0f</span>
+            </div>
+            <div class="ios-row">
+              <span class="label">Auto-connect</span>
+              <span class="toggle"></span>
+            </div>
+            <div class="ios-row">
+              <span class="label">Statut</span>
+              <span class="value green"><span class="ios-statusdot"></span>Zero Trust</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="step">
+  <div class="step with-mock">
     <div class="step-num">06</div>
     <div>
       <h3>Vérifier que tout marche</h3>
@@ -181,6 +212,34 @@
 gateway=on</code></pre>
       <p>Si tu vois les deux sur <code>on</code> → ton iPhone est officiellement en Zero Trust, ton trafic DNS est filtré par tes règles.</p>
       <p>Pour aller plus loin : teste un domaine malveillant — <code>malware.testcategory.com</code>. Tu dois voir une page de blocage Cloudflare.</p>
+    </div>
+    <div class="step-mock">
+      <div class="iphone-mock">
+        <div class="ios-screen">
+          <div class="ios-statusbar">
+            <span>9:42</span>
+            <span class="right">5G · VPN</span>
+          </div>
+          <div style="padding:8px 16px;font-size:9px;color:#8e8e93;text-align:center;">
+            cloudflare.com/cdn-cgi/trace
+          </div>
+          <div class="ios-code-block">
+fl=42a191<br>
+h=cloudflare.com<br>
+ip=104.28.42.91<br>
+loc=FR<br>
+<span style="color:#b794ff;font-weight:700;">warp=on</span><br>
+<span style="color:#b794ff;font-weight:700;">gateway=on</span><br>
+colo=CDG<br>
+sliver=none
+          </div>
+          <div style="margin:14px;padding:14px;background:rgba(124,92,255,0.08);border:1px solid rgba(124,92,255,0.3);border-radius:12px;text-align:center;">
+            <div style="font-size:24px;margin-bottom:4px;color:#7c5cff;">✓</div>
+            <div style="font-size:11px;font-weight:700;color:#7c5cff;">Zero Trust actif</div>
+            <div style="font-size:9.5px;color:#8e8e93;margin-top:4px;">DNS filtré par tes règles</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
