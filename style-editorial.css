@@ -1051,6 +1051,52 @@ footer {
 }
 .trust-badge p { font-size: 0.92rem; margin: 0; }
 
+/* ============ READING PROGRESS BAR ============ */
+.reading-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--c-vpn), var(--c-brand), var(--c-mobile));
+  z-index: 200;
+  width: 0%;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 12px rgba(124,92,255,0.5);
+}
+
+/* ============ BACK TO TOP ============ */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--text);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  border: none;
+  font-size: 18px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: var(--c-brand);
+  color: var(--text);
+  transform: translateY(-4px);
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
   .nav-links { display: none; }
