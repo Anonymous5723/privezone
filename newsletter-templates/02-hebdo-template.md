@@ -95,7 +95,7 @@ Si tu débarques ou tu veux explorer :
 
 **Bastien — PrivéZone**
 
-[Le site](https://privezone.pages.dev) · [Tous les guides](https://privezone.pages.dev/articles/) · [Offres](https://privezone.pages.dev/offres.html) · [Contact](mailto:mrprobean@proton.me)
+[Le site](https://privezone.pages.dev) · [Tous les guides](https://privezone.pages.dev/articles/) · [Offres](https://privezone.pages.dev/offres.html) · [Contact](mailto:privezone.contact@proton.me)
 
 *Tu reçois cet email parce que tu t'es inscrit sur privezone.pages.dev. [Se désinscrire en 1 clic.]({{ unsubscribe_url }})*
 ```

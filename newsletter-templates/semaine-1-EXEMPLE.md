@@ -73,6 +73,6 @@ Si tu débarques : voilà les 8 autres articles essentiels du site.
 
 **— PrivéZone**
 
-[Le site](https://privezone.pages.dev) · [Tous les articles](https://privezone.pages.dev/articles/) · [Contact](mailto:mrprobean@proton.me)
+[Le site](https://privezone.pages.dev) · [Tous les articles](https://privezone.pages.dev/articles/) · [Contact](mailto:privezone.contact@proton.me)
 
 *Tu reçois cet email parce que tu t'es inscrit sur privezone.pages.dev. [Se désinscrire en 1 clic.](unsubscribe-link-managed-by-buttondown)*
