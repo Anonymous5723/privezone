@@ -5,113 +5,106 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>À propos | PrivéZone</title>
 <meta name="description" content="PrivéZone — guides honnêtes sur la vie privée numérique, tirés d'expériences réelles. Pas de blabla marketing, juste ce qui marche.">
-<meta name="theme-color" content="#7c5cff">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style-editorial.css">
 <meta property="og:title" content="À propos | PrivéZone">
 <meta property="og:description" content="Guides honnêtes sur la vie privée numérique, tirés d'expériences réelles. Pas de blabla marketing.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 </head>
-<body>
+<body class="article-page">
 
 <nav>
   <div class="nav-container">
-    <a href="/" class="logo"><span class="logo-icon" aria-hidden="true"></span>Privé<span>Zone</span></a>
+    <a href="/" class="logo">PRIVÉ<span>ZONE</span></a>
     <div class="nav-links">
-      <a href="/articles/">Articles</a>
+      <a href="/#guides">Guides</a>
+      <a href="/articles/">Tous</a>
       <a href="/about.html">À propos</a>
     </div>
   </div>
 </nav>
 
-<main>
+<header class="article-hero">
+  <div class="eyebrow">Manifesto · 2026</div>
+  <h1>Guides honnêtes,<br>zéro bullshit.</h1>
+  <p class="lead">Pourquoi ce site existe, comment il est financé, et qui se cache derrière.</p>
+</header>
 
-  <article>
+<article class="article-body">
 
-    <header class="article-header">
-      <h1>À propos de PrivéZone</h1>
-      <p class="subtitle">Pourquoi ce site existe, comment il est financé, et qui se cache derrière.</p>
-    </header>
+  <h2>L'idée.</h2>
+  <p>La majorité des articles sur la vie privée numérique tombent dans deux catégories : ultra-techniques et incompréhensibles, ou marketing déguisé qui te vend toujours le même VPN avec un code promo.</p>
+  <p>PrivéZone se veut différent. Chaque article est tiré d'une <strong>expérience réelle</strong> — une galère vécue, une configuration faite et débuggée. Pas de copy-paste d'autres sites. Pas de "top 10 VPN" généré par IA.</p>
 
-    <h2>L'idée</h2>
-
-    <p>La majorité des articles sur la vie privée numérique tombent dans deux catégories : (1) ultra-techniques et incompréhensibles pour les non-tech, (2) marketing déguisé qui te vend toujours le même VPN avec un code promo.</p>
-
-    <p>PrivéZone se veut différent. Chaque article est tiré d'une <strong>expérience réelle</strong> — une galère vécue, une configuration faite et débuggée. Pas de copy-paste d'autres sites. Pas de "top 10 VPN" généré par IA.</p>
-
-    <h2>Nos principes</h2>
-
-    <div class="trust-grid">
-      <div class="trust-badge">
-        <div class="icon">🔬</div>
-        <h4>Tout testé en vrai</h4>
-        <p>Mullvad, Bitwarden, VeraCrypt, Cloudflare Zero Trust… tous installés sur mes propres machines. Si je le recommande, c'est que je l'utilise.</p>
-      </div>
-      <div class="trust-badge">
-        <div class="icon">💬</div>
-        <h4>Pas de blabla marketing</h4>
-        <p>Aucun article ne sera jamais une plaquette commerciale. On dit les défauts d'un outil aussi clairement que ses qualités.</p>
-      </div>
-      <div class="trust-badge">
-        <div class="icon">🆓</div>
-        <h4>Gratuit prioritaire</h4>
-        <p>Quand un outil gratuit fait le job, on le recommande avant le payant. Le but n'est pas de te faire dépenser pour dépenser.</p>
-      </div>
-      <div class="trust-badge">
-        <div class="icon">🔄</div>
-        <h4>Mis à jour</h4>
-        <p>Le monde de la vie privée évolue vite (lois RGPD, fuites, nouveaux protocoles). Les articles sont retouchés quand l'info devient obsolète.</p>
-      </div>
+  <h2>Nos principes.</h2>
+  <div class="trust-grid">
+    <div class="trust-badge">
+      <div class="icon">01 · Tests réels</div>
+      <h4>Tout testé en vrai</h4>
+      <p>Mullvad, Bitwarden, VeraCrypt, Cloudflare Zero Trust… tous installés sur mes propres machines. Si je le recommande, c'est que je l'utilise.</p>
     </div>
+    <div class="trust-badge">
+      <div class="icon">02 · Anti-marketing</div>
+      <h4>Pas de blabla</h4>
+      <p>Aucun article ne sera jamais une plaquette commerciale. On dit les défauts d'un outil aussi clairement que ses qualités.</p>
+    </div>
+    <div class="trust-badge">
+      <div class="icon">03 · Gratuit d'abord</div>
+      <h4>Gratuit prioritaire</h4>
+      <p>Quand un outil gratuit fait le job, on le recommande avant le payant. Le but n'est pas de te faire dépenser pour dépenser.</p>
+    </div>
+    <div class="trust-badge">
+      <div class="icon">04 · Évolutif</div>
+      <h4>Mis à jour</h4>
+      <p>Le monde de la vie privée évolue vite (lois RGPD, fuites, nouveaux protocoles). Les articles sont retouchés quand l'info devient obsolète.</p>
+    </div>
+  </div>
 
-    <h2>La méthode</h2>
+  <h2>La méthode.</h2>
+  <p>Ici, on parle d'outils qu'on utilise vraiment. Quand un article recommande Mullvad ou Bitwarden, c'est parce que ces outils sont installés sur mon propre PC. Quand on déconseille quelque chose (TLS inspection sans certificat, par exemple), c'est qu'on a vu le problème de ses yeux.</p>
 
-    <p>Ici, on parle d'outils qu'on utilise vraiment. Quand un article recommande Mullvad ou Bitwarden, c'est parce que ces outils sont installés sur mon propre PC. Quand on déconseille quelque chose (TLS inspection sans certificat, par exemple), c'est qu'on a vu le problème de ses yeux.</p>
+  <h2>Le modèle économique.</h2>
+  <p>PrivéZone contient des <strong>liens affiliés</strong> vers les outils recommandés. Si tu cliques et que tu prends un abonnement, on touche une commission. Cela <strong>n'augmente pas le prix que tu paies</strong>.</p>
 
-    <h2>Le modèle économique</h2>
-
-    <p>PrivéZone contient des <strong>liens affiliés</strong> vers les outils recommandés. Si tu cliques et que tu prends un abonnement, on touche une commission. Cela <strong>n'augmente pas le prix que tu paies</strong>.</p>
-
-    <p>Notre engagement :</p>
-    <ul>
+  <div class="callout tip">
+    <div class="callout-eyebrow">Notre engagement</div>
+    <ul style="margin: 8px 0 0 18px;">
       <li>On ne recommande <strong>que des outils qu'on utilise réellement</strong></li>
       <li>On indique honnêtement <strong>les limites et défauts</strong> de chaque outil</li>
-      <li>On ne fait pas de "promotion exceptionnelle" sur des prix réguliers</li>
-      <li>On ne classe pas par "qui paie le plus" mais par "ce qui marche pour quel usage"</li>
+      <li>Pas de "promo exceptionnelle" sur des prix réguliers</li>
+      <li>On classe par "ce qui marche", pas par "qui paie le plus"</li>
     </ul>
+  </div>
 
-    <h2>Ce que ce site ne fait pas</h2>
+  <h2>Ce que ce site ne fait pas.</h2>
+  <ul>
+    <li>Pas de tracking visiteur (pas de Google Analytics, pas de Facebook Pixel)</li>
+    <li>Pas de cookies (sauf ceux strictement nécessaires côté serveur)</li>
+    <li>Pas de pubs visuelles</li>
+    <li>Pas de pop-ups</li>
+    <li>Pas de "abonne-toi à la newsletter" qui ferme tout l'écran</li>
+  </ul>
 
-    <ul>
-      <li>❌ Pas de tracking visiteur (pas de Google Analytics, pas de Facebook Pixel)</li>
-      <li>❌ Pas de cookies (sauf ceux strictement nécessaires côté serveur)</li>
-      <li>❌ Pas de pubs visuelles</li>
-      <li>❌ Pas de pop-ups</li>
-      <li>❌ Pas de "abonne-toi à la newsletter" qui ferme tout l'écran</li>
-    </ul>
+  <h2>Contact.</h2>
+  <p>Une question ? Une erreur dans un article ? Une demande de sujet ? Écris-moi à <a href="mailto:mrprobean@proton.me?subject=Contact%20Priv%C3%A9Zone">mrprobean@proton.me</a> (Proton Mail, chiffré de bout en bout).</p>
+  <p>Je réponds généralement sous 48 h. Pour les demandes de presse ou partenariats, précise-le dans l'objet du mail.</p>
 
-    <h2>Contact</h2>
-
-    <p>Une question ? Une erreur dans un article ? Une demande de sujet ? Écris-moi à <a href="mailto:mrprobean@proton.me?subject=Contact%20Priv%C3%A9Zone">mrprobean@proton.me</a> (Proton Mail, chiffré de bout en bout).</p>
-
-    <p>Je réponds généralement sous 48 h. Pour les demandes de presse ou partenariats, précise-le dans l'objet du mail.</p>
-
-  </article>
-
-</main>
+</article>
 
 <footer>
-  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit.</p>
+  <div>© 2026 PrivéZone · Sans tracking · Sans cookies</div>
   <div class="footer-links">
     <a href="/about.html">À propos</a>
-    <a href="/articles/">Tous les articles</a>
-    <a href="/rss.xml">Flux RSS</a>
-    <a href="mailto:mrprobean@proton.me?subject=Contact%20Priv%C3%A9Zone">Contact</a>
+    <a href="/articles/">Articles</a>
+    <a href="/rss.xml">RSS</a>
+    <a href="mailto:mrprobean@proton.me">Contact</a>
   </div>
 </footer>
-
-<script src="/script.js" defer></script>
 
 </body>
 </html>

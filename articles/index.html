@@ -3,163 +3,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tous les articles | PrivéZone</title>
+<title>Tous les guides | PrivéZone</title>
 <meta name="description" content="Tous les guides de PrivéZone sur la vie privée, la sécurité, le chiffrement, les VPN et Tor.">
-<meta name="theme-color" content="#7c5cff">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/style.css">
-<meta property="og:title" content="Tous les articles | PrivéZone">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style-editorial.css">
+<meta property="og:title" content="Tous les guides | PrivéZone">
 <meta property="og:description" content="Tous les guides de PrivéZone sur la vie privée, la sécurité, le chiffrement, les VPN et Tor.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://privezone.pages.dev/articles/">
-<meta property="og:image" content="https://privezone.pages.dev/og-image.svg">
 <meta property="og:locale" content="fr_FR">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
 <nav>
   <div class="nav-container">
-    <a href="/" class="logo"><span class="logo-icon" aria-hidden="true"></span>Privé<span>Zone</span></a>
+    <a href="/" class="logo">PRIVÉ<span>ZONE</span></a>
     <div class="nav-links">
-      <a href="/articles/">Articles</a>
+      <a href="/#guides">Guides</a>
+      <a href="/articles/">Tous</a>
       <a href="/about.html">À propos</a>
     </div>
   </div>
 </nav>
 
-<main>
+<section class="hero">
+  <div class="hero-eyebrow">Bibliothèque · 09 guides</div>
+  <h1>
+    TOUS LES<br>
+    <span class="glow">GUIDES.</span>
+  </h1>
+  <p class="lead">
+    Cybersécurité, VPN, chiffrement, Tor, mots de passe.
+    Classés par catégorie, testés sur vrai matériel.
+  </p>
+</section>
 
-  <section class="hero">
-    <h1>Tous les articles</h1>
-    <p>Guides honnêtes sur la vie privée numérique, classés par catégorie.</p>
-  </section>
+<section class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">Catégorie 01</div>
+      <h2>Mobile.</h2>
+    </div>
+    <div class="section-count">02 guides</div>
+  </div>
 
-  <h2>📱 Mobile</h2>
   <div class="article-grid">
 
-    <article class="article-card">
+    <article class="article-card" data-cat="mobile">
       <a href="reset-iphone-recuperation-comptes.html">
-        <span class="tag">📱 Récupération</span>
-        <h3>J'ai reset mon iPhone par erreur — comment j'ai tout récupéré en 30 min</h3>
+        <div class="card-number">01</div>
+        <div class="card-category">iPhone · Récupération</div>
+        <h3>J'ai reset mon iPhone — récup en 30 min</h3>
         <p>Guide étape par étape pour retrouver l'accès à tes comptes après une réinitialisation complète.</p>
+        <div class="card-cta">Lire →</div>
       </a>
     </article>
 
-    <article class="article-card">
+    <article class="article-card" data-cat="mobile">
       <a href="cloudflare-zero-trust-iphone-2026.html">
-        <span class="tag">🛡️ Sécurité mobile</span>
-        <h3>Cloudflare Zero Trust sur iPhone : le guide complet 2026</h3>
-        <p>Filtrage anti-malware niveau entreprise sur ton iPhone, gratuitement.</p>
+        <div class="card-number">02</div>
+        <div class="card-category">Sécurité mobile</div>
+        <h3>Cloudflare Zero Trust sur iPhone</h3>
+        <p>Filtrage anti-malware niveau entreprise sur ton iPhone, gratuitement. Guide complet 2026.</p>
+        <div class="card-cta">Lire →</div>
       </a>
     </article>
 
   </div>
+</section>
 
-  <h2>🌍 VPN &amp; anonymat</h2>
+<section class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">Catégorie 02</div>
+      <h2>VPN &amp; anonymat.</h2>
+    </div>
+    <div class="section-count">02 guides</div>
+  </div>
+
   <div class="article-grid">
 
-    <article class="article-card">
+    <article class="article-card" data-cat="vpn">
       <a href="mullvad-vs-nordvpn-vs-proton-vpn.html">
-        <span class="tag">🌍 Comparatif VPN</span>
-        <h3>Mullvad vs NordVPN vs Proton VPN : le comparatif honnête 2026</h3>
-        <p>Lequel pour quoi, pourquoi tu n'as PAS besoin du plus cher.</p>
+        <div class="card-number">03</div>
+        <div class="card-category">Comparatif VPN</div>
+        <h3>Mullvad vs NordVPN vs Proton VPN</h3>
+        <p>Le comparatif honnête 2026. Lequel pour quoi, pourquoi tu n'as PAS besoin du plus cher.</p>
+        <div class="card-cta">Lire →</div>
       </a>
     </article>
 
-    <article class="article-card">
+    <article class="article-card" data-cat="vpn">
       <a href="tor-browser-guide-debutant.html">
-        <span class="tag">🧅 Tor</span>
-        <h3>Tor Browser : guide débutant et les 10 erreurs qui te grillent</h3>
-        <p>Ce que Tor fait, ne fait pas, et les conneries qui détruisent ton anonymat.</p>
+        <div class="card-number">04</div>
+        <div class="card-category">Tor · Anonymat</div>
+        <h3>Tor Browser — guide débutant</h3>
+        <p>Ce que Tor fait, ne fait pas, et les 10 erreurs qui détruisent ton anonymat.</p>
+        <div class="card-cta">Lire →</div>
       </a>
     </article>
 
   </div>
+</section>
 
-  <h2>💻 PC &amp; Mac</h2>
+<section class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">Catégorie 03</div>
+      <h2>PC &amp; Mac.</h2>
+    </div>
+    <div class="section-count">02 guides</div>
+  </div>
+
   <div class="article-grid">
 
-    <article class="article-card">
+    <article class="article-card" data-cat="pc">
       <a href="pc-windows-prive-guide-2026.html">
-        <span class="tag">💻 Hardening PC</span>
-        <h3>Configurer un PC Windows 100 % privé en 2 heures</h3>
-        <p>Bitwarden, Mullvad, VeraCrypt, télémétrie Windows désactivée. Checklist complet.</p>
+        <div class="card-number">05</div>
+        <div class="card-category">Hardening · Windows</div>
+        <h3>PC Windows 100% privé en 2 h</h3>
+        <p>Bitwarden, Mullvad, VeraCrypt, télémétrie Windows désactivée. Checklist complète.</p>
+        <div class="card-cta">Lire →</div>
       </a>
     </article>
 
-    <article class="article-card">
+    <article class="article-card" data-cat="pc">
       <a href="mac-securise-prive-guide-2026.html">
-        <span class="tag">🍎 Hardening Mac</span>
-        <h3>Configurer un Mac 100 % privé en 2 heures</h3>
-        <p>FileVault, Lockdown Mode, Privacy, télémétrie Apple, VPN, password manager. Checklist macOS.</p>
+        <div class="card-number">06</div>
+        <div class="card-category">Hardening · macOS</div>
+        <h3>Mac 100% privé en 2 h</h3>
+        <p>FileVault, Lockdown Mode, télémétrie Apple, VPN, password manager. Checklist macOS.</p>
+        <div class="card-cta">Lire →</div>
       </a>
     </article>
 
   </div>
+</section>
 
-  <h2>🔐 Mots de passe</h2>
+<section class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">Catégorie 04</div>
+      <h2>Mots de passe &amp; chiffrement.</h2>
+    </div>
+    <div class="section-count">02 guides</div>
+  </div>
+
   <div class="article-grid">
 
-    <article class="article-card">
+    <article class="article-card" data-cat="crypto">
       <a href="bitwarden-tutoriel-complet-2026.html">
-        <span class="tag">🔐 Mots de passe</span>
-        <h3>Bitwarden : le tutoriel complet 2026 — du compte aux passkeys</h3>
-        <p>Configurer Bitwarden de A à Z. Mot de passe maître, 2FA, import depuis Chrome, passkeys.</p>
+        <div class="card-number">07</div>
+        <div class="card-category">Password manager</div>
+        <h3>Bitwarden — tutoriel complet 2026</h3>
+        <p>Du compte aux passkeys. Mot de passe maître, 2FA, import depuis Chrome.</p>
+        <div class="card-cta">Lire →</div>
       </a>
     </article>
 
-  </div>
-
-  <h2>🔒 Chiffrement</h2>
-  <div class="article-grid">
-
-    <article class="article-card">
+    <article class="article-card" data-cat="crypto">
       <a href="chiffrer-disque-externe-veracrypt.html">
-        <span class="tag">🔒 Chiffrement</span>
-        <h3>Chiffrer un disque externe avec VeraCrypt en 10 min</h3>
-        <p>Tutoriel pas-à-pas pour rendre une clé USB / disque externe inviolable. Gratuit, open source.</p>
+        <div class="card-number">08</div>
+        <div class="card-category">Chiffrement</div>
+        <h3>Chiffrer un disque avec VeraCrypt</h3>
+        <p>Tutoriel pas-à-pas pour rendre une clé USB / disque externe inviolable. En 10 minutes.</p>
+        <div class="card-cta">Lire →</div>
       </a>
     </article>
 
   </div>
+</section>
 
-  <h2>💬 Messageries</h2>
+<section class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">Catégorie 05</div>
+      <h2>Messageries.</h2>
+    </div>
+    <div class="section-count">01 guide</div>
+  </div>
+
   <div class="article-grid">
 
-    <article class="article-card">
+    <article class="article-card" data-cat="msg">
       <a href="signal-vs-whatsapp-vs-telegram.html">
-        <span class="tag">💬 Messageries</span>
-        <h3>Signal vs WhatsApp vs Telegram : quelle messagerie en 2026</h3>
-        <p>Comparatif technique des 3 messageries grand public. Chiffrement, métadonnées, recommandation par profil.</p>
+        <div class="card-number">09</div>
+        <div class="card-category">Messageries · Comparatif</div>
+        <h3>Signal vs WhatsApp vs Telegram</h3>
+        <p>Comparatif technique des 3 messageries grand public. Chiffrement, métadonnées, reco par profil.</p>
+        <div class="card-cta">Lire →</div>
       </a>
     </article>
 
   </div>
+</section>
 
-  <section class="newsletter" id="newsletter">
-    <h3>📬 1 email par semaine. Aucun spam, désinscription en 1 clic.</h3>
-    <p>Reçois les nouveaux guides + des astuces concrètes pour ta vie privée numérique.</p>
+<section class="newsletter" id="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-eyebrow">Hebdo · Aucun spam</div>
+    <h2>1 email. 1 fois par semaine.</h2>
+    <p>Les nouveaux guides + des astuces concrètes pour ta vie privée numérique. Désinscription en 1 clic.</p>
     <form action="https://buttondown.com/api/emails/embed-subscribe/privezone" method="post" class="embeddable-buttondown-form">
       <input type="email" name="email" placeholder="ton@email.com" required aria-label="Email">
-      <button type="submit" class="btn">S'inscrire</button>
+      <button type="submit">S'inscrire</button>
     </form>
-    <p style="font-size:0.82rem;margin-top:14px;color:var(--text-dim);">Préfères-tu le <a href="/rss.xml">flux RSS</a> ? Ou écris directement à <a href="mailto:mrprobean@proton.me?subject=Contact%20Priv%C3%A9Zone">mrprobean@proton.me</a></p>
-  </section>
-
-</main>
+  </div>
+</section>
 
 <footer>
-  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit.</p>
+  <div>© 2026 PrivéZone · Sans tracking · Sans cookies</div>
   <div class="footer-links">
     <a href="/about.html">À propos</a>
-    <a href="/articles/">Tous les articles</a>
-    <a href="/rss.xml">Flux RSS</a>
-    <a href="mailto:mrprobean@proton.me?subject=Contact%20Priv%C3%A9Zone">Contact</a>
+    <a href="/articles/">Articles</a>
+    <a href="/rss.xml">RSS</a>
+    <a href="mailto:mrprobean@proton.me">Contact</a>
   </div>
 </footer>
-
-<script src="/script.js" defer></script>
 
 </body>
 </html>

@@ -5,11 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mullvad vs NordVPN vs Proton VPN : comparatif honnête 2026 | PrivéZone</title>
 <meta name="description" content="J'ai utilisé les trois pendant des mois. Lequel pour quoi, prix réels, vraie vitesse, vraie anonymat. Et le piège du Lockdown mode qui te coupe d'internet.">
-<meta name="theme-color" content="#7c5cff">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style-editorial.css">
 <meta property="og:title" content="Mullvad vs NordVPN vs Proton VPN : comparatif honnête 2026">
-<meta property="og:description" content="Test réel après plusieurs mois d'utilisation. Lequel choisir selon ton vrai besoin, et pourquoi tu n'as probablement pas besoin du plus cher.">
+<meta property="og:description" content="Test réel après plusieurs mois d'utilisation. Lequel choisir selon ton vrai besoin.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://privezone.pages.dev/articles/mullvad-vs-nordvpn-vs-proton-vpn.html">
 <meta property="og:image" content="https://privezone.pages.dev/og-image.svg">
@@ -29,212 +32,230 @@
   "inLanguage": "fr-FR"
 }
 </script>
+<style>:root { --c-accent: var(--c-vpn); }</style>
 </head>
-<body>
+<body class="article-page">
 
 <nav>
   <div class="nav-container">
-    <a href="/" class="logo"><span class="logo-icon" aria-hidden="true"></span>Privé<span>Zone</span></a>
+    <a href="/" class="logo">PRIVÉ<span>ZONE</span></a>
     <div class="nav-links">
-      <a href="/articles/">Articles</a>
+      <a href="/#guides">Guides</a>
+      <a href="/articles/">Tous</a>
       <a href="/about.html">À propos</a>
     </div>
   </div>
 </nav>
 
-<main>
+<header class="article-hero">
+  <div class="eyebrow">03 · Comparatif VPN</div>
+  <h1>Mullvad vs Nord<br>vs Proton.</h1>
+  <p class="lead">Test réel après plusieurs mois. Lequel choisir selon ton vrai besoin — et pourquoi tu n'as probablement pas besoin du plus cher.</p>
+  <div class="article-meta">
+    <span><strong>10 MIN</strong> · LECTURE</span>
+    <span><strong>26 MAI 2026</strong> · PUBLIÉ</span>
+    <span><strong>MÀJ</strong> · 27 MAI</span>
+  </div>
+</header>
 
-  <article>
+<article class="article-body">
 
-    <header class="article-header">
-      <p class="article-meta">
-        <span class="meta-item">🌍 Comparatif VPN</span>
-        <span class="meta-dot"></span>
-        <span class="meta-item">⏱️ 10 min de lecture</span>
-        <span class="meta-dot"></span>
-        <span class="meta-item">📅 Publié le 26 mai 2026</span>
-        <span class="article-updated">Mis à jour le 27 mai 2026</span>
-      </p>
-      <h1>Mullvad vs NordVPN vs Proton VPN : le comparatif honnête de 2026</h1>
-      <p class="subtitle">Test réel après plusieurs mois d'utilisation. Lequel choisir selon ton vrai besoin — et pourquoi tu n'as probablement pas besoin du plus cher.</p>
-    </header>
+  <p>Avant <em>« lequel choisir »</em>, la vraie question : <strong>tu veux un VPN pour quoi exactement ?</strong> La réponse change tout. Les trois VPN du titre sont tous bons, mais pour des usages différents.</p>
 
-    <p>Avant de répondre à <em>« lequel choisir »</em>, voilà la vraie question : <strong>tu veux un VPN pour quoi exactement ?</strong> La réponse change tout. Les trois VPN du titre sont tous bons, mais pour des usages différents.</p>
+  <h2>TL;DR — matrice de décision.</h2>
 
-    <h2>TL;DR — la matrice de décision</h2>
+  <table style="width:100%; border-collapse:collapse; margin:32px 0; font-size:0.95rem;">
+    <tr style="border-bottom: 1px solid var(--border);">
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">Ton besoin</th>
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">Choix</th>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;">Vie privée maximale, anonymat fort</td>
+      <td style="padding:14px 12px;"><strong style="color:var(--c-vpn);">Mullvad</strong></td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;">Streaming international (Netflix US, BBC iPlayer…)</td>
+      <td style="padding:14px 12px;"><strong style="color:var(--c-brand);">NordVPN</strong></td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;">Écosystème complet (mail + VPN + cloud + pass)</td>
+      <td style="padding:14px 12px;"><strong style="color:var(--c-pc);">Proton VPN</strong></td>
+    </tr>
+    <tr>
+      <td style="padding:14px 12px;">Gratuit pour usage occasionnel</td>
+      <td style="padding:14px 12px;"><strong style="color:var(--c-pc);">Proton VPN Free</strong></td>
+    </tr>
+  </table>
 
-    <table style="width:100%; border-collapse:collapse; margin:24px 0;">
-      <tr style="border-bottom: 1px solid var(--border);">
-        <th style="text-align:left; padding:10px 8px;">Ton besoin</th>
-        <th style="text-align:left; padding:10px 8px;">Choix</th>
-      </tr>
-      <tr style="border-bottom: 1px solid var(--border);">
-        <td style="padding:10px 8px;">Vie privée maximale, anonymat fort</td>
-        <td style="padding:10px 8px;"><strong>Mullvad</strong></td>
-      </tr>
-      <tr style="border-bottom: 1px solid var(--border);">
-        <td style="padding:10px 8px;">Streaming international (Netflix US, BBC iPlayer…)</td>
-        <td style="padding:10px 8px;"><strong>NordVPN</strong> ou <strong>ExpressVPN</strong></td>
-      </tr>
-      <tr style="border-bottom: 1px solid var(--border);">
-        <td style="padding:10px 8px;">Écosystème complet (mail + VPN + cloud + pass)</td>
-        <td style="padding:10px 8px;"><strong>Proton VPN</strong></td>
-      </tr>
-      <tr>
-        <td style="padding:10px 8px;">Gratuit pour usage occasionnel</td>
-        <td style="padding:10px 8px;"><strong>Proton VPN Free</strong></td>
-      </tr>
-    </table>
+  <h2>Mullvad — le VPN des chercheurs en sécu.</h2>
 
-    <h2>Mullvad — le VPN des chercheurs en sécurité</h2>
+  <p>Mullvad est un VPN suédois fondé en 2009. Sa particularité : <strong>tu n'as pas de compte au sens classique</strong>. Pas d'email, pas de mot de passe — juste un numéro de compte à 16 chiffres généré aléatoirement. Tu peux même payer en cash, par courrier, dans une enveloppe anonyme.</p>
 
-    <p>Mullvad est un VPN suédois fondé en 2009. Sa particularité : <strong>tu n'as pas de compte au sens classique</strong>. Pas d'email, pas de mot de passe — juste un numéro de compte à 16 chiffres généré aléatoirement. Tu peux même payer en cash, par courrier, dans une enveloppe anonyme.</p>
+  <h3>Points forts</h3>
+  <ul>
+    <li>Prix <strong>fixe</strong> : 5 € / mois, point. Pas de "promotion 2 ans", pas d'embrouille marketing.</li>
+    <li>WireGuard natif, ultra-rapide</li>
+    <li>Politique <em>no logs</em> audités plusieurs fois</li>
+    <li>Fonctionnalités avancées : <strong>DAITA</strong>, <strong>Multihop</strong>, <strong>Quantum-resistant tunnel</strong></li>
+    <li>App open source, audits réguliers</li>
+  </ul>
 
-    <p><strong>Points forts :</strong></p>
-    <ul>
-      <li>Prix <strong>fixe</strong> : 5 € / mois, point. Pas de "promotion 2 ans", pas d'embrouille marketing.</li>
-      <li>WireGuard natif, ultra-rapide</li>
-      <li>Politique <em>no logs</em> audités plusieurs fois</li>
-      <li>Fonctionnalités avancées : <strong>DAITA</strong> (anti-analyse de trafic par IA), <strong>Multihop</strong> (2 serveurs en cascade), <strong>Quantum-resistant tunnel</strong></li>
-      <li>App open source, audits réguliers</li>
-    </ul>
+  <h3>Points faibles</h3>
+  <ul>
+    <li>~50 pays seulement (vs 90+ pour Nord/Express)</li>
+    <li>Bloqué par Netflix, Disney+, BBC iPlayer la plupart du temps</li>
+    <li>Interface plus austère que les concurrents</li>
+  </ul>
 
-    <p><strong>Points faibles :</strong></p>
-    <ul>
-      <li>~50 pays seulement (vs 90+ pour Nord/Express). Si tu veux te connecter en Mongolie, t'auras pas.</li>
-      <li>Bloqué par Netflix, Disney+, BBC iPlayer la plupart du temps</li>
-      <li>Interface plus austère que les concurrents</li>
-    </ul>
+  <div class="callout warn">
+    <div class="callout-eyebrow">⚠ Piège · Lockdown mode</div>
+    <p>Mullvad propose une option <em>Lockdown mode</em> qui bloque <strong>tout trafic internet</strong> si le VPN se déconnecte. Excellent pour l'anonymat — mais si le VPN bugge et n'arrive pas à se reconnecter, tu perds internet jusqu'à ce que tu désactives manuellement le Lockdown. Ponctuel oui, quotidien non.</p>
+  </div>
 
-    <div class="callout warning">
-      <p>⚠️ <strong>Le piège du Lockdown mode</strong> : Mullvad propose une option <em>Lockdown mode</em> qui bloque <strong>tout trafic internet</strong> si le VPN se déconnecte. Excellent pour l'anonymat — mais si le VPN bugge et n'arrive pas à se reconnecter, tu perds internet jusqu'à ce que tu désactives manuellement le Lockdown. Activable ponctuellement, mais à éviter au quotidien.</p>
-    </div>
+  <div class="callout success">
+    <div class="callout-eyebrow">⭐ Tester Mullvad</div>
+    <p>5 € / mois fixe, paiement crypto/cash anonyme possible, 30 jours satisfait ou remboursé. Le seul VPN qui prend ta vie privée au sérieux jusque dans le modèle économique.</p>
+    <p style="margin-top:16px;"><a href="https://mullvad.net/" rel="noopener noreferrer">Voir Mullvad →</a></p>
+  </div>
 
-    <div class="affiliate-cta">
-      <h4>🛡️ Tester Mullvad VPN</h4>
-      <p>5 € / mois, paiement crypto/cash anonyme possible, 30 jours satisfait ou remboursé. Le seul VPN qui prend ta vie privée au sérieux jusque dans le modèle économique.</p>
-      <a href="https://mullvad.net/" class="btn" rel="noopener noreferrer">Voir Mullvad</a>
-    </div>
+  <h2>Proton VPN — l'écosystème intégré.</h2>
 
-    <h2>Proton VPN — l'écosystème intégré</h2>
+  <p>Proton est suisse, et propose <strong>tout l'écosystème vie privée</strong> : mail, VPN, calendar, drive, password manager. Si tu utilises déjà ProtonMail, prendre Proton VPN te donne un seul compte pour tout.</p>
 
-    <p>Proton est suisse, et propose <strong>tout l'écosystème vie privée</strong> : mail, VPN, calendar, drive, password manager. Si tu utilises déjà ProtonMail, prendre Proton VPN te donne un seul compte pour tout.</p>
+  <h3>Points forts</h3>
+  <ul>
+    <li><strong>Vraie version gratuite</strong> sans limite de data, sans pub (3 pays seulement)</li>
+    <li>Suisse → lois sur la vie privée parmi les plus strictes au monde</li>
+    <li>Apps open source, audits</li>
+    <li>Plan Unlimited (10 €/mois) inclut mail, drive, VPN, password manager, calendrier</li>
+    <li>Bonne vitesse en plans payants</li>
+  </ul>
 
-    <p><strong>Points forts :</strong></p>
-    <ul>
-      <li><strong>Vraie version gratuite</strong> sans limite de data, sans pub (3 pays seulement)</li>
-      <li>Suisse → lois sur la vie privée parmi les plus strictes au monde</li>
-      <li>Apps open source, audits</li>
-      <li>Plan Unlimited (10 €/mois) inclut mail, drive, VPN, password manager, calendrier — bonne valeur si tu veux tout sous un toit</li>
-      <li>Bonne vitesse en plans payants</li>
-    </ul>
+  <h3>Points faibles</h3>
+  <ul>
+    <li>Compte lié à un email (donc moins anonyme que Mullvad)</li>
+    <li>Plan VPN seul (10 €/mois) plus cher que Mullvad pour des fonctionnalités similaires</li>
+  </ul>
 
-    <p><strong>Points faibles :</strong></p>
-    <ul>
-      <li>Compte lié à un email (donc moins anonyme que Mullvad)</li>
-      <li>Plan VPN seul (10 €/mois) plus cher que Mullvad pour des fonctionnalités similaires</li>
-    </ul>
+  <div class="callout tip">
+    <div class="callout-eyebrow">📧 Proton — écosystème complet</div>
+    <p>Si tu veux tout au même endroit (mail chiffré + VPN + drive + pass + agenda), Proton Unlimited à 10 €/mois est imbattable en rapport fonctionnalités/prix. Et leur version gratuite suffit pour beaucoup.</p>
+    <p style="margin-top:16px;"><a href="https://proton.me/" rel="noopener noreferrer">Voir Proton →</a></p>
+  </div>
 
-    <div class="affiliate-cta">
-      <h4>📧 Proton — l'écosystème complet</h4>
-      <p>Si tu veux tout au même endroit (mail chiffré + VPN + drive + pass + agenda), Proton Unlimited à 10 €/mois est imbattable en rapport fonctionnalités/prix. Et leur version gratuite suffit pour beaucoup.</p>
-      <a href="https://proton.me/" class="btn" rel="noopener noreferrer">Voir Proton</a>
-    </div>
+  <h2>NordVPN — streaming et simplicité.</h2>
 
-    <h2>NordVPN — pour le streaming et la simplicité</h2>
+  <p>Le plus connu, le plus marketé. Si tu veux juste regarder Netflix US ou BBC iPlayer depuis chez toi, Nord est probablement ton meilleur choix.</p>
 
-    <p>Le plus connu, le plus marketé. Si tu veux juste regarder Netflix US ou BBC iPlayer depuis chez toi, Nord est probablement ton meilleur choix.</p>
+  <h3>Points forts</h3>
+  <ul>
+    <li>~110 pays disponibles</li>
+    <li>Excellent pour le streaming (Netflix US, Disney+, Hulu, BBC iPlayer)</li>
+    <li>Interface jolie et facile</li>
+    <li>Threat Protection inclus (anti-malware DNS)</li>
+    <li>Prix attractif sur engagement 2 ans (~3 €/mois)</li>
+  </ul>
 
-    <p><strong>Points forts :</strong></p>
-    <ul>
-      <li>~110 pays disponibles</li>
-      <li>Excellent pour le streaming (Netflix US, Disney+, Hulu, BBC iPlayer débloqués la plupart du temps)</li>
-      <li>Interface jolie et facile</li>
-      <li>Threat Protection inclus (anti-malware DNS)</li>
-      <li>Prix attractif sur engagement 2 ans (~3 €/mois — mais attention au prix réel à 12 €/mois si tu prends mensuel)</li>
-    </ul>
+  <h3>Points faibles</h3>
+  <ul>
+    <li>Compte basé sur Panama</li>
+    <li>Apps closed-source</li>
+    <li>Marketing TRÈS agressif (les fameuses "promotions 80 %")</li>
+    <li>Threat Protection peut interférer avec WARP/d'autres outils DNS</li>
+  </ul>
 
-    <p><strong>Points faibles :</strong></p>
-    <ul>
-      <li>Compte basé sur Panama (mieux que les pays "5/9/14 eyes" mais pas Suède/Suisse)</li>
-      <li>Apps closed-source</li>
-      <li>Marketing TRÈS agressif (les fameuses "promotions 80 %" qui sont en fait les prix normaux)</li>
-      <li>Threat Protection peut interférer avec WARP/d'autres outils DNS</li>
-    </ul>
+  <div class="callout success">
+    <div class="callout-eyebrow">🎬 Offre NordVPN · Streaming</div>
+    <p>110+ pays, Netflix US/Disney+/BBC iPlayer débloqués la plupart du temps, Threat Protection inclus. Engagement 2 ans pour le meilleur prix (~3 €/mois), satisfait ou remboursé 30 jours.</p>
+    <p style="margin-top:16px;"><a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored">Voir l'offre NordVPN →</a></p>
+  </div>
 
-    <div class="affiliate-cta">
-      <h4>🎬 Tester NordVPN — l'option streaming &amp; multi-pays</h4>
-      <p>110+ pays, Netflix US/Disney+/BBC iPlayer débloqués la plupart du temps, Threat Protection inclus. Engagement 2 ans pour le meilleur prix (~3 €/mois), satisfait ou remboursé 30 jours.</p>
-      <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" class="btn" rel="noopener noreferrer sponsored">Voir l'offre NordVPN</a>
-    </div>
+  <h2>Le vrai test : la vitesse.</h2>
 
-    <h2>Le vrai test : la vitesse</h2>
+  <p>Sur ma fibre 1 Gbps, voilà les vitesses mesurées (serveur le plus proche en France) :</p>
 
-    <p>Sur ma fibre 1 Gbps, voilà les vitesses que je mesure (serveur le plus proche en France) :</p>
-
-    <pre><code>Sans VPN       : 870 Mbps
+  <pre><code>Sans VPN       : 870 Mbps
 Mullvad        : 720 Mbps  (-17%)
 Proton VPN     : 680 Mbps  (-22%)
 NordVPN        : 650 Mbps  (-25%)</code></pre>
 
-    <p>Tous sont rapides. La différence est négligeable en usage réel (navigation, streaming 4K). Si tu fais du téléchargement intensif, Mullvad gagne un peu.</p>
+  <p>Tous sont rapides. La différence est négligeable en usage réel (navigation, streaming 4K). Si tu fais du téléchargement intensif, Mullvad gagne un peu.</p>
 
-    <h2>Combinaison gagnante : Mullvad + Cloudflare WARP</h2>
+  <h2>Ma setup quotidienne.</h2>
 
-    <p>Voilà la setup que j'utilise au quotidien :</p>
+  <p>Voilà la combinaison que j'utilise :</p>
 
-    <ul>
-      <li><strong>Cloudflare WARP + Zero Trust</strong> sur mon iPhone (filtrage anti-menaces, gratuit) — <a href="cloudflare-zero-trust-iphone-2026.html">voir le guide</a></li>
-      <li><strong>Mullvad</strong> sur mon PC Windows (chiffrement total, Lockdown mode quand je suis sur Wi-Fi public)</li>
-      <li>Tor Browser pour la navigation vraiment anonyme</li>
-    </ul>
+  <ul>
+    <li><strong>Cloudflare WARP + Zero Trust</strong> sur mon iPhone (filtrage anti-menaces, gratuit) — <a href="cloudflare-zero-trust-iphone-2026.html">voir le guide</a></li>
+    <li><strong>Mullvad</strong> sur mon PC Windows (chiffrement total, Lockdown ponctuel sur Wi-Fi public)</li>
+    <li>Tor Browser pour la navigation vraiment anonyme</li>
+  </ul>
 
-    <p>Trois outils, trois usages distincts. Pas besoin de payer 4 VPN.</p>
+  <p>Trois outils, trois usages distincts. Pas besoin de payer 4 VPN.</p>
 
-    <h2>Verdict final</h2>
+  <h2>Verdict final.</h2>
 
-    <ul>
-      <li><strong>Si tu débutes</strong> : Proton VPN Free (3 pays, illimité)</li>
-      <li><strong>Si tu veux le meilleur pour la vie privée</strong> : <a href="https://mullvad.net/" rel="noopener noreferrer">Mullvad</a></li>
-      <li><strong>Si tu veux du streaming</strong> : <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored">NordVPN</a> ou ExpressVPN</li>
-      <li><strong>Si tu utilises Proton Mail</strong> : <a href="https://proton.me/" rel="noopener noreferrer">Proton Unlimited</a> (tout en un)</li>
-    </ul>
+  <ul>
+    <li><strong>Si tu débutes</strong> : Proton VPN Free (3 pays, illimité)</li>
+    <li><strong>Si tu veux le meilleur pour la vie privée</strong> : <a href="https://mullvad.net/" rel="noopener noreferrer">Mullvad</a></li>
+    <li><strong>Si tu veux du streaming</strong> : <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored">NordVPN</a></li>
+    <li><strong>Si tu utilises Proton Mail</strong> : <a href="https://proton.me/" rel="noopener noreferrer">Proton Unlimited</a></li>
+  </ul>
 
-    <p>Quel que soit ton choix : <strong>active la 2FA sur ton compte VPN</strong>. Un compte VPN piraté, c'est un attaquant qui peut router ton trafic comme bon lui semble.</p>
+  <p>Quel que soit ton choix : <strong>active la 2FA sur ton compte VPN</strong>. Un compte VPN piraté, c'est un attaquant qui peut router ton trafic comme bon lui semble.</p>
 
-    <section class="related-articles">
-      <h3>Articles similaires</h3>
-      <div class="related-grid">
-        <div class="related-card">
-          <a href="/articles/tor-browser-guide-debutant.html">
-            <span class="tag">🧅 Tor</span>
-            <h4>Tor Browser : guide débutant et les 10 erreurs à éviter</h4>
-          </a>
-        </div>
-        <div class="related-card">
-          <a href="/articles/pc-windows-prive-guide-2026.html">
-            <span class="tag">💻 Hardening PC</span>
-            <h4>Configurer un PC Windows 100 % privé</h4>
-          </a>
-        </div>
-      </div>
-    </section>
+</article>
 
-  </article>
+<section class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">À lire aussi</div>
+      <h2>Articles liés.</h2>
+    </div>
+  </div>
+  <div class="article-grid">
+    <article class="article-card" data-cat="vpn">
+      <a href="tor-browser-guide-debutant.html">
+        <div class="card-number">04</div>
+        <div class="card-category">Tor · Anonymat</div>
+        <h3>Tor Browser — guide débutant</h3>
+        <p>Les 10 erreurs qui détruisent ton anonymat.</p>
+        <div class="card-cta">Lire →</div>
+      </a>
+    </article>
+    <article class="article-card" data-cat="pc">
+      <a href="pc-windows-prive-guide-2026.html">
+        <div class="card-number">05</div>
+        <div class="card-category">Hardening · Windows</div>
+        <h3>PC Windows 100% privé</h3>
+        <p>Checklist complète en 2 heures.</p>
+        <div class="card-cta">Lire →</div>
+      </a>
+    </article>
+  </div>
+</section>
 
-</main>
+<section class="newsletter" id="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-eyebrow">Hebdo · Aucun spam</div>
+    <h2>1 email. 1 fois par semaine.</h2>
+    <p>Les nouveaux guides + des astuces concrètes pour ta vie privée numérique. Désinscription en 1 clic.</p>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/privezone" method="post" class="embeddable-buttondown-form">
+      <input type="email" name="email" placeholder="ton@email.com" required aria-label="Email">
+      <button type="submit">S'inscrire</button>
+    </form>
+  </div>
+</section>
 
 <footer>
-  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit.</p>
+  <div>© 2026 PrivéZone · Sans tracking · Sans cookies</div>
   <div class="footer-links">
     <a href="/about.html">À propos</a>
-    <a href="/articles/">Tous les articles</a>
-    <a href="/rss.xml">Flux RSS</a>
-    <a href="mailto:mrprobean@proton.me?subject=Contact%20Priv%C3%A9Zone">Contact</a>
+    <a href="/articles/">Articles</a>
+    <a href="/rss.xml">RSS</a>
+    <a href="mailto:mrprobean@proton.me">Contact</a>
   </div>
 </footer>
-
-<script src="/script.js" defer></script>
 
 </body>
 </html>

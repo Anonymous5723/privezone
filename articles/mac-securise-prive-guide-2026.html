@@ -4,343 +4,343 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Configurer un Mac 100 % privé en 2 heures (guide 2026) | PrivéZone</title>
-<meta name="description" content="Le guide complet pour transformer ton Mac en forteresse numérique : FileVault, Lockdown Mode, App Privacy, désactivation télémétrie Apple, VPN, password manager. Sans rien casser.">
-<meta name="theme-color" content="#7c5cff">
+<meta name="description" content="FileVault, Lockdown Mode, App Privacy, désactivation télémétrie Apple, VPN, password manager. Le guide complet pour blinder ton Mac sans rien casser.">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/style.css">
-<meta property="og:title" content="Configurer un Mac 100% privé en 2h">
-<meta property="og:description" content="FileVault, Lockdown Mode, Privacy, télémétrie, VPN. Le checklist complet pour blinder ton Mac sans rien casser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style-editorial.css">
+<meta property="og:title" content="Mac 100% privé en 2h">
+<meta property="og:description" content="FileVault, Lockdown Mode, télémétrie Apple, VPN, password manager.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://privezone.pages.dev/articles/mac-securise-prive-guide-2026.html">
 <meta property="og:image" content="https://privezone.pages.dev/og-image.svg">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://privezone.pages.dev/articles/mac-securise-prive-guide-2026.html">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Configurer un Mac 100% privé en 2 heures (guide 2026)",
-  "datePublished": "2026-05-28",
-  "dateModified": "2026-05-28",
-  "author": { "@type": "Person", "name": "PrivéZone" },
-  "publisher": { "@type": "Organization", "name": "PrivéZone", "logo": { "@type": "ImageObject", "url": "https://privezone.pages.dev/favicon.svg" } },
-  "description": "Le guide complet pour transformer ton Mac en forteresse numérique.",
-  "inLanguage": "fr-FR"
-}
-</script>
+<style>:root { --c-accent: var(--c-pc); }</style>
 </head>
-<body>
+<body class="article-page">
 
 <nav>
   <div class="nav-container">
-    <a href="/" class="logo"><span class="logo-icon" aria-hidden="true"></span>Privé<span>Zone</span></a>
+    <a href="/" class="logo">PRIVÉ<span>ZONE</span></a>
     <div class="nav-links">
-      <a href="/articles/">Articles</a>
+      <a href="/#guides">Guides</a>
+      <a href="/articles/">Tous</a>
       <a href="/about.html">À propos</a>
     </div>
   </div>
 </nav>
 
-<main>
+<header class="article-hero">
+  <div class="eyebrow">06 · Hardening · macOS</div>
+  <h1>Mac 100% privé.<br>En 2 heures.</h1>
+  <p class="lead">macOS est meilleur que Windows par défaut, mais loin d'être parfait. Apple collecte beaucoup, et des réglages critiques sont désactivés. Le protocole pour blinder sans rien casser.</p>
+  <div class="article-meta">
+    <span><strong>14 MIN</strong> · LECTURE</span>
+    <span><strong>28 MAI 2026</strong> · PUBLIÉ</span>
+    <span><strong>MÀJ</strong> · 28 MAI</span>
+  </div>
+</header>
 
-  <article>
+<article class="article-body">
 
-    <header class="article-header">
-      <p class="article-meta">
-        <span class="meta-item">🍎 Hardening Mac</span>
-        <span class="meta-dot"></span>
-        <span class="meta-item">⏱️ 14 min de lecture</span>
-        <span class="meta-dot"></span>
-        <span class="meta-item">📅 Publié le 28 mai 2026</span>
-        <span class="article-updated">Mis à jour le 28 mai 2026</span>
-      </p>
-      <h1>Configurer un Mac 100 % privé en 2 heures (guide 2026)</h1>
-      <p class="subtitle">macOS est globalement meilleur que Windows côté vie privée par défaut, mais loin d'être parfait. Apple collecte beaucoup de télémétrie « pour améliorer ses produits », et de nombreux réglages critiques sont désactivés par défaut. Voilà le protocole pour blinder ton Mac sans rien casser de tes usages quotidiens.</p>
-    </header>
+  <p>Ce guide marche pour <strong>macOS Sequoia, Sonoma et Ventura</strong> (macOS 13+). Si tu es sur une version plus ancienne, mets-la à jour d'abord — c'est la première règle de sécurité.</p>
 
-    <p>Ce guide marche pour <strong>macOS Sequoia, Sonoma et Ventura</strong> (macOS 13+). Si tu es sur une version plus ancienne, mets-la à jour d'abord — c'est la première règle de sécurité.</p>
-
-    <h2>Phase 1 — Gestionnaire de mots de passe (15 min)</h2>
-
-    <p>Premier réflexe avant tout le reste. iCloud Keychain (le gestionnaire intégré Apple) est correct mais limité à l'écosystème Apple. Si tu utilises aussi un PC ou Android, ou si tu veux du contrôle total, passe à un vrai gestionnaire multiplateforme.</p>
-
-    <ol>
-      <li>Installe <strong>Bitwarden</strong> depuis le Mac App Store ou <a href="https://bitwarden.com/download/" rel="noopener noreferrer">bitwarden.com/download</a></li>
-      <li>Installe l'<strong>extension Safari/Brave/Firefox</strong></li>
-      <li>Crée ton compte avec un <strong>mot de passe maître long</strong> (25+ caractères, mémorisable)</li>
-      <li>Active la <strong>2FA</strong> sur ton compte Bitwarden (authenticator app + code de secours imprimé)</li>
-      <li>Importe tes mots de passe iCloud Keychain : Préférences Système → Mots de passe → ⋯ → <em>Exporter</em> → CSV → Import dans Bitwarden</li>
-    </ol>
-
-    <p>Pour le tutoriel détaillé, voir <a href="/articles/bitwarden-tutoriel-complet-2026.html">notre guide Bitwarden complet</a>.</p>
-
-    <h2>Phase 2 — FileVault (chiffrement disque complet, 10 min)</h2>
-
-    <p>Sans FileVault activé, si quelqu'un te vole ton Mac, il peut booter depuis une clé USB Linux et lire <strong>tous tes fichiers en clair</strong>. Avec FileVault, c'est mort.</p>
-
-    <p><strong>Sur les Mac récents (Apple Silicon M1/M2/M3/M4)</strong>, FileVault est souvent activé par défaut depuis macOS 12. Mais vérifie quand même :</p>
-
-    <ol>
-      <li>Menu Pomme  → <strong>Réglages Système → Confidentialité et sécurité → FileVault</strong></li>
-      <li>Si tu vois "FileVault est activé pour le disque…" → ✅ tu es protégé</li>
-      <li>Sinon, clique <strong>Activer</strong>
-        <ul>
-          <li>macOS te demande où sauvegarder la clé de récupération : <strong>compte iCloud</strong> (pratique mais Apple a une copie) ou <strong>clé locale</strong> (à imprimer et ranger en sûreté)</li>
-          <li>Pour la paranoia maximale → clé locale + impression papier rangée dans un coffre</li>
-        </ul>
-      </li>
-      <li>Le chiffrement initial prend quelques heures en arrière-plan (utilisation normale possible pendant ce temps)</li>
-    </ol>
-
-    <div class="callout warning">
-      <p>⚠️ <strong>La clé de récupération est CRITIQUE.</strong> Si tu la perds ET tu oublies ton mot de passe macOS, tes données sont perdues à jamais. Pas de récupération possible — c'est exactement ce qui fait que FileVault est sûr.</p>
+  <div class="step">
+    <div class="step-num">01</div>
+    <div>
+      <h3>Gestionnaire de mots de passe (15 min)</h3>
+      <p>Premier réflexe. iCloud Keychain (le gestionnaire intégré Apple) est correct mais limité à l'écosystème Apple. Si tu utilises aussi un PC ou Android, passe à un gestionnaire multiplateforme.</p>
+      <ol>
+        <li>Installe <strong>Bitwarden</strong> depuis le Mac App Store</li>
+        <li>Installe l'<strong>extension Safari/Brave/Firefox</strong></li>
+        <li>Crée ton compte avec un <strong>mot de passe maître long</strong> (25+ caractères)</li>
+        <li>Active la <strong>2FA</strong> + code de secours imprimé</li>
+        <li>Importe iCloud Keychain : Préférences → Mots de passe → ⋯ → Exporter CSV → Import Bitwarden</li>
+      </ol>
+      <p>Tutoriel détaillé : <a href="bitwarden-tutoriel-complet-2026.html">guide Bitwarden complet</a>.</p>
     </div>
+  </div>
 
-    <h2>Phase 3 — Lockdown Mode (mode paranoia, optionnel)</h2>
-
-    <p>Apple a introduit le <strong>Mode Lockdown</strong> en 2022 pour les cibles à haut risque (journalistes, activistes, personnalités). Il <strong>désactive automatiquement</strong> :</p>
-
-    <ul>
-      <li>La plupart des pièces jointes (sauf images)</li>
-      <li>Les liens preview dans Messages</li>
-      <li>Les profils de configuration installables</li>
-      <li>Les connexions par câble quand le Mac est verrouillé</li>
-      <li>FaceTime et appels de numéros inconnus</li>
-    </ul>
-
-    <p>Pour activer (si tu en as besoin) :</p>
-    <p><strong>Réglages Système → Confidentialité et sécurité → Mode isolement (Lockdown Mode)</strong> → Activer</p>
-
-    <p>⚠️ Ce mode <strong>casse beaucoup de fonctionnalités</strong> du quotidien (certains sites web ne marchent plus, certains messages ne s'ouvrent pas). À activer SEULEMENT si tu es une cible spécifique. Pour 99 % des gens, c'est de la sur-protection.</p>
-
-    <h2>Phase 4 — VPN avec kill switch (15 min)</h2>
-
-    <p>Sur Mac, le VPN doit :</p>
-    <ul>
-      <li>Démarrer avec ton Mac</li>
-      <li>Se connecter automatiquement</li>
-      <li>Couper tout trafic si la connexion VPN tombe (kill switch / Lockdown mode)</li>
-    </ul>
-
-    <p>Avec <a href="https://mullvad.net/" rel="noopener noreferrer">Mullvad</a> sur macOS :</p>
-
-    <ul>
-      <li>Téléchargement depuis <em>mullvad.net</em> ou via Homebrew : <code>brew install mullvad-vpn</code></li>
-      <li>Settings → <strong>Launch on start-up : ON</strong></li>
-      <li><strong>Auto-connect : ON</strong></li>
-      <li><strong>Lockdown mode (kill switch) : ON</strong></li>
-      <li>Protocol : <strong>WireGuard</strong></li>
-      <li>DNS content blockers : Ads + Trackers + Malware <strong>ON</strong></li>
-    </ul>
-
-    <p>Test final : <a href="https://mullvad.net/check" rel="noopener noreferrer">mullvad.net/check</a> → trois feux verts.</p>
-
-    <div class="affiliate-cta">
-      <h4>🌍 NordVPN — alternative grand public sur Mac</h4>
-      <p>Si tu veux plus de pays disponibles et un débridage Netflix US / Disney+ / BBC iPlayer, NordVPN est le meilleur compromis. App native macOS, Threat Protection anti-malware DNS intégrée, plans dès ~3 €/mois en 2 ans.</p>
-      <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" class="btn" rel="noopener noreferrer sponsored">Voir l'offre NordVPN</a>
+  <div class="step">
+    <div class="step-num">02</div>
+    <div>
+      <h3>FileVault — chiffrement complet (10 min)</h3>
+      <p>Sans FileVault, si on te vole ton Mac, on peut booter sur clé USB Linux et lire <strong>tous tes fichiers en clair</strong>. Avec FileVault, c'est mort.</p>
+      <p>Sur les Mac Apple Silicon, FileVault est souvent activé par défaut. Vérifie :</p>
+      <ol>
+        <li> → <strong>Réglages Système → Confidentialité et sécurité → FileVault</strong></li>
+        <li>Si "FileVault est activé pour le disque…" → ✓ tu es protégé</li>
+        <li>Sinon, clique <strong>Activer</strong>
+          <ul>
+            <li>Où sauvegarder la clé de récupération : <strong>compte iCloud</strong> (pratique mais Apple a une copie) ou <strong>clé locale</strong> (impression + coffre)</li>
+            <li>Paranoia max → clé locale + impression rangée en sûreté</li>
+          </ul>
+        </li>
+        <li>Chiffrement initial : quelques heures en arrière-plan</li>
+      </ol>
     </div>
+  </div>
 
-    <h2>Phase 5 — Réglages de confidentialité macOS (20 min)</h2>
+  <div class="callout warn">
+    <div class="callout-eyebrow">⚠ La clé de récupération est CRITIQUE</div>
+    <p>Si tu la perds ET tu oublies ton mot de passe macOS, tes données sont perdues à jamais. Pas de récupération possible — c'est exactement ce qui fait que FileVault est sûr.</p>
+  </div>
 
-    <p>C'est la partie la plus longue mais la plus importante. Pomme  → <strong>Réglages Système → Confidentialité et sécurité</strong> → on parcourt chaque section.</p>
-
-    <h3>Localisation</h3>
-    <p>Préférences → <strong>Confidentialité et sécurité → Service de localisation</strong>. Désactive pour toutes les apps qui n'en ont pas besoin (mais garde pour Maps, Météo, Localiser si tu les utilises).</p>
-
-    <h3>Analyse et amélioration</h3>
-    <p><strong>Désactive TOUT</strong> :</p>
-    <ul>
-      <li>Partager les données d'analyse Mac avec Apple → <strong>OFF</strong></li>
-      <li>Améliorer Siri et Dictée → <strong>OFF</strong></li>
-      <li>Partager avec les développeurs d'apps → <strong>OFF</strong></li>
-      <li>Partager avec les iCloud Analytics → <strong>OFF</strong></li>
-    </ul>
-
-    <h3>Publicité Apple</h3>
-    <p><strong>Réglages → Confidentialité et sécurité → Publicité Apple</strong> :</p>
-    <ul>
-      <li>Publicités personnalisées → <strong>OFF</strong></li>
-    </ul>
-
-    <h3>Accessibilité, Micro, Caméra, Photos, Fichiers</h3>
-    <p>Passe en revue chaque app autorisée. <strong>Désactive l'accès</strong> pour celles qui n'en ont pas besoin. Tu peux laisser pour Zoom, WhatsApp, Discord, Photos système, etc.</p>
-
-    <h3>Spotlight Suggestions</h3>
-    <p><strong>Réglages → Spotlight</strong> → décoche :</p>
-    <ul>
-      <li>Suggestions Siri</li>
-      <li>Suggestions Safari</li>
-      <li>Apps web</li>
-    </ul>
-    <p>Ça empêche Spotlight d'envoyer tes recherches à Apple/Bing.</p>
-
-    <h3>Apple ID et iCloud</h3>
-    <p>Réglages → ton nom (en haut) → <strong>iCloud</strong> :</p>
-    <ul>
-      <li>Active la <strong>protection avancée des données (Advanced Data Protection)</strong> → chiffrement de bout en bout pour TOUS tes fichiers iCloud (par défaut, Apple peut lire certains de tes fichiers iCloud)</li>
-      <li>Si tu actives cette option, sauvegarde ta <strong>clé de récupération iCloud</strong> impérativement (imprimée + rangée en sûreté)</li>
-    </ul>
-
-    <h2>Phase 6 — Pare-feu (Firewall)</h2>
-
-    <p>macOS a un pare-feu intégré mais désactivé par défaut. À activer :</p>
-
-    <ol>
-      <li><strong>Réglages → Réseau → Pare-feu</strong></li>
-      <li>Active <strong>Pare-feu</strong></li>
-      <li>Clique <strong>Options</strong> → coche <strong>"Activer le mode furtif"</strong> (rend ton Mac invisible aux scans réseau)</li>
-    </ol>
-
-    <p>Pour aller plus loin avec un pare-feu applicatif (contrôle quelles apps peuvent communiquer) : <strong>Little Snitch</strong> (~45 €, mais c'est l'outil de référence Mac) ou <strong>LuLu</strong> (gratuit, open source, de Patrick Wardle aka Objective-See).</p>
-
-    <h2>Phase 7 — Le navigateur (15 min)</h2>
-
-    <p>Safari sur Mac est <strong>relativement bon</strong> pour la vie privée (Intelligent Tracking Prevention activé par défaut, sans cookies tiers). Mais si tu veux le maximum :</p>
-
-    <h3>Option A — Safari durci (le plus intégré)</h3>
-    <ul>
-      <li>Safari → Réglages → <strong>Confidentialité</strong></li>
-      <li>Cocher <strong>"Bloquer tous les cookies"</strong> (peut casser certains sites)</li>
-      <li><strong>"Masquer mon adresse IP des traceurs"</strong> → ON</li>
-      <li>Désactiver <strong>"Suggestions Safari"</strong></li>
-    </ul>
-
-    <h3>Option B — Brave (recommandé)</h3>
-    <ul>
-      <li>Téléchargement : <a href="https://brave.com/" rel="noopener noreferrer">brave.com</a></li>
-      <li>Bloqueur de pubs et trackers natif et agressif</li>
-      <li>Mode Private avec Tor intégré</li>
-      <li>Fingerprinting protection forte</li>
-    </ul>
-
-    <p>Que tu choisisses Safari ou Brave : <strong>désactive Chrome</strong>. Chrome est l'outil de tracking n°1 de Google.</p>
-
-    <h2>Phase 8 — Désactiver le démarrage automatique des apps</h2>
-
-    <p>Beaucoup d'apps installent des "Login Items" / "Background Items" qui démarrent avec ton Mac sans te le dire.</p>
-
-    <ol>
-      <li><strong>Réglages → Général → Ouverture/Fermeture de session</strong></li>
-      <li>Onglet <strong>"Au démarrage de la session"</strong> : supprime tout ce qui n'est pas absolument nécessaire</li>
-      <li>Onglet <strong>"Autoriser en arrière-plan"</strong> : désactive les apps qui n'ont pas besoin de tourner H24</li>
-    </ol>
-
-    <p>Garde activé : Mullvad VPN, Bitwarden, et c'est tout. Désactive le reste sauf si vraiment indispensable.</p>
-
-    <h2>Phase 9 — Chiffrement de disques externes (VeraCrypt)</h2>
-
-    <p>Pour chiffrer une clé USB ou un disque externe transporté avec le Mac :</p>
-
-    <ul>
-      <li><strong>VeraCrypt</strong> est compatible Mac → voir <a href="/articles/chiffrer-disque-externe-veracrypt.html">notre guide complet VeraCrypt</a></li>
-      <li>Alternative native macOS : <strong>Utilitaire de disque</strong> → <em>Effacer</em> → format <strong>"APFS (chiffré)"</strong> → mot de passe. Plus simple mais ne marche que pour les lecteurs lus depuis un Mac.</li>
-    </ul>
-
-    <h2>Phase 10 — Sauvegarde chiffrée (Time Machine)</h2>
-
-    <p>Si tu utilises Time Machine, active impérativement le chiffrement de la sauvegarde :</p>
-
-    <ol>
-      <li><strong>Réglages → Général → Time Machine</strong></li>
-      <li>Sélectionne ton disque → coche <strong>"Chiffrer la sauvegarde"</strong></li>
-      <li>Définis un mot de passe (différent de ton mot de passe macOS, stocké dans Bitwarden)</li>
-    </ol>
-
-    <p>Sans ça, n'importe qui qui vole ton disque Time Machine récupère toutes tes données.</p>
-
-    <h2>Vérification finale</h2>
-
-    <ol>
-      <li><a href="https://mullvad.net/check" rel="noopener noreferrer">mullvad.net/check</a> → 3 feux verts</li>
-      <li><a href="https://browserleaks.com/webrtc" rel="noopener noreferrer">browserleaks.com/webrtc</a> → aucune IP locale visible</li>
-      <li><a href="https://haveibeenpwned.com" rel="noopener noreferrer">haveibeenpwned.com</a> → vérifie si tes emails apparaissent dans des fuites</li>
-      <li>Dans <strong>Préférences Système → Confidentialité et sécurité → FileVault</strong> → doit être ACTIVÉ</li>
-      <li>Dans <strong>Réseau → Pare-feu</strong> → doit être ACTIVÉ</li>
-    </ol>
-
-    <h2>Différences Mac vs Windows — récap</h2>
-
-    <table>
-      <tr>
-        <th>Aspect</th>
-        <th>Mac (macOS)</th>
-        <th>Windows</th>
-      </tr>
-      <tr>
-        <td>Chiffrement disque</td>
-        <td>FileVault (souvent activé par défaut sur Apple Silicon)</td>
-        <td>BitLocker (Pro) ou VeraCrypt (Home)</td>
-      </tr>
-      <tr>
-        <td>Télémétrie par défaut</td>
-        <td>Modérée (Apple Analytics)</td>
-        <td>Forte (Microsoft Telemetry)</td>
-      </tr>
-      <tr>
-        <td>Pare-feu</td>
-        <td>Désactivé par défaut, à activer</td>
-        <td>Windows Defender Firewall activé</td>
-      </tr>
-      <tr>
-        <td>Anti-malware</td>
-        <td>XProtect intégré (silencieux, efficace)</td>
-        <td>Windows Defender (visible, efficace)</td>
-      </tr>
-      <tr>
-        <td>App Store sandbox</td>
-        <td>Forte (les apps Mac App Store sont isolées)</td>
-        <td>Variable selon l'éditeur</td>
-      </tr>
-      <tr>
-        <td>Spyware grand public</td>
-        <td>Rare</td>
-        <td>Plus courant</td>
-      </tr>
-    </table>
-
-    <p><strong>Bottom line</strong> : macOS est mieux par défaut, mais les deux nécessitent du hardening manuel pour atteindre le niveau "vraiment privé".</p>
-
-    <div class="affiliate-cta">
-      <h4>🛡️ Le combo gagnant à mettre en place ce week-end (Mac)</h4>
-      <p>Pour faire vite : <strong>Bitwarden</strong> (mots de passe) + <strong>Mullvad ou NordVPN</strong> (VPN) + <strong>FileVault activé</strong> + <strong>pare-feu ON</strong>. Tu peux être en mode "Mac vraiment privé" en moins de 2 heures.</p>
-      <a href="https://bitwarden.com/" class="btn" rel="noopener noreferrer">Commencer avec Bitwarden</a>
+  <div class="step">
+    <div class="step-num">03</div>
+    <div>
+      <h3>Lockdown Mode (optionnel)</h3>
+      <p>Apple a introduit le <strong>Mode Lockdown</strong> en 2022 pour les cibles à haut risque (journalistes, activistes). Il <strong>désactive automatiquement</strong> :</p>
+      <ul>
+        <li>La plupart des pièces jointes (sauf images)</li>
+        <li>Les liens preview dans Messages</li>
+        <li>Les profils de configuration installables</li>
+        <li>Les connexions par câble quand le Mac est verrouillé</li>
+        <li>FaceTime et appels de numéros inconnus</li>
+      </ul>
+      <p>Activer : <strong>Réglages → Confidentialité et sécurité → Mode isolement</strong> → Activer</p>
+      <p>⚠ Ce mode <strong>casse beaucoup de fonctionnalités</strong>. À activer SEULEMENT si tu es une cible spécifique. Pour 99 % des gens, sur-protection.</p>
     </div>
+  </div>
 
-    <section class="related-articles">
-      <h3>Articles similaires</h3>
-      <div class="related-grid">
-        <div class="related-card">
-          <a href="/articles/pc-windows-prive-guide-2026.html">
-            <span class="tag">💻 Hardening PC</span>
-            <h4>Configurer un PC Windows 100 % privé</h4>
-          </a>
-        </div>
-        <div class="related-card">
-          <a href="/articles/mullvad-vs-nordvpn-vs-proton-vpn.html">
-            <span class="tag">🌍 Comparatif VPN</span>
-            <h4>Mullvad vs NordVPN vs Proton VPN</h4>
-          </a>
-        </div>
-      </div>
-    </section>
+  <div class="step">
+    <div class="step-num">04</div>
+    <div>
+      <h3>VPN avec kill switch (15 min)</h3>
+      <p>Sur Mac, le VPN doit démarrer, se connecter auto, et couper le trafic s'il tombe.</p>
+      <p>Avec <a href="https://mullvad.net/" rel="noopener noreferrer">Mullvad</a> :</p>
+      <ul>
+        <li>Téléchargement depuis <em>mullvad.net</em> ou : <code>brew install mullvad-vpn</code></li>
+        <li>Settings → <strong>Launch on start-up : ON</strong></li>
+        <li><strong>Auto-connect : ON</strong></li>
+        <li><strong>Lockdown mode (kill switch) : ON</strong></li>
+        <li>Protocol : <strong>WireGuard</strong></li>
+        <li>DNS content blockers : Ads + Trackers + Malware <strong>ON</strong></li>
+      </ul>
+      <p>Test final : <a href="https://mullvad.net/check" rel="noopener noreferrer">mullvad.net/check</a> → trois feux verts.</p>
+    </div>
+  </div>
 
-  </article>
+  <div class="callout success">
+    <div class="callout-eyebrow">🌍 NordVPN · Alternative Mac</div>
+    <p>Plus de pays disponibles et débridage Netflix US / Disney+ / BBC iPlayer. App native macOS, Threat Protection anti-malware DNS intégrée, plans dès ~3 €/mois en 2 ans.</p>
+    <p style="margin-top:16px;"><a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored">Voir l'offre NordVPN →</a></p>
+  </div>
 
-</main>
+  <div class="step">
+    <div class="step-num">05</div>
+    <div>
+      <h3>Réglages confidentialité macOS (20 min)</h3>
+      <p>La partie la plus longue mais la plus importante.  → <strong>Réglages Système → Confidentialité et sécurité</strong>.</p>
+
+      <h4>Localisation</h4>
+      <p>Désactive pour toutes les apps qui n'en ont pas besoin (garde Maps, Météo, Localiser si tu les utilises).</p>
+
+      <h4>Analyse et amélioration · TOUT OFF</h4>
+      <ul>
+        <li>Partager les données d'analyse Mac avec Apple → <strong>OFF</strong></li>
+        <li>Améliorer Siri et Dictée → <strong>OFF</strong></li>
+        <li>Partager avec les développeurs d'apps → <strong>OFF</strong></li>
+        <li>iCloud Analytics → <strong>OFF</strong></li>
+      </ul>
+
+      <h4>Publicité Apple</h4>
+      <p>Publicités personnalisées → <strong>OFF</strong></p>
+
+      <h4>Accessibilité, Micro, Caméra, Photos, Fichiers</h4>
+      <p>Désactive l'accès pour les apps qui n'en ont pas besoin.</p>
+
+      <h4>Spotlight</h4>
+      <p>Décoche Suggestions Siri, Suggestions Safari, Apps web. Empêche Spotlight d'envoyer tes recherches.</p>
+
+      <h4>Apple ID et iCloud</h4>
+      <p>Active la <strong>protection avancée des données (Advanced Data Protection)</strong> → chiffrement E2E pour TOUS tes fichiers iCloud. Sauvegarde ta <strong>clé de récupération iCloud</strong>.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">06</div>
+    <div>
+      <h3>Pare-feu</h3>
+      <p>macOS a un pare-feu intégré mais désactivé par défaut.</p>
+      <ol>
+        <li><strong>Réglages → Réseau → Pare-feu</strong></li>
+        <li>Active <strong>Pare-feu</strong></li>
+        <li>Options → coche <strong>"Activer le mode furtif"</strong></li>
+      </ol>
+      <p>Pour aller plus loin : <strong>Little Snitch</strong> (~45 €) ou <strong>LuLu</strong> (gratuit, open source, de Patrick Wardle).</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">07</div>
+    <div>
+      <h3>Le navigateur (15 min)</h3>
+      <p>Safari est <strong>relativement bon</strong> (ITP activé par défaut). Pour le maximum :</p>
+
+      <h4>Option A — Safari durci</h4>
+      <ul>
+        <li>Safari → Réglages → Confidentialité</li>
+        <li><strong>"Bloquer tous les cookies"</strong></li>
+        <li><strong>"Masquer mon adresse IP des traceurs"</strong> → ON</li>
+        <li>Désactiver "Suggestions Safari"</li>
+      </ul>
+
+      <h4>Option B — Brave (recommandé)</h4>
+      <ul>
+        <li>Téléchargement : <a href="https://brave.com/" rel="noopener noreferrer">brave.com</a></li>
+        <li>Bloqueur natif agressif, Tor intégré, fingerprinting protection forte</li>
+      </ul>
+      <p><strong>Désactive Chrome</strong>. Outil de tracking n°1 de Google.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">08</div>
+    <div>
+      <h3>Démarrage automatique des apps</h3>
+      <p>Beaucoup d'apps installent des "Login Items" qui démarrent avec ton Mac sans te le dire.</p>
+      <ol>
+        <li><strong>Réglages → Général → Ouverture/Fermeture de session</strong></li>
+        <li>Onglet <strong>"Au démarrage"</strong> : supprime tout ce qui n'est pas nécessaire</li>
+        <li>Onglet <strong>"Autoriser en arrière-plan"</strong> : désactive ce qui n'a pas besoin de tourner H24</li>
+      </ol>
+      <p>Garde : Mullvad VPN, Bitwarden. Désactive le reste.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">09</div>
+    <div>
+      <h3>Chiffrement disques externes</h3>
+      <ul>
+        <li><strong>VeraCrypt</strong> compatible Mac → <a href="chiffrer-disque-externe-veracrypt.html">guide complet</a></li>
+        <li>Alternative native macOS : <strong>Utilitaire de disque</strong> → Effacer → format <strong>"APFS (chiffré)"</strong> → mot de passe. Plus simple mais ne marche que sur Mac.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">10</div>
+    <div>
+      <h3>Time Machine chiffré</h3>
+      <ol>
+        <li><strong>Réglages → Général → Time Machine</strong></li>
+        <li>Sélectionne ton disque → coche <strong>"Chiffrer la sauvegarde"</strong></li>
+        <li>Définis un mot de passe (différent de macOS, stocké dans Bitwarden)</li>
+      </ol>
+      <p>Sans ça, n'importe qui qui vole ton disque Time Machine récupère tout.</p>
+    </div>
+  </div>
+
+  <h2>Vérification finale.</h2>
+
+  <ol>
+    <li><a href="https://mullvad.net/check" rel="noopener noreferrer">mullvad.net/check</a> → 3 feux verts</li>
+    <li><a href="https://browserleaks.com/webrtc" rel="noopener noreferrer">browserleaks.com/webrtc</a> → aucune IP locale visible</li>
+    <li><a href="https://haveibeenpwned.com" rel="noopener noreferrer">haveibeenpwned.com</a> → emails dans des fuites ?</li>
+    <li>FileVault → ACTIVÉ</li>
+    <li>Pare-feu → ACTIVÉ</li>
+  </ol>
+
+  <h2>Mac vs Windows — récap.</h2>
+
+  <table style="width:100%; border-collapse:collapse; margin:32px 0; font-size:0.92rem;">
+    <tr style="border-bottom: 1px solid var(--border);">
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">Aspect</th>
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">macOS</th>
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">Windows</th>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;">Chiffrement disque</td>
+      <td style="padding:14px 12px;">FileVault (souvent ON par défaut)</td>
+      <td style="padding:14px 12px;">BitLocker (Pro) ou VeraCrypt</td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;">Télémétrie par défaut</td>
+      <td style="padding:14px 12px;">Modérée</td>
+      <td style="padding:14px 12px;">Forte</td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;">Pare-feu</td>
+      <td style="padding:14px 12px;">OFF par défaut</td>
+      <td style="padding:14px 12px;">Defender ON</td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;">Anti-malware</td>
+      <td style="padding:14px 12px;">XProtect intégré</td>
+      <td style="padding:14px 12px;">Windows Defender</td>
+    </tr>
+    <tr>
+      <td style="padding:14px 12px;">Spyware grand public</td>
+      <td style="padding:14px 12px;">Rare</td>
+      <td style="padding:14px 12px;">Plus courant</td>
+    </tr>
+  </table>
+
+  <p><strong>Bottom line</strong> : macOS est mieux par défaut, mais les deux nécessitent du hardening manuel pour atteindre le niveau "vraiment privé".</p>
+
+  <div class="callout tip">
+    <div class="callout-eyebrow">🛡 Combo gagnant Mac · Ce week-end</div>
+    <p>Pour faire vite : <strong>Bitwarden</strong> (mots de passe) + <strong>Mullvad ou NordVPN</strong> + <strong>FileVault ON</strong> + <strong>Pare-feu ON</strong>. Mode "Mac vraiment privé" en moins de 2 heures.</p>
+  </div>
+
+</article>
+
+<section class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">À lire aussi</div>
+      <h2>Articles liés.</h2>
+    </div>
+  </div>
+  <div class="article-grid">
+    <article class="article-card" data-cat="pc">
+      <a href="pc-windows-prive-guide-2026.html">
+        <div class="card-number">05</div>
+        <div class="card-category">Hardening · Windows</div>
+        <h3>PC Windows 100% privé</h3>
+        <p>Checklist complète en 2 heures.</p>
+        <div class="card-cta">Lire →</div>
+      </a>
+    </article>
+    <article class="article-card" data-cat="vpn">
+      <a href="mullvad-vs-nordvpn-vs-proton-vpn.html">
+        <div class="card-number">03</div>
+        <div class="card-category">Comparatif VPN</div>
+        <h3>Mullvad vs NordVPN vs Proton</h3>
+        <p>Le comparatif honnête 2026.</p>
+        <div class="card-cta">Lire →</div>
+      </a>
+    </article>
+  </div>
+</section>
+
+<section class="newsletter" id="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-eyebrow">Hebdo · Aucun spam</div>
+    <h2>1 email. 1 fois par semaine.</h2>
+    <p>Les nouveaux guides + des astuces concrètes pour ta vie privée numérique. Désinscription en 1 clic.</p>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/privezone" method="post" class="embeddable-buttondown-form">
+      <input type="email" name="email" placeholder="ton@email.com" required aria-label="Email">
+      <button type="submit">S'inscrire</button>
+    </form>
+  </div>
+</section>
 
 <footer>
-  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit.</p>
+  <div>© 2026 PrivéZone · Sans tracking · Sans cookies</div>
   <div class="footer-links">
     <a href="/about.html">À propos</a>
-    <a href="/articles/">Tous les articles</a>
-    <a href="/rss.xml">Flux RSS</a>
-    <a href="mailto:mrprobean@proton.me?subject=Contact%20Priv%C3%A9Zone">Contact</a>
+    <a href="/articles/">Articles</a>
+    <a href="/rss.xml">RSS</a>
+    <a href="mailto:mrprobean@proton.me">Contact</a>
   </div>
 </footer>
-
-<script src="/script.js" defer></script>
 
 </body>
 </html>

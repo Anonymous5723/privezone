@@ -3,337 +3,335 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chiffrer un disque externe avec VeraCrypt en 10 min (guide 2026) | PrivéZone</title>
-<meta name="description" content="Tutoriel pas-à-pas pour chiffrer une clé USB ou un disque externe avec VeraCrypt (gratuit, open source). Anti-vol, anti-perte, militaire. 10 minutes chrono.">
-<meta name="theme-color" content="#7c5cff">
+<title>Chiffrer un disque externe avec VeraCrypt en 10 min | PrivéZone</title>
+<meta name="description" content="Tutoriel pas-à-pas pour chiffrer une clé USB ou un disque externe avec VeraCrypt (gratuit, open source). Anti-vol, anti-perte. 10 minutes chrono.">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/style.css">
-<meta property="og:title" content="Chiffrer un disque externe avec VeraCrypt en 10 min">
-<meta property="og:description" content="Tutoriel pas-à-pas pour chiffrer une clé USB ou un disque externe avec VeraCrypt. Anti-vol, anti-perte, gratuit, open source.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style-editorial.css">
+<meta property="og:title" content="Chiffrer un disque avec VeraCrypt en 10 min">
+<meta property="og:description" content="Rendre une clé USB / disque externe inviolable, gratuit, open source.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://privezone.pages.dev/articles/chiffrer-disque-externe-veracrypt.html">
 <meta property="og:image" content="https://privezone.pages.dev/og-image.svg">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://privezone.pages.dev/articles/chiffrer-disque-externe-veracrypt.html">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Chiffrer un disque externe avec VeraCrypt en 10 min",
-  "datePublished": "2026-05-27",
-  "dateModified": "2026-05-27",
-  "author": { "@type": "Person", "name": "PrivéZone" },
-  "publisher": { "@type": "Organization", "name": "PrivéZone", "logo": { "@type": "ImageObject", "url": "https://privezone.pages.dev/favicon.svg" } },
-  "description": "Tutoriel complet pour chiffrer une clé USB ou un disque externe avec VeraCrypt.",
-  "inLanguage": "fr-FR"
-}
-</script>
+<style>:root { --c-accent: var(--c-crypto); }</style>
 </head>
-<body>
+<body class="article-page">
 
 <nav>
   <div class="nav-container">
-    <a href="/" class="logo"><span class="logo-icon" aria-hidden="true"></span>Privé<span>Zone</span></a>
+    <a href="/" class="logo">PRIVÉ<span>ZONE</span></a>
     <div class="nav-links">
-      <a href="/articles/">Articles</a>
+      <a href="/#guides">Guides</a>
+      <a href="/articles/">Tous</a>
       <a href="/about.html">À propos</a>
     </div>
   </div>
 </nav>
 
-<main>
+<header class="article-hero">
+  <div class="eyebrow">08 · Chiffrement</div>
+  <h1>VeraCrypt.<br>Disque chiffré en 10 min.</h1>
+  <p class="lead">Tu transportes des docs sensibles sur clé USB ou disque externe ? Sans chiffrement, n'importe qui le branche → tout est lisible. VeraCrypt rend ton support <strong>inviolable</strong>, gratuitement, en 10 min.</p>
+  <div class="article-meta">
+    <span><strong>9 MIN</strong> · LECTURE</span>
+    <span><strong>27 MAI 2026</strong> · PUBLIÉ</span>
+    <span><strong>MÀJ</strong> · 27 MAI</span>
+  </div>
+</header>
 
-  <article>
+<article class="article-body">
 
-    <header class="article-header">
-      <p class="article-meta">
-        <span class="meta-item">🔒 Chiffrement</span>
-        <span class="meta-dot"></span>
-        <span class="meta-item">⏱️ 9 min de lecture</span>
-        <span class="meta-dot"></span>
-        <span class="meta-item">📅 Publié le 27 mai 2026</span>
-        <span class="article-updated">Mis à jour le 27 mai 2026</span>
-      </p>
-      <h1>Chiffrer un disque externe avec VeraCrypt en 10 minutes (guide 2026)</h1>
-      <p class="subtitle">Tu transportes des docs sensibles sur une clé USB ou un disque externe ? Sans chiffrement, n'importe qui le branche → tout est lisible. VeraCrypt rend ton support <strong>inviolable</strong>, gratuitement, en 10 min. Tutoriel pas-à-pas.</p>
-    </header>
+  <p>Une clé USB perdue, un disque externe volé, un PC pro qui tourne avec tes docs perso… Sans chiffrement, <strong>5 minutes suffisent</strong>. Avec VeraCrypt, c'est mathématiquement impossible — même avec un superordinateur.</p>
 
-    <p>Une clé USB perdue, un disque externe volé, un PC pro qui tourne avec tes docs perso… Sans chiffrement, <strong>5 minutes suffisent à un inconnu</strong> pour récupérer tout ce que tu y avais. Avec VeraCrypt, c'est mathématiquement impossible — même avec un superordinateur, il n'arrivera à rien sans le mot de passe.</p>
+  <p>VeraCrypt c'est <strong>gratuit, open source, audité plusieurs fois</strong>. Successeur officieux du légendaire TrueCrypt. Utilisé par journalistes, militants et pros de l'infosec depuis 10 ans.</p>
 
-    <p>VeraCrypt c'est <strong>gratuit, open source, audité plusieurs fois par des experts indépendants</strong>, et c'est le successeur officieux du légendaire TrueCrypt. C'est l'outil utilisé par les journalistes, les militants et les pros de l'infosec depuis plus de 10 ans.</p>
+  <h2>Les deux modes.</h2>
 
-    <h2>Les deux modes (à choisir avant de commencer)</h2>
+  <table style="width:100%; border-collapse:collapse; margin:32px 0;">
+    <tr style="border-bottom: 1px solid var(--border);">
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">Mode</th>
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">Avantage</th>
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">Inconvénient</th>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;"><strong>Conteneur</strong> (un fichier <code>.hc</code>)</td>
+      <td style="padding:14px 12px;">Mix chiffrés + clair sur le même disque. Portable, déplaçable.</td>
+      <td style="padding:14px 12px;">Taille à choisir à l'avance.</td>
+    </tr>
+    <tr>
+      <td style="padding:14px 12px;"><strong>Disque entier</strong></td>
+      <td style="padding:14px 12px;">Tout protégé d'office.</td>
+      <td style="padding:14px 12px;">Disque illisible sans VeraCrypt + mot de passe.</td>
+    </tr>
+  </table>
 
-    <p>VeraCrypt propose 2 façons de chiffrer ton disque externe :</p>
+  <div class="callout tip">
+    <div class="callout-eyebrow">⭐ Reco · Conteneur</div>
+    <p>Pour un usage perso (clé USB ou disque externe) : choisis le <strong>conteneur chiffré</strong>. Plus souple, déplaçable, et tu peux le sauvegarder comme un simple fichier sur le cloud (chiffré, donc safe).</p>
+  </div>
 
-    <table>
-      <tr>
-        <th>Mode</th>
-        <th>Avantage</th>
-        <th>Inconvénient</th>
-      </tr>
-      <tr>
-        <td><strong>Conteneur chiffré</strong> (un gros fichier <code>.hc</code>)</td>
-        <td>Tu peux mélanger fichiers chiffrés + fichiers en clair sur le même disque. Portable, déplaçable.</td>
-        <td>Tu dois choisir la taille du conteneur à l'avance.</td>
-      </tr>
-      <tr>
-        <td><strong>Disque entier chiffré</strong></td>
-        <td>Tout le disque est protégé d'office. Pas de gestion de taille.</td>
-        <td>Tout le disque devient illisible sans VeraCrypt + mot de passe.</td>
-      </tr>
-    </table>
-
-    <div class="our-pick">
-      <h4>Pour un usage perso (clé USB ou disque externe) : choisis <strong>« conteneur chiffré »</strong></h4>
-      <p>Plus souple, déplaçable d'un disque à l'autre, et tu peux le sauvegarder comme un simple fichier sur le cloud (chiffré, donc safe). C'est ce qu'on va utiliser dans ce tuto.</p>
+  <div class="step">
+    <div class="step-num">01</div>
+    <div>
+      <h3>Télécharger VeraCrypt (2 min)</h3>
+      <ol>
+        <li>Va sur le site officiel : <a href="https://veracrypt.io/" rel="noopener noreferrer">veracrypt.io</a> (UNIQUEMENT ce site — les imitations existent)</li>
+        <li>Télécharge la version Windows (ou Mac/Linux)</li>
+        <li>Installe normalement. Choisis <strong>« Install »</strong> (pas <em>Extract</em>)</li>
+        <li>Ouvre VeraCrypt</li>
+      </ol>
     </div>
+  </div>
 
-    <h2>Étape 1 — Télécharger VeraCrypt (2 min)</h2>
-
-    <ol>
-      <li>Va sur le site officiel : <a href="https://veracrypt.io/" rel="noopener noreferrer">veracrypt.io</a> (et UNIQUEMENT ce site — les imitations existent)</li>
-      <li>Télécharge la version Windows (ou Mac/Linux selon ton OS)</li>
-      <li>Installe normalement (suivant > suivant > installer). Choisis l'option <strong>« Install »</strong> (pas <em>Extract</em>).</li>
-      <li>Ouvre VeraCrypt depuis le menu Démarrer</li>
-    </ol>
-
-    <h2>Étape 2 — Créer un conteneur chiffré (5 min)</h2>
-
-    <ol>
-      <li>Dans VeraCrypt, clique <strong>« Create Volume »</strong></li>
-      <li>Choisis <strong>« Create an encrypted file container »</strong> → Next</li>
-      <li><strong>« Standard VeraCrypt volume »</strong> → Next</li>
-      <li><strong>Volume Location</strong> → clique <em>Select File</em>
-        <ul>
-          <li>Navigue jusqu'à ton disque externe / clé USB</li>
-          <li>Tape un nom de fichier au choix, ex. <code>perso.hc</code> ou <code>important.dat</code> (l'extension n'a pas d'importance)</li>
-          <li><strong>Important</strong> : tu CRÉES un nouveau fichier (n'écrase pas un existant), VeraCrypt te demande confirmation</li>
-        </ul>
-      </li>
-      <li><strong>Encryption Options</strong> → laisse les défauts :
-        <ul>
-          <li>Encryption Algorithm : <strong>AES</strong> (le standard mondial, validé NSA niveau Top Secret)</li>
-          <li>Hash Algorithm : <strong>SHA-512</strong></li>
-          <li>Pour la <strong>paranoia ultime</strong> : choisis <strong>« AES-Twofish-Serpent »</strong> (triple chiffrement en cascade, plus lent mais imbattable)</li>
-        </ul>
-      </li>
-      <li><strong>Volume Size</strong> → choisis selon ton besoin :
-        <ul>
-          <li>5-10 GB pour des documents textes / photos personnelles</li>
-          <li>50+ GB si tu vas y mettre des vidéos / archives lourdes</li>
-          <li>Astuce : choisis un peu plus que ce dont tu as besoin pour éviter d'avoir à recréer</li>
-        </ul>
-      </li>
-      <li><strong>Volume Password</strong> → LE point critique. Voir section suivante.</li>
-    </ol>
-
-    <div class="callout warning">
-      <p>⚠️ <strong>Le mot de passe est la SEULE protection.</strong> Pas de "mot de passe oublié", pas de récupération. Si tu le perds, tes données sont perdues à jamais (c'est aussi ce qui rend VeraCrypt incassable).</p>
+  <div class="step">
+    <div class="step-num">02</div>
+    <div>
+      <h3>Créer un conteneur chiffré (5 min)</h3>
+      <ol>
+        <li>Clique <strong>« Create Volume »</strong></li>
+        <li><strong>« Create an encrypted file container »</strong> → Next</li>
+        <li><strong>« Standard VeraCrypt volume »</strong> → Next</li>
+        <li><strong>Volume Location</strong> → <em>Select File</em> → navigue jusqu'à ton disque externe, tape un nom (ex. <code>perso.hc</code>)</li>
+        <li><strong>Encryption Options</strong> :
+          <ul>
+            <li>Encryption : <strong>AES</strong> (standard mondial)</li>
+            <li>Hash : <strong>SHA-512</strong></li>
+            <li>Paranoia max : <strong>AES-Twofish-Serpent</strong> (triple chiffrement)</li>
+          </ul>
+        </li>
+        <li><strong>Volume Size</strong> :
+          <ul>
+            <li>5-10 GB pour docs textes / photos</li>
+            <li>50+ GB pour vidéos / archives</li>
+          </ul>
+        </li>
+      </ol>
     </div>
+  </div>
 
-    <h2>Étape 3 — Le mot de passe (le plus important)</h2>
+  <div class="callout warn">
+    <div class="callout-eyebrow">⚠ Le mot de passe est la SEULE protection</div>
+    <p>Pas de "mot de passe oublié", pas de récupération. Si tu le perds, tes données sont perdues à jamais (c'est aussi ce qui rend VeraCrypt incassable).</p>
+  </div>
 
-    <p><strong>Règles d'un bon mot de passe VeraCrypt :</strong></p>
-
-    <ul>
-      <li>✅ <strong>20+ caractères minimum</strong> (idéalement 25-30)</li>
-      <li>✅ Mix lettres / chiffres / symboles</li>
-      <li>✅ <strong>Imprévisible</strong> : pas ta date de naissance, pas le nom de ton chien</li>
-      <li>✅ Unique : jamais utilisé ailleurs</li>
-    </ul>
-
-    <p><strong>La méthode qui marche</strong> (à mémoriser ou stocker dans <a href="/articles/bitwarden-tutoriel-complet-2026.html">Bitwarden</a>) :</p>
-
-    <pre><code>Méthode 1 — passphrase (à mémoriser) :
+  <div class="step">
+    <div class="step-num">03</div>
+    <div>
+      <h3>Le mot de passe (le plus important)</h3>
+      <p><strong>Règles :</strong></p>
+      <ul>
+        <li><strong>20+ caractères</strong> minimum (idéalement 25-30)</li>
+        <li>Mix lettres / chiffres / symboles</li>
+        <li><strong>Imprévisible</strong></li>
+        <li>Unique</li>
+      </ul>
+      <p>À mémoriser ou stocker dans <a href="bitwarden-tutoriel-complet-2026.html">Bitwarden</a> :</p>
+      <pre><code>Méthode 1 — passphrase (à mémoriser) :
    muffin-2-volcan-PARAPLUIE-stylo!
 
 Méthode 2 — généré par Bitwarden (stocké dedans) :
    k$Hp9!mZ@2vQrLnE*8wY#cFbX5jT</code></pre>
-
-    <p>Saisis-le deux fois pour confirmer, puis <strong>Next</strong>.</p>
-
-    <h2>Étape 4 — La magie : le formatage (3 min)</h2>
-
-    <ol>
-      <li>VeraCrypt te demande de <strong>bouger ta souris aléatoirement</strong> dans la fenêtre pendant ~30 secondes
-        <ul>
-          <li>C'est pour générer de l'entropie cryptographique (du vrai hasard pour la clé)</li>
-          <li>Plus tu bouges, plus c'est sécurisé</li>
-        </ul>
-      </li>
-      <li>Quand la barre est pleine en bas → clique <strong>Format</strong></li>
-      <li>VeraCrypt formate le conteneur (peut prendre 1-5 min selon la taille choisie)</li>
-      <li>Quand c'est fini → <strong>Exit</strong></li>
-    </ol>
-
-    <p>Ton fichier <code>.hc</code> est créé sur ton disque externe. <strong>Personne ne peut le lire sans le mot de passe</strong>, même s'il vole ton disque.</p>
-
-    <h2>Étape 5 — Utiliser le conteneur (à chaque utilisation)</h2>
-
-    <h3>Pour ouvrir le conteneur :</h3>
-    <ol>
-      <li>Lance VeraCrypt</li>
-      <li>Sélectionne une <strong>lettre de lecteur</strong> libre (genre Z:)</li>
-      <li>Clique <strong>« Select File »</strong> → choisis ton conteneur <code>.hc</code></li>
-      <li>Clique <strong>« Mount »</strong></li>
-      <li>Tape ton mot de passe → OK</li>
-      <li>VeraCrypt monte le conteneur comme un disque normal (visible dans l'Explorateur)</li>
-      <li>Tu peux y copier/lire/modifier des fichiers normalement</li>
-    </ol>
-
-    <h3>Pour fermer le conteneur (IMPORTANT) :</h3>
-    <ol>
-      <li>De retour dans VeraCrypt, sélectionne la lettre de lecteur où il est monté</li>
-      <li>Clique <strong>« Dismount »</strong></li>
-      <li>Le conteneur redevient un fichier illisible</li>
-    </ol>
-
-    <div class="callout danger">
-      <p>🚨 <strong>Démonte TOUJOURS le conteneur</strong> avant de t'éloigner du PC, de débrancher le disque externe, ou d'éteindre ta machine. Sinon les données restent en clair en RAM tant qu'il est monté.</p>
     </div>
+  </div>
 
-    <h2>Cas d'usage concrets</h2>
-
-    <ul>
-      <li><strong>Clé USB de boulot</strong> avec des docs sensibles → si tu la perds dans le train, aucune fuite</li>
-      <li><strong>Disque externe de sauvegarde</strong> de tes photos / documents perso</li>
-      <li><strong>Stockage de tes seed phrases crypto</strong> (en plus de la version papier)</li>
-      <li><strong>Documents juridiques</strong> (testament numérique, contrats…)</li>
-      <li><strong>Archive personnelle sensible</strong> (santé, finances, etc.)</li>
-    </ul>
-
-    <h2>Erreurs classiques à éviter</h2>
-
-    <div class="callout danger">
-      <p><strong>1. Mot de passe trop simple</strong> → un brute force avec GPU casse les mots de passe &lt;15 caractères en quelques heures. Vise 25+.</p>
+  <div class="step">
+    <div class="step-num">04</div>
+    <div>
+      <h3>La magie — le formatage (3 min)</h3>
+      <ol>
+        <li>VeraCrypt te demande de <strong>bouger ta souris aléatoirement</strong> dans la fenêtre pendant ~30 secondes (entropie cryptographique)</li>
+        <li>Quand la barre est pleine → <strong>Format</strong></li>
+        <li>VeraCrypt formate le conteneur (1-5 min selon la taille)</li>
+        <li>Quand c'est fini → <strong>Exit</strong></li>
+      </ol>
+      <p>Ton fichier <code>.hc</code> est créé. <strong>Personne ne peut le lire sans le mot de passe</strong>, même s'il vole ton disque.</p>
     </div>
+  </div>
 
-    <div class="callout danger">
-      <p><strong>2. Mot de passe stocké en clair</strong> sur le même appareil → ridicule. Soit tu le mémorises, soit tu le stockes dans <a href="/articles/bitwarden-tutoriel-complet-2026.html">Bitwarden</a> (chiffré).</p>
+  <div class="step">
+    <div class="step-num">05</div>
+    <div>
+      <h3>Utiliser le conteneur</h3>
+      <h4>Pour ouvrir</h4>
+      <ol>
+        <li>Lance VeraCrypt</li>
+        <li>Sélectionne une <strong>lettre de lecteur</strong> libre (Z:)</li>
+        <li><strong>« Select File »</strong> → choisis ton <code>.hc</code></li>
+        <li><strong>« Mount »</strong> → tape ton mot de passe → OK</li>
+        <li>VeraCrypt monte le conteneur comme un disque normal</li>
+      </ol>
+
+      <h4>Pour fermer (IMPORTANT)</h4>
+      <ol>
+        <li>Sélectionne la lettre de lecteur où il est monté</li>
+        <li><strong>« Dismount »</strong></li>
+        <li>Le conteneur redevient un fichier illisible</li>
+      </ol>
     </div>
+  </div>
 
-    <div class="callout danger">
-      <p><strong>3. Oublier de démonter</strong> → données accessibles en mémoire si quelqu'un accède au PC.</p>
+  <div class="callout danger">
+    <div class="callout-eyebrow">🚨 Démonte TOUJOURS avant de partir</div>
+    <p>Avant de t'éloigner du PC, débrancher le disque externe, ou éteindre ta machine. Sinon les données restent en clair en RAM tant qu'il est monté.</p>
+  </div>
+
+  <h2>Cas d'usage concrets.</h2>
+
+  <ul>
+    <li><strong>Clé USB de boulot</strong> avec docs sensibles → perdue dans le train, aucune fuite</li>
+    <li><strong>Disque externe</strong> de sauvegarde de tes photos / docs perso</li>
+    <li><strong>Stockage de tes seed phrases crypto</strong> (en complément de la version papier)</li>
+    <li><strong>Documents juridiques</strong> (testament numérique, contrats…)</li>
+    <li><strong>Archive personnelle sensible</strong> (santé, finances…)</li>
+  </ul>
+
+  <h2>Erreurs classiques.</h2>
+
+  <div class="callout danger">
+    <div class="callout-eyebrow">Erreur 01</div>
+    <p><strong>Mot de passe trop simple</strong> → brute force GPU casse les MDP &lt;15 caractères en quelques heures. Vise 25+.</p>
+  </div>
+
+  <div class="callout danger">
+    <div class="callout-eyebrow">Erreur 02</div>
+    <p><strong>Mot de passe stocké en clair</strong> sur le même appareil. Soit tu mémorises, soit Bitwarden.</p>
+  </div>
+
+  <div class="callout danger">
+    <div class="callout-eyebrow">Erreur 03</div>
+    <p><strong>Oublier de démonter</strong> → données accessibles en mémoire si quelqu'un accède au PC.</p>
+  </div>
+
+  <div class="callout danger">
+    <div class="callout-eyebrow">Erreur 04</div>
+    <p><strong>Aucune sauvegarde</strong> → si ton disque meurt, tes données aussi. Sauvegarde le fichier <code>.hc</code> ailleurs (autre disque, cloud chiffré).</p>
+  </div>
+
+  <h2>VeraCrypt vs alternatives.</h2>
+
+  <table style="width:100%; border-collapse:collapse; margin:32px 0;">
+    <tr style="border-bottom: 1px solid var(--border);">
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">Outil</th>
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">Open source</th>
+      <th style="text-align:left; padding:14px 12px; text-transform:uppercase; font-size:0.78rem; letter-spacing:0.15em; color:var(--text-dim);">Verdict</th>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;"><strong style="color:var(--c-vpn);">VeraCrypt</strong></td>
+      <td style="padding:14px 12px;">Oui</td>
+      <td style="padding:14px 12px;">⭐ Recommandé</td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;">BitLocker</td>
+      <td style="padding:14px 12px;">Non (Microsoft)</td>
+      <td style="padding:14px 12px;">Propriétaire, suspicions backdoor</td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;">FileVault</td>
+      <td style="padding:14px 12px;">Non (Apple)</td>
+      <td style="padding:14px 12px;">OK disque interne Mac, pas externe</td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding:14px 12px;">Cryptomator</td>
+      <td style="padding:14px 12px;">Oui</td>
+      <td style="padding:14px 12px;">Excellent pour cloud chiffré</td>
+    </tr>
+    <tr>
+      <td style="padding:14px 12px;">Nordlocker</td>
+      <td style="padding:14px 12px;">Non</td>
+      <td style="padding:14px 12px;">Cloud chiffré clé en main</td>
+    </tr>
+  </table>
+
+  <h2>Et pour le cloud — Nordlocker.</h2>
+
+  <p>VeraCrypt c'est <strong>parfait pour le disque local</strong>, mais si tu veux <strong>synchroniser tes fichiers chiffrés sur plusieurs appareils via le cloud</strong>, c'est galère.</p>
+
+  <p><strong>Nordlocker</strong> (NordSecurity) propose une approche simple :</p>
+  <ul>
+    <li>Drag &amp; drop : tu déposes un fichier → chiffré + uploadé</li>
+    <li>Sync multi-appareils (PC, Mac, web)</li>
+    <li>3 GB gratuits</li>
+    <li>Chiffrement end-to-end</li>
+    <li>Closed-source (audité par Cure53 en 2020)</li>
+  </ul>
+
+  <p><strong>Complémentaire à VeraCrypt</strong>, pas un remplacement.</p>
+
+  <div class="callout success">
+    <div class="callout-eyebrow">☁ Tester Nordlocker · Cloud chiffré</div>
+    <p>3 GB gratuits, chiffrement E2E, sync multi-appareils. Plans payants à partir de ~2,99 €/mois pour 500 GB. Idéal pour archiver tes docs sensibles dans le cloud sans craindre les fuites.</p>
+    <p style="margin-top:16px;"><a href="https://go.nordpass.io/aff_c?offer_id=489&aff_id=148974&url_id=9356" rel="noopener noreferrer sponsored">Découvrir Nordlocker →</a></p>
+  </div>
+
+  <h2>En résumé.</h2>
+
+  <ul>
+    <li><strong>10 minutes</strong> de config initiale</li>
+    <li>1 mot de passe fort à mémoriser (ou stocké dans Bitwarden)</li>
+    <li>Toutes tes données sensibles deviennent <strong>inviolables</strong></li>
+    <li>Aucune limite d'usage, gratuit à vie, open source</li>
+  </ul>
+
+  <p>Si tu transportes des docs sensibles sur USB sans chiffrement, tu as <strong>une fuite de données qui marche sur jambes</strong>. VeraCrypt règle ça en 30 minutes.</p>
+
+</article>
+
+<section class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">À lire aussi</div>
+      <h2>Articles liés.</h2>
     </div>
+  </div>
+  <div class="article-grid">
+    <article class="article-card" data-cat="crypto">
+      <a href="bitwarden-tutoriel-complet-2026.html">
+        <div class="card-number">07</div>
+        <div class="card-category">Password manager</div>
+        <h3>Bitwarden — tutoriel complet</h3>
+        <p>Du compte aux passkeys.</p>
+        <div class="card-cta">Lire →</div>
+      </a>
+    </article>
+    <article class="article-card" data-cat="pc">
+      <a href="pc-windows-prive-guide-2026.html">
+        <div class="card-number">05</div>
+        <div class="card-category">Hardening · Windows</div>
+        <h3>PC Windows 100% privé</h3>
+        <p>Checklist complète en 2 heures.</p>
+        <div class="card-cta">Lire →</div>
+      </a>
+    </article>
+  </div>
+</section>
 
-    <div class="callout danger">
-      <p><strong>4. Aucune sauvegarde du conteneur</strong> → si ton disque externe meurt, tes données aussi. Sauvegarde le fichier <code>.hc</code> à un autre endroit (autre disque, cloud chiffré).</p>
-    </div>
-
-    <h2>VeraCrypt vs alternatives</h2>
-
-    <table>
-      <tr>
-        <th>Outil</th>
-        <th>Gratuit ?</th>
-        <th>Open source ?</th>
-        <th>Verdict</th>
-      </tr>
-      <tr>
-        <td><strong>VeraCrypt</strong></td>
-        <td>✅ Oui</td>
-        <td>✅ Oui</td>
-        <td>⭐ Recommandé</td>
-      </tr>
-      <tr>
-        <td>BitLocker (Windows)</td>
-        <td>✅ Windows Pro</td>
-        <td>❌ Non (Microsoft)</td>
-        <td>OK mais propriétaire, des suspicions de backdoor NSA</td>
-      </tr>
-      <tr>
-        <td>FileVault (Mac)</td>
-        <td>✅ Oui</td>
-        <td>❌ Non (Apple)</td>
-        <td>OK pour disque interne Mac, ne marche pas externe</td>
-      </tr>
-      <tr>
-        <td>Cryptomator</td>
-        <td>✅ Oui</td>
-        <td>✅ Oui</td>
-        <td>Excellent pour le cloud (Dropbox/Google Drive chiffrés)</td>
-      </tr>
-      <tr>
-        <td>Nordlocker</td>
-        <td>🟡 Free 3 GB</td>
-        <td>❌ Non (NordSecurity)</td>
-        <td>Cloud chiffré clé en main (drag &amp; drop simple)</td>
-      </tr>
-    </table>
-
-    <h2>Et si tu préfères du cloud chiffré clé en main — Nordlocker</h2>
-
-    <p>VeraCrypt c'est <strong>parfait pour le disque local</strong>, mais si tu veux <strong>synchroniser tes fichiers chiffrés sur plusieurs appareils via le cloud</strong> (PC, smartphone, tablette), c'est un peu galère.</p>
-
-    <p><strong>Nordlocker</strong> (de NordSecurity, les mêmes que NordVPN/NordPass) propose une approche simple :</p>
-    <ul>
-      <li>✅ Drag &amp; drop : tu déposes un fichier → il est chiffré + uploadé</li>
-      <li>✅ Synchronisation multi-appareils (PC, Mac, web)</li>
-      <li>✅ 3 GB gratuits pour tester</li>
-      <li>✅ Chiffrement end-to-end (NordSecurity ne peut pas lire tes fichiers)</li>
-      <li>🟡 Closed-source (mais audité par Cure53 en 2020)</li>
-    </ul>
-
-    <p>C'est <strong>complémentaire à VeraCrypt</strong>, pas un remplacement. VeraCrypt pour les disques externes physiques (clés USB, HDD portables) → Nordlocker pour le cloud sync de tes fichiers sensibles.</p>
-
-    <div class="affiliate-cta">
-      <h4>☁️ Tester Nordlocker — cloud chiffré drag &amp; drop</h4>
-      <p>3 GB gratuits pour tester, chiffrement E2E, sync multi-appareils. Plans payants à partir de ~2,99 €/mois pour 500 GB. Idéal pour archiver tes documents sensibles dans le cloud sans craindre les fuites.</p>
-      <a href="https://go.nordpass.io/aff_c?offer_id=489&aff_id=148974&url_id=9356" class="btn" rel="noopener noreferrer sponsored">Découvrir Nordlocker</a>
-    </div>
-
-    <h2>En résumé</h2>
-
-    <ul>
-      <li><strong>10 minutes</strong> de config initiale</li>
-      <li>1 mot de passe fort à mémoriser (ou stocké dans Bitwarden)</li>
-      <li>Toutes tes données sensibles deviennent <strong>inviolables</strong> sur leur support</li>
-      <li>Aucune limite d'usage, gratuit à vie, open source</li>
-    </ul>
-
-    <p>Si tu transportes des documents sensibles sur USB ou disque externe sans chiffrement, tu as <strong>une fuite de données potentielle qui marche sur jambes</strong>. VeraCrypt règle ça en une demi-heure.</p>
-
-    <div class="affiliate-cta">
-      <h4>🔐 Et pour gérer ton mot de passe VeraCrypt — Bitwarden</h4>
-      <p>Le mot de passe VeraCrypt étant <strong>vital et impossible à récupérer</strong>, stocke-le dans un gestionnaire chiffré comme Bitwarden. Compte gratuit, multiplateforme, recommandé par tous les experts sécu.</p>
-      <a href="https://bitwarden.com/" class="btn" rel="noopener noreferrer">Découvrir Bitwarden</a>
-    </div>
-
-    <section class="related-articles">
-      <h3>Articles similaires</h3>
-      <div class="related-grid">
-        <div class="related-card">
-          <a href="/articles/bitwarden-tutoriel-complet-2026.html">
-            <span class="tag">🔐 Mots de passe</span>
-            <h4>Bitwarden : tutoriel complet 2026</h4>
-          </a>
-        </div>
-        <div class="related-card">
-          <a href="/articles/pc-windows-prive-guide-2026.html">
-            <span class="tag">💻 Hardening PC</span>
-            <h4>Configurer un PC Windows 100 % privé</h4>
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </article>
-
-</main>
+<section class="newsletter" id="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-eyebrow">Hebdo · Aucun spam</div>
+    <h2>1 email. 1 fois par semaine.</h2>
+    <p>Les nouveaux guides + des astuces concrètes pour ta vie privée numérique. Désinscription en 1 clic.</p>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/privezone" method="post" class="embeddable-buttondown-form">
+      <input type="email" name="email" placeholder="ton@email.com" required aria-label="Email">
+      <button type="submit">S'inscrire</button>
+    </form>
+  </div>
+</section>
 
 <footer>
-  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit.</p>
+  <div>© 2026 PrivéZone · Sans tracking · Sans cookies</div>
   <div class="footer-links">
     <a href="/about.html">À propos</a>
-    <a href="/articles/">Tous les articles</a>
-    <a href="/rss.xml">Flux RSS</a>
-    <a href="mailto:mrprobean@proton.me?subject=Contact%20Priv%C3%A9Zone">Contact</a>
+    <a href="/articles/">Articles</a>
+    <a href="/rss.xml">RSS</a>
+    <a href="mailto:mrprobean@proton.me">Contact</a>
   </div>
 </footer>
-
-<script src="/script.js" defer></script>
 
 </body>
 </html>
