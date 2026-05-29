@@ -54,6 +54,53 @@ Objectif : générer du revenu passif via **affiliation tech privacy** (VPN, pas
 - ✅ Footer amélioré avec liens (About, Articles, RSS)
 - ✅ Verif fichier Google : `google3b55a1a91c652abc.html`
 
+### 🔥 Refonte éditoriale v4 (29 mai 2026 — style ORYZO)
+Inspirée d'un site TikTok envoyé par l'user (style ORYZO premium dark).
+
+**Design system** :
+- Fond **noir absolu** `#0a0a0a` (au lieu du bleu nuit `#0a0e1a`)
+- Typo géante **uppercase** (jusqu'à 13rem, weight 900)
+- Police **Inter** chargée depuis Google Fonts
+- **5 couleurs d'accent par catégorie** :
+  - Mobile : `#ff3b30` (rouge)
+  - VPN/Tor : `#00ff88` (vert acid)
+  - PC/Mac : `#5a8bff` (bleu)
+  - Crypto/MDP : `#ffd60a` (or)
+  - Messageries : `#ff2d92` (rose hot)
+  - Brand : `#b794ff` (violet PrivéZone)
+
+**Nouveaux composants CSS** (`style-editorial.css`) :
+- `.hero` — slogan massif type `PRIVÉ. ANONYME. INVIOLABLE.`
+- `.ticker` — barre défilante animée (9 GUIDES · 0 COOKIE · etc.)
+- `.featured` — section vedette avec mockup iPhone
+- `.article-grid` éditorial — full bleed, hover qui révèle l'accent
+- `.step` numéroté 01, 02, 03… avec accent coloré
+- `.callout warn/danger/success/tip` — boîtes colorées avec eyebrow
+- `.iphone-mock` + `.ios-screen` — mockups iPhone CSS pur (blanc Apple + violet)
+- `.desktop-mock` — fenêtre Mac/PC avec traffic lights/title bar/sidebar
+- `.reading-progress` — barre de progression scroll en haut des articles
+- `.back-to-top` — bouton circulaire après 600px de scroll
+
+**Mockups CSS factices intégrés** (zéro image) :
+- Cloudflare : 2 mockups iPhone (app Cloudflare One Agent + résultat trace)
+- Reset-iPhone : 3 mockups iPhone (Réglages, Revolut SMS, Authenticator)
+- Bitwarden : 1 mockup iPhone vault
+- Mullvad : 1 mockup app iPhone (Paris/WireGuard/DAITA)
+- Signal/WhatsApp/Telegram : 3 mockups côte à côte
+- Mac hardening : 1 mockup macOS Réglages Système (FileVault, ADP)
+- PC Windows : 1 mockup Windows 11 Confidentialité (theme dark)
+- VeraCrypt : 1 mockup app desktop (volume monté Z:)
+- Tor Browser : 1 mockup fenêtre avec circuit 3 hops visible
+
+**Pages migrées** :
+- index.html, articles/index.html, about.html, 404.html, merci.html
+- 9 articles tous migrés au format éditorial
+- og-image.svg refait (PRIVÉ. ANONYME. en violet/noir)
+
+**Style legacy conservé** :
+- `style.css` (ancien) — peut servir de référence
+- `index-legacy.html` — backup homepage v3
+
 ### Google Search Console
 - ✅ Propriété vérifiée : `https://privezone.pages.dev`
 - ✅ Sitemap soumis
@@ -242,4 +289,35 @@ L'user a (vérifier au besoin) :
 ---
 
 *Document généré le 27 mai 2026 par Claude pendant la session de l'utilisateur.*
+*Mis à jour le 29 mai 2026 — refonte éditoriale v4 (style ORYZO).*
 *Si tu lis ceci dans une nouvelle session : bienvenue, tu es à jour. Demande à l'user "où en est-on, et qu'est-ce qu'on attaque ?"*
+
+---
+
+## 🆕 Update 29 mai 2026 — Session 3 (refonte éditoriale)
+
+### Ce qui a été fait dans cette session
+1. **Refonte complète design v4** (style ORYZO premium) — voir section ci-dessus
+2. **Mullvad config Paris** (PC + iPhone) pour fixer le blocage Meta/Instagram
+3. **Mullvad split-tunnel PC activé** (Edge bypass VPN)
+4. **Appel Meta envoyé** via accountscenter.meta.com (en attente 24-72h)
+5. **9 articles + homepage + about + 404 + merci** tous migrés
+6. **12 mockups CSS factices** (iPhone + desktop Mac/Windows + Tor + VeraCrypt)
+7. **Reading progress bar + back-to-top** ajoutés
+8. **ffmpeg installé** sur le PC (pour analyser des vidéos de réf design)
+
+### Encore à faire (prochaine session)
+- ☐ **TeamViewer** — user ne reçoit pas l'email de vérif sur "soucoupe media"
+- ☐ **Suivi appel Meta** — réponse sous 24-72h
+- ☐ **Buttondown** — finaliser config + envoyer 1ère newsletter
+- ☐ **Vraies captures iPhone** — l'user pourra remplacer les mockups CSS factices par ses vraies captures plus tard (le composant `.iphone-mock` permet de mettre une `<img>` à la place du contenu CSS)
+- ☐ **Domaine custom** `privezone.fr` (~10€/an Cloudflare Registrar)
+- ☐ **Article #10** — sujet à définir (Top alternatives Google ? Guide Mac M-series ?)
+
+### Comportement Meta/Instagram à surveiller
+L'user est sur Mullvad Paris (PC + iPhone). Split-tunnel PC actif → Edge bypass VPN pour Instagram/Facebook. Appel Meta envoyé. Si refus → repostuler dans 7 jours.
+
+### Notes design éditorial
+- Les couleurs d'accent par catégorie sont définies via `<style>:root { --c-accent: var(--c-vpn); }</style>` au début de chaque article HTML — facile à changer
+- Pour créer un nouvel article : copier le template d'un existant, changer `--c-accent`, le titre, la lead, l'eyebrow
+- Les mockups CSS sont scopés inline (style="...") → ne casse pas si copié-collé
