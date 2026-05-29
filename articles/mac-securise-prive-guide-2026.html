@@ -174,25 +174,25 @@
   <div class="step">
     <div class="step-num">04</div>
     <div>
-      <h3>VPN avec kill switch (15 min)</h3>
+      <h3>VPN avec Kill Switch (15 min)</h3>
       <p>Sur Mac, le VPN doit démarrer, se connecter auto, et couper le trafic s'il tombe.</p>
-      <p>Avec <a href="https://mullvad.net/" rel="noopener noreferrer">Mullvad</a> :</p>
+      <p>Avec <strong>NordVPN</strong> (notre reco) :</p>
       <ul>
-        <li>Téléchargement depuis <em>mullvad.net</em> ou : <code>brew install mullvad-vpn</code></li>
-        <li>Settings → <strong>Launch on start-up : ON</strong></li>
-        <li><strong>Auto-connect : ON</strong></li>
-        <li><strong>Lockdown mode (kill switch) : ON</strong></li>
-        <li>Protocol : <strong>WireGuard</strong></li>
-        <li>DNS content blockers : Ads + Trackers + Malware <strong>ON</strong></li>
+        <li>Téléchargement depuis <em>nordvpn.com/download/mac</em> ou Mac App Store</li>
+        <li>Settings → General → <strong>Launch NordVPN at login : ON</strong></li>
+        <li><strong>Auto-connect : ON</strong> (Fastest server)</li>
+        <li><strong>Kill Switch : ON</strong> (Internet + App-level)</li>
+        <li>Protocol : <strong>NordLynx</strong> (WireGuard optimisé Nord)</li>
+        <li><strong>Threat Protection : ON</strong> (anti-malware + bloqueur trackers/pubs)</li>
       </ul>
-      <p>Test final : <a href="https://mullvad.net/check" rel="noopener noreferrer">mullvad.net/check</a> → trois feux verts.</p>
+      <p>Test final : <a href="https://nordvpn.com/what-is-my-ip/" rel="noopener noreferrer">nordvpn.com/what-is-my-ip</a> → ton IP est bien celle du serveur NordVPN.</p>
     </div>
   </div>
 
   <div class="callout success">
-    <div class="callout-eyebrow">🌍 NordVPN · Alternative Mac</div>
-    <p>Plus de pays disponibles et débridage Netflix US / Disney+ / BBC iPlayer. App native macOS, Threat Protection anti-malware DNS intégrée, plans dès ~3 €/mois en 2 ans.</p>
-    <p style="margin-top:16px;"><a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored">Voir l'offre NordVPN →</a></p>
+    <div class="callout-eyebrow">⭐ Offre du moment · NordVPN -74%</div>
+    <p>110+ pays, Netflix US/Disney+/BBC iPlayer débloqués, Threat Protection intégrée, 6 appareils simultanés, garantie 30 jours. App native macOS Apple Silicon optimisée. Plan 2 ans à <strong>3,09 €/mois</strong> (au lieu de 12,99 €/mois).</p>
+    <p style="margin-top:16px;"><a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored" target="_blank">⭐ Profiter de l'offre →</a></p>
   </div>
 
   <div class="step">
@@ -273,7 +273,7 @@
         <li>Onglet <strong>"Au démarrage"</strong> : supprime tout ce qui n'est pas nécessaire</li>
         <li>Onglet <strong>"Autoriser en arrière-plan"</strong> : désactive ce qui n'a pas besoin de tourner H24</li>
       </ol>
-      <p>Garde : Mullvad VPN, Bitwarden. Désactive le reste.</p>
+      <p>Garde : NordVPN, Bitwarden. Désactive le reste.</p>
     </div>
   </div>
 
@@ -304,7 +304,7 @@
   <h2>Vérification finale.</h2>
 
   <ol>
-    <li><a href="https://mullvad.net/check" rel="noopener noreferrer">mullvad.net/check</a> → 3 feux verts</li>
+    <li><a href="https://nordvpn.com/what-is-my-ip/" rel="noopener noreferrer">nordvpn.com/what-is-my-ip</a> → ton IP est bien celle du serveur VPN choisi</li>
     <li><a href="https://browserleaks.com/webrtc" rel="noopener noreferrer">browserleaks.com/webrtc</a> → aucune IP locale visible</li>
     <li><a href="https://haveibeenpwned.com" rel="noopener noreferrer">haveibeenpwned.com</a> → emails dans des fuites ?</li>
     <li>FileVault → ACTIVÉ</li>
@@ -348,9 +348,10 @@
 
   <p><strong>Bottom line</strong> : macOS est mieux par défaut, mais les deux nécessitent du hardening manuel pour atteindre le niveau "vraiment privé".</p>
 
-  <div class="callout tip">
-    <div class="callout-eyebrow">🛡 Combo gagnant Mac · Ce week-end</div>
-    <p>Pour faire vite : <strong>Bitwarden</strong> (mots de passe) + <strong>Mullvad ou NordVPN</strong> + <strong>FileVault ON</strong> + <strong>Pare-feu ON</strong>. Mode "Mac vraiment privé" en moins de 2 heures.</p>
+  <div class="callout success">
+    <div class="callout-eyebrow">⭐ Combo gagnant Mac · Ce week-end</div>
+    <p><strong>NordVPN</strong> (VPN) + <strong>Bitwarden</strong> (mots de passe, gratuit) + <strong>FileVault ON</strong> + <strong>Pare-feu ON</strong>. Mode "Mac vraiment privé" en moins de 2 heures, pour moins d'un café par mois.</p>
+    <p style="margin-top:16px;"><a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored" target="_blank">⭐ Voir l'offre NordVPN -74% →</a></p>
   </div>
 
 </article>

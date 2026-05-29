@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Configurer un PC Windows 100% privé en 2h | PrivéZone</title>
-<meta name="description" content="Bitwarden, Mullvad, VeraCrypt, désactivation télémétrie Windows… Le checklist complet et testé pour transformer ton PC en forteresse.">
+<meta name="description" content="Bitwarden, NordVPN, VeraCrypt, désactivation télémétrie Windows… Le checklist complet et testé pour transformer ton PC en forteresse.">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style-editorial.css">
 <meta property="og:title" content="PC Windows 100% privé en 2h">
-<meta property="og:description" content="Bitwarden, Mullvad, VeraCrypt, télémétrie Windows désactivée. Checklist complet.">
+<meta property="og:description" content="Bitwarden, NordVPN, VeraCrypt, télémétrie Windows désactivée. Checklist complet.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://privezone.pages.dev/articles/pc-windows-prive-guide-2026.html">
 <meta property="og:image" content="https://privezone.pages.dev/og-image.svg">
@@ -93,29 +93,29 @@
   <div class="step">
     <div class="step-num">03</div>
     <div>
-      <h3>VPN avec Lockdown (15 min)</h3>
+      <h3>VPN avec Kill Switch (15 min)</h3>
       <p>Sur Windows, le VPN doit :</p>
       <ul>
         <li>Démarrer avec Windows</li>
         <li>Se connecter automatiquement</li>
-        <li>Bloquer tout trafic si le VPN tombe (kill switch / Lockdown)</li>
+        <li>Bloquer tout trafic si le VPN tombe (Kill Switch)</li>
       </ul>
-      <p>Avec <a href="https://mullvad.net/" rel="noopener noreferrer">Mullvad</a> :</p>
+      <p>Avec <strong>NordVPN</strong> (notre reco) :</p>
       <ul>
-        <li>Settings → VPN settings → <strong>Launch on start-up : ON</strong></li>
-        <li><strong>Auto-connect : ON</strong></li>
-        <li><strong>Lockdown mode : ON</strong></li>
-        <li>Protocol : <strong>WireGuard</strong></li>
-        <li>DNS content blockers : Ads + Trackers + Malware <strong>ON</strong></li>
+        <li>Settings → Auto-connect → <strong>Launch NordVPN on start-up : ON</strong></li>
+        <li><strong>Auto-connect : ON</strong> (Fastest server)</li>
+        <li><strong>Kill Switch : ON</strong> (Internet-level + App-level)</li>
+        <li>Protocol : <strong>NordLynx</strong> (WireGuard optimisé Nord)</li>
+        <li><strong>Threat Protection : ON</strong> (anti-malware + bloqueur trackers/pubs DNS intégré)</li>
       </ul>
-      <p>Test final : <a href="https://mullvad.net/check" rel="noopener noreferrer">mullvad.net/check</a> → trois feux verts (VPN actif, pas de fuite DNS, pas de fuite WebRTC).</p>
+      <p>Test final : <a href="https://nordvpn.com/what-is-my-ip/" rel="noopener noreferrer">nordvpn.com/what-is-my-ip</a> → vérifie que ton IP est bien celle du serveur NordVPN choisi (pas ta vraie IP).</p>
     </div>
   </div>
 
   <div class="callout success">
-    <div class="callout-eyebrow">🌍 Alternative NordVPN · Multi-pays</div>
-    <p>110+ pays, débloque Netflix US / Disney+ / BBC iPlayer, Threat Protection anti-malware DNS intégré. Bon compromis si tu n'as pas la rigueur "no-account" de Mullvad. Plans à ~3 €/mois en 2 ans.</p>
-    <p style="margin-top:16px;"><a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored">Voir l'offre NordVPN →</a></p>
+    <div class="callout-eyebrow">⭐ Offre du moment · NordVPN -74%</div>
+    <p>110+ pays, Netflix US/Disney+/BBC iPlayer débloqués, Threat Protection anti-malware DNS intégré, 6 appareils simultanés, garantie 30 jours satisfait ou remboursé. Plan 2 ans à <strong>3,09 €/mois</strong> (au lieu de 12,99 €/mois).</p>
+    <p style="margin-top:16px;"><a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored" target="_blank">⭐ Profiter de l'offre →</a></p>
   </div>
 
   <div class="desktop-mock" style="margin: 32px auto;">
@@ -260,16 +260,17 @@
 
   <p>Une fois tout configuré, fais ces 3 tests :</p>
   <ol>
-    <li><a href="https://mullvad.net/check" rel="noopener noreferrer">mullvad.net/check</a> — 3 feux verts</li>
-    <li><a href="https://browserleaks.com/webrtc" rel="noopener noreferrer">browserleaks.com/webrtc</a> — aucune IP locale visible</li>
+    <li><a href="https://nordvpn.com/what-is-my-ip/" rel="noopener noreferrer">nordvpn.com/what-is-my-ip</a> — ton IP est bien celle du serveur VPN, pas la tienne</li>
+    <li><a href="https://browserleaks.com/webrtc" rel="noopener noreferrer">browserleaks.com/webrtc</a> — aucune IP locale visible (pas de fuite WebRTC)</li>
     <li><a href="https://haveibeenpwned.com" rel="noopener noreferrer">haveibeenpwned.com</a> — vérifie si tes emails apparaissent dans des fuites</li>
   </ol>
 
   <p>2 heures, et ton PC est passé de "ouvert par défaut" à "fermé par défaut". Tu n'as pas perdu en confort — mais Microsoft, Google, et les régies publicitaires ne te tracent plus.</p>
 
-  <div class="callout tip">
-    <div class="callout-eyebrow">🛡 Combo gagnant à mettre en place ce week-end</div>
-    <p>Pour faire vite : <strong>Bitwarden</strong> (mots de passe) + <strong>Mullvad</strong> (VPN) + <strong>VeraCrypt</strong> (chiffrement disque). Gratuit pour les 3. Prêt en 1 heure.</p>
+  <div class="callout success">
+    <div class="callout-eyebrow">⭐ Combo gagnant à mettre en place ce week-end</div>
+    <p><strong>NordVPN</strong> (VPN) + <strong>Bitwarden</strong> (mots de passe, gratuit) + <strong>VeraCrypt</strong> (chiffrement disque, gratuit). NordVPN à 3,09 €/mois en 2 ans = moins d'un café par mois pour blinder ton réseau. Prêt en 1 heure.</p>
+    <p style="margin-top:16px;"><a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored" target="_blank">⭐ Voir l'offre NordVPN -74% →</a></p>
   </div>
 
 </article>

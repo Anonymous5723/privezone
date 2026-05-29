@@ -228,20 +228,20 @@
 
   <p>Pour maximum d'anonymat :</p>
   <ol>
-    <li>Active <a href="https://mullvad.net/" rel="noopener noreferrer">Mullvad VPN</a> en premier</li>
+    <li>Active ton VPN en premier (<strong>NordVPN</strong> ou tout autre VPN avec kill switch)</li>
     <li>Puis lance Tor Browser</li>
-    <li>Résultat : ton FAI voit <strong>seulement Mullvad</strong>, jamais Tor. Mullvad voit <strong>du trafic Tor anonyme</strong>, jamais ce que tu fais.</li>
+    <li>Résultat : ton FAI voit <strong>seulement le VPN</strong>, jamais Tor. Le VPN voit <strong>du trafic Tor anonyme</strong>, jamais ce que tu fais.</li>
   </ol>
 
-  <pre><code>Toi → Mullvad → Tor (3 nœuds) → Site web
+  <pre><code>Toi → NordVPN → Tor (3 nœuds) → Site web
 
-(ton ISP voit    (Mullvad voit    (le site voit
- que Mullvad)    que du Tor)      une IP exit Tor)</code></pre>
+(ton ISP voit    (NordVPN voit    (le site voit
+ que NordVPN)    que du Tor)      une IP exit Tor)</code></pre>
 
   <div class="callout success">
-    <div class="callout-eyebrow">⭐ Combo Mullvad + Tor</div>
-    <p>Mullvad à 5 €/mois est l'option la plus respectueuse pour faire du <em>Tor over VPN</em>. Pas d'email, pas de carte bancaire (paiement crypto/cash anonyme), audits no-logs. Combiné à Tor, tu as la couche d'anonymat maximum.</p>
-    <p style="margin-top:16px;"><a href="https://mullvad.net/" rel="noopener noreferrer">Voir Mullvad →</a></p>
+    <div class="callout-eyebrow">⭐ Combo NordVPN + Tor</div>
+    <p>Pour faire du <em>Tor over VPN</em>, il te faut un VPN avec <strong>kill switch fiable</strong> (si le VPN tombe, Tor doit pas continuer à découvert). NordVPN à 3,09 €/mois remplit ces critères : Kill Switch, NordLynx rapide pour ne pas saturer Tor déjà lent, 30 jours satisfait ou remboursé pour tester.</p>
+    <p style="margin-top:16px;"><a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=148974&url_id=1172" rel="noopener noreferrer sponsored" target="_blank">⭐ Voir l'offre NordVPN →</a></p>
   </div>
 
   <h2>Sites .onion utiles.</h2>
@@ -263,7 +263,7 @@
     <li>Ne jamais s'y connecter à des comptes perso</li>
     <li>Garder la fenêtre par défaut, pas d'extensions</li>
     <li>Vérifier les adresses .onion via le site officiel clearnet</li>
-    <li>Pour le top niveau : Tor over VPN (Mullvad → Tor)</li>
+    <li>Pour le top niveau : Tor over VPN (NordVPN → Tor)</li>
   </ul>
 
   <p>Utilisé correctement, Tor reste l'outil d'anonymat le plus solide qui existe. Utilisé n'importe comment, c'est juste une fausse impression de sécurité.</p>
