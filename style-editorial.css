@@ -459,11 +459,16 @@ nav {
   margin-bottom: 40px;
 }
 .newsletter form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
   gap: 0;
-  max-width: 480px;
+  max-width: 600px;
   margin: 0 auto;
   border: 1px solid var(--border-hot);
+}
+.newsletter form input[name="metadata__first_name"] {
+  margin-bottom: 0 !important;
+  border-right: 1px solid var(--border-hot);
 }
 .newsletter input {
   flex: 1;
