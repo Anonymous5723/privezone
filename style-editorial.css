@@ -954,4 +954,8 @@ footer {
   .step { grid-template-columns: 1fr; gap: 8px; }
   .step.with-mock { grid-template-columns: 1fr; }
   .step.with-mock .step-mock { position: static; margin-top: 24px; }
+  .article-body div[style*="grid-template-columns:repeat(3,1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
 }
