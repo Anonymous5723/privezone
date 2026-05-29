@@ -1,31 +1,28 @@
-# 📧 Mail à envoyer à Romain Leglaive
+# 📧 Mail à Romain Leglaive
 
 **À** : romain@nordvpnmedia.com
-**De** : mrprobean@proton.me
-**Objet** : Accès dashboard partenaire — suivi commissions
+**De** : privezone.contact@proton.me
+**Objet** : Suivi commissions + nouvelle adresse contact
 
 ---
 
-Bonjour Romain,
+Salut Romain,
 
-Merci pour les explications sur le système de paiement.
+Petit point rapide.
 
-Pour pouvoir suivre mes commissions et préparer la facturation quand j'atteindrai le seuil de 100 $, j'ai besoin de :
+D'abord, j'ai créé une adresse dédiée pour PrivéZone : **privezone.contact@proton.me**. Tu peux utiliser celle-là pour la suite — l'ancienne reste valide mais je centralise tout ici.
 
-1. **L'URL du dashboard partenaire** où je peux voir mes clics, conversions et montant cumulé
-2. **Mes identifiants de connexion** (ou la procédure pour les créer)
-3. **Le format de facture attendu** (avez-vous un template ?) — j'aimerais aussi savoir :
-   - Quelles infos juridiques mettre (votre raison sociale, adresse, TVA intracom le cas échéant)
-   - Si vous acceptez les factures d'auto-entrepreneur français (statut sans TVA en-dessous des seuils)
+Ensuite, deux trucs sur le suivi :
 
-Par ailleurs, je suis intéressé par le programme **Saily eSIM** que vous mentionniez dans votre signature. Pouvez-vous me communiquer le lien de candidature ?
+J'ai pas accès à un dashboard pour voir mes clics / conversions / montant cumulé. Tu peux me filer le lien et les identifiants ?
 
-Mon site est actif depuis quelques jours : https://privezone.pages.dev (guides cybersécurité francophones, audience FR principalement).
+Et quand on arrivera au seuil de 100 $, comment ça se passe niveau facture côté français ? Auto-entrepreneur sans TVA, c'est ok pour vous, ou il faut un format particulier ? Vos coordonnées juridiques aussi pour que je puisse préparer le doc en amont.
 
-Mon ID affilié actif : **148974**
+Dernier point : Saily eSIM. J'ai vu le lien dans ta signature, c'est pile dans le ton de mon audience (voyage + privacy). Je veux bien candidater, comment je fais ?
 
-Merci d'avance,
+Le site est en ligne depuis quelques jours : https://privezone.pages.dev
 
-Bastien
-mrprobean@proton.me
-https://privezone.pages.dev
+ID affilié : 148974
+
+Merci,
+Neo

@@ -65,7 +65,7 @@ J'ai négocié pour mes lecteurs une réduction **NordVPN -74%** : tu passes de 
 
 À vendredi prochain pour le premier numéro,
 
-**Bastien**
+**Neo**
 Créateur de PrivéZone
 
 ---

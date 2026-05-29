@@ -93,7 +93,7 @@ Si tu débarques ou tu veux explorer :
 
 À vendredi prochain ! 🛡️
 
-**Bastien — PrivéZone**
+**Neo — PrivéZone**
 
 [Le site](https://privezone.pages.dev) · [Tous les guides](https://privezone.pages.dev/articles/) · [Offres](https://privezone.pages.dev/offres.html) · [Contact](mailto:privezone.contact@proton.me)
 

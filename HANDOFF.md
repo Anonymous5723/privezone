@@ -7,7 +7,7 @@
 
 ## 🎯 Contexte général
 
-**Anonymous5723** (alias Bastien, à Marseille, FR) a construit en 2 nuits :
+**Anonymous5723** (alias Neo, à Marseille, FR) a construit en 2 nuits :
 1. Une infra sécurité complète (Mullvad + Zero Trust + Tor + Bitwarden + VeraCrypt)
 2. Un site/blog d'affiliation : **PrivéZone** (vie privée numérique)
 
@@ -321,3 +321,86 @@ L'user est sur Mullvad Paris (PC + iPhone). Split-tunnel PC actif → Edge bypas
 - Les couleurs d'accent par catégorie sont définies via `<style>:root { --c-accent: var(--c-vpn); }</style>` au début de chaque article HTML — facile à changer
 - Pour créer un nouvel article : copier le template d'un existant, changer `--c-accent`, le titre, la lead, l'eyebrow
 - Les mockups CSS sont scopés inline (style="...") → ne casse pas si copié-collé
+
+---
+
+## 🆕 Update 30 mai 2026 — Session 4 (PriveShield + GHOST)
+
+### Identité user
+- **Vrai prénom** : **Neo** (pas Bastien comme on pensait au début)
+- Pseudo brand : Neo, créateur de PrivéZone
+
+### Ce qui a été fait dans cette session
+
+#### Site PrivéZone
+- Section OFFRES rendue proéminente (homepage + page dédiée /offres.html)
+- Sommaire des guides ajouté
+- Strip Mullvad → NordVPN partout (Mullvad sans affiliate)
+- Email contact migré : `privezone.contact@proton.me`
+- Formulaire newsletter Buttondown fixé + champ Prénom ajouté
+- 2 templates emails créés (welcome + hebdo, ton "arrête d'être une proie")
+
+#### Affiliations
+- Mail à Romain Leglaive envoyé : demande dashboard + facture + Saily
+- En attente réponse 24-72h
+
+#### 🛡 PriveShield Wallet — Bouclier crypto Exodus (C:\PriveShield)
+
+**12 couches anti-malware** :
+1. Mullvad VPN
+2. Defender RTP
+3. Controlled Folder Access (protège exodus.wallet)
+4. 16 règles ASR
+5. Clipboard Guardian (anti-hijack adresses crypto)
+6. 4 honeypots
+7. Backup AES-256 quotidien
+8. Watchdog (relance Guardian si mort)
+9. Binary Integrity (hashes Exodus.exe)
+10. Network Monitor
+11. Browser Audit (anti-fake MetaMask)
+12. Panic Mode (kill + déconnect + lock)
+
+**Mot de passe backup AES-256** (à NOTER pour Neo) :
+```
+QfZztVfntqGojDpmUrgWzZf5bdUL+SogRTYfUFawbrg=
+```
+
+**Tâches planifiées Windows** (5) :
+- PriveShield-ClipboardGuard (at login)
+- PriveShield-DailyBackup (22h)
+- PriveShield-HoneypotCheck (chaque heure)
+- PriveShield-Watchdog (chaque 2 min)
+- PriveShield-BinaryCheck (chaque 6h)
+
+#### 🥷 Niveaux d'anonymat actifs
+
+1. **ANONYMITY MODE** [A] : Mullvad Multihop FR→CH + DNS blockers (ads/trackers/malware/gambling/social)
+2. **STEALTH MODE** [S] : + Tor Browser installé (`C:\PriveShield\tor\Browser\firefox.exe`)
+3. **FORTRESS MODE** [F] : Portail PIN+captcha+env check avant Exodus
+   - PIN : `210913`
+   - Mot-clé : `privezone`
+   - Hash SHA-256 → DPAPI → `C:\PriveShield\fortress.dat`
+4. **TOR SERVICE** [T] : tor.exe en background, SOCKS5 sur 127.0.0.1:9050
+5. **MONERO GUI** [M] : install lancé, raccourci bureau prévu
+
+#### 👻 GHOST MODE (en cours)
+
+- **VirtualBox 7.2.8** installé ✓
+- **Whonix 18.1.4.2 LXQt** : téléchargement via tâche planifiée `PriveShield-WhonixDownload`
+- État au moment du commit : ~170 MB / 2 GB (8%)
+- Auto-import dans VBox une fois fini
+- 4 heures estimées de DL (Multihop CH ralentit)
+
+#### Raccourcis bureau créés
+- PriveShield Wallet (dashboard)
+- Tor Browser (PriveShield)
+- Monero (PriveShield) — quand install fini
+
+### Encore à faire (Session 5)
+- ☐ Vérifier réponse Romain (dashboard NordVPN + Saily)
+- ☐ Buttondown finalisation + envoi 1ère newsletter
+- ☐ Vérifier que Whonix DL a terminé → tester VMs dans VBox
+- ☐ Domaine custom `privezone.fr` (~10€/an)
+- ☐ Article #10 (sujet à définir)
+- ☐ Post Reddit r/vieprivee pour trafic
+- ☐ Plausible Analytics
