@@ -154,7 +154,8 @@
     <div class="newsletter-eyebrow">Hebdo · Aucun spam</div>
     <h2>1 email. 1 fois par semaine.</h2>
     <p>Les nouvelles offres + nouveaux guides + astuces concrètes pour ta vie privée. Désinscription en 1 clic.</p>
-    <form action="https://buttondown.com/api/emails/embed-subscribe/privezone" method="post" class="embeddable-buttondown-form">
+    <form action="https://buttondown.com/api/emails/embed-subscribe/privezone" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/privezone', 'popupwindow')" class="embeddable-buttondown-form">
+      <input type="hidden" value="1" name="embed">
       <input type="email" name="email" placeholder="ton@email.com" required aria-label="Email">
       <button type="submit">S'inscrire</button>
     </form>
