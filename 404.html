@@ -3,47 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page introuvable — PrivéZone</title>
+<title>404 — Page introuvable | PrivéZone</title>
 <meta name="description" content="Cette page n'existe pas. Retour à l'accueil PrivéZone.">
-<meta name="theme-color" content="#7c5cff">
+<meta name="theme-color" content="#0a0a0a">
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style-editorial.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-container">
-    <a href="/" class="logo"><span class="logo-icon" aria-hidden="true"></span>Privé<span>Zone</span></a>
+    <a href="/" class="logo">PRIVÉ<span>ZONE</span></a>
     <div class="nav-links">
-      <a href="/articles/">Articles</a>
+      <a href="/#guides">Guides</a>
+      <a href="/articles/">Tous</a>
       <a href="/about.html">À propos</a>
     </div>
   </div>
 </nav>
 
-<main>
-  <section class="error-page">
-    <div class="error-code">404</div>
-    <h1>Cette page n'existe pas (ou plus)</h1>
-    <p>Le lien est peut-être cassé, ou la page a été déplacée. Reviens à l'accueil ou explore les articles — il y a forcément un guide qui te sera utile.</p>
-    <a href="/" class="btn">Retour à l'accueil</a>
-    &nbsp;
-    <a href="/articles/" class="btn" style="background:transparent; border:1px solid var(--accent); color:var(--accent);">Voir les articles</a>
-  </section>
-</main>
+<section class="hero" style="text-align:center;align-items:center;">
+  <div class="hero-eyebrow" style="justify-content:center;">404 · Page introuvable</div>
+  <h1 style="font-size:clamp(5rem,20vw,18rem);">
+    <span class="glow">404.</span>
+  </h1>
+  <p class="lead" style="margin:0 auto 48px;">
+    Cette page n'existe pas (ou plus). Le lien est peut-être cassé, ou la page a été déplacée.
+  </p>
+  <div class="hero-actions" style="justify-content:center;">
+    <a href="/" class="btn">Retour à l'accueil <span class="btn-arrow">→</span></a>
+    <a href="/articles/" class="btn outline">Voir les articles</a>
+  </div>
+</section>
 
 <footer>
-  <p>PrivéZone © 2026 — Sans tracking, sans cookies, sans bullshit.</p>
+  <div>© 2026 PrivéZone · Sans tracking · Sans cookies</div>
   <div class="footer-links">
     <a href="/about.html">À propos</a>
-    <a href="/articles/">Tous les articles</a>
-    <a href="/rss.xml">Flux RSS</a>
-    <a href="mailto:mrprobean@proton.me?subject=Contact%20Priv%C3%A9Zone">Contact</a>
+    <a href="/articles/">Articles</a>
+    <a href="/rss.xml">RSS</a>
+    <a href="mailto:mrprobean@proton.me">Contact</a>
   </div>
 </footer>
-
-<script src="/script.js" defer></script>
 
 </body>
 </html>
