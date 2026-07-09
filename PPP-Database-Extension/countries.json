@@ -1,0 +1,179 @@
+[
+  {
+    "country": "Switzerland",
+    "code": "ch",
+    "database": "https://www.psm.admin.ch/fr/kategorien/7300",
+    "emergency": "",
+    "language": "French"
+  },
+  {
+    "country": "Netherlands",
+    "code": "nl",
+    "database": "https://english.ctgb.nl/",
+    "emergency": "",
+    "language": "English"
+  },
+  {
+    "country": "Belgium",
+    "code": "be",
+    "database": "https://fytoweb.be/fr/produits-phytopharmaceutiques/consulter-autorisations-de-produits-phytopharmaceutiques",
+    "emergency": "https://fytoweb.be/fr/legislation/phytoprotection/autorisations-120-jours-pour-situations-durgence",
+    "language": "French"
+  },
+  {
+    "country": "Austria",
+    "code": "at",
+    "database": "https://psmregister.baes.gv.at/psmregister/faces/main;jsessionid=AWI2nuZ2NnBnSaOrNI7q34nUjqb6YGwiQs1CSs_3sB7MT46hnKZv!-934073747?_adf.ctrl-state=pd4izu9un_39",
+    "emergency": "",
+    "language": "German"
+  },
+  {
+    "country": "Germany",
+    "code": "de",
+    "database": "https://apps2.bvl.bund.de/psm/jsp/index.jsp",
+    "emergency": "",
+    "language": "German"
+  },
+  {
+    "country": "Italy",
+    "code": "it",
+    "database": "https://www.fitosanitari.salute.gov.it/fitosanitariws_new/FitosanitariServlet",
+    "emergency": "https://www.salute.gov.it/new/it/tema/prodotti-fitosanitari/autorizzazioni-situazioni-emergenza-fitosanitaria-art-53-reg-11072009/",
+    "language": "Italian"
+  },
+  {
+    "country": "France",
+    "code": "fr",
+    "database": "https://www.anses.fr/fr/content/registre-des-amm-des-produits-phytopharmaceutiques-et-des-matieres-fertilisantes-et-supports",
+    "emergency": "https://agriculture.gouv.fr/produits-phytopharmaceutiques-autorisations-de-mise-sur-le-marche-dune-duree-maximale-de-120-jours",
+    "language": "French"
+  },
+  {
+    "country": "Portugal",
+    "code": "pt",
+    "database": "https://sifito.dgav.pt/Account/Login?ReturnUrl=%2F",
+    "emergency": "https://www.dgav.pt/medicamentos/conteudo/produtos-fitofarmaceuticos/divulgacao/lista-das-autorizacoes-de-emergencia-concedidas-pela-dgav/",
+    "language": "Portuguese"
+  },
+  {
+    "country": "Spain",
+    "code": "es",
+    "database": "https://www.mapa.gob.es/es/agricultura/temas/sanidad-vegetal/productos-fitosanitarios/registro-productos/",
+    "emergency": "https://www.mapa.gob.es/dam/mapa/contenido/agricultura/temas/sanidad-vegetal/medios-de-defensa-fitosanitaria/registro-productos-fitosanitarios/autorizaciones_excepcionales.xls",
+    "language": "Spanish",
+    "notes": "AE: Página arriba, ver “Otras autorizaciones de productos fitosanitarios”"
+  },
+  {
+    "country": "Greece",
+    "code": "gr",
+    "database": "https://1click.minagric.gr/oneClickUI/frmFytoPro.zul?lang=en",
+    "emergency": "",
+    "language": "Greek",
+    "notes": "Listado: ΚΑΤΑΛΟΓΟΣ ΦΥΤΟΠΡΟΣΤΑΤΕΥΤΙΚΩΝ ΠΡΟΪΟΝΤΩΝ ΚΑΙ ΒΙΟΚΤΟΝΩΝ ΚΑΤΑ ΚΑΤΗΓΟΡΙΑ ή ΔΡΑΣΤΙΚΟ · AE: ΚΑΤΑΛΟΓΟΣ ΕΓΚΡΙΣΕΩΝ ΚΥΚΛΟΦΟΡΙΑΣ ΓΙΑ 120 ΗΜΕΡΕΣ"
+  },
+  {
+    "country": "Malta",
+    "code": "mt",
+    "database": "https://mccaa.org.mt/Section/Content?contentId=1158",
+    "emergency": "",
+    "language": "English"
+  },
+  {
+    "country": "Uruguay",
+    "code": "uy",
+    "database": "https://www.mgap.gub.uy/profit/productosweb.aspx",
+    "emergency": "",
+    "language": "Spanish"
+  },
+  {
+    "country": "Argentina",
+    "code": "ar",
+    "database": "https://aps2.senasa.gov.ar/vademecum/app/publico",
+    "emergency": "",
+    "language": "Spanish"
+  },
+  {
+    "country": "Mexico",
+    "code": "mx",
+    "database": "https://siipris03.cofepris.gob.mx/Resoluciones/Consultas/ConWebRegPlaguicida.asp",
+    "emergency": "",
+    "language": "Spanish"
+  },
+  {
+    "country": "Chile",
+    "code": "cl",
+    "database": "https://app.powerbi.com/view?r=eyJrIjoiNzAxNTc2MjEtYmQ0ZS00YzZkLWJlMGYtNjZhZDE1YzhmYWViIiwidCI6Ijc3ZWNkYTc1LTU4NjQtNDIyYS1hNTM1LTZlYTY3MTU0MDI5YyIsImMiOjR9",
+    "emergency": "",
+    "language": "Spanish"
+  },
+  {
+    "country": "Peru",
+    "code": "pe",
+    "database": "https://servicios.senasa.gob.pe/SIGIAWeb/sigia_consulta_cultivo.html",
+    "emergency": "",
+    "language": "Spanish"
+  },
+  {
+    "country": "Turkey",
+    "code": "tr",
+    "database": "https://bku.tarimorman.gov.tr/Arama/Index",
+    "emergency": "",
+    "language": "Turkish"
+  },
+  {
+    "country": "Israel",
+    "code": "il",
+    "database": "https://data.gov.il/dataset/673/resource/cffe0c50-6856-4187-9315-51bc113cb718",
+    "emergency": "",
+    "language": "Hebrew"
+  },
+  {
+    "country": "Australia",
+    "code": "au",
+    "database": "https://www.apvma.gov.au/",
+    "emergency": "",
+    "language": "English"
+  },
+  {
+    "country": "South Africa",
+    "code": "za",
+    "database": "https://www.agri-intel.com/",
+    "emergency": "",
+    "language": "English"
+  },
+  {
+    "country": "US-EPA",
+    "code": "us",
+    "database": "https://ordspub.epa.gov/ords/pesticides/f?p=PPLS:1",
+    "emergency": "",
+    "language": "English"
+  },
+  {
+    "country": "Brasil",
+    "code": "br",
+    "database": "https://agrofit.agricultura.gov.br/agrofit_cons/principal_agrofit_cons",
+    "emergency": "",
+    "language": "Portuguese"
+  },
+  {
+    "country": "Ireland",
+    "code": "ie",
+    "database": "https://www.pcs.agriculture.gov.ie/plantprotectionproducts/",
+    "emergency": "",
+    "language": "English"
+  },
+  {
+    "country": "Tunisia",
+    "code": "tn",
+    "database": "https://catalog.agridata.tn/dataset/liste-des-pesticides-homologues-en-tunisie",
+    "emergency": "",
+    "language": "French"
+  },
+  {
+    "country": "Morocco",
+    "code": "ma",
+    "database": "https://www.onssa.gov.ma/intrants-agricoles-ia/homologation-des-intrants-chimiques/les-pesticides-a-usage-agricole/",
+    "emergency": "",
+    "language": "French"
+  }
+]
