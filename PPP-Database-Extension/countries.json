@@ -44,7 +44,7 @@
   {
     "country": "France",
     "code": "fr",
-    "database": "https://www.anses.fr/fr/content/registre-des-amm-des-produits-phytopharmaceutiques-et-des-matieres-fertilisantes-et-supports",
+    "database": "https://www.anses.fr/fr/decisions",
     "emergency": "https://agriculture.gouv.fr/produits-phytopharmaceutiques-autorisations-de-mise-sur-le-marche-dune-duree-maximale-de-120-jours",
     "language": "French"
   },
@@ -74,9 +74,10 @@
   {
     "country": "Malta",
     "code": "mt",
-    "database": "https://mccaa.org.mt/Section/Content?contentId=1158",
+    "database": "https://www.eppo.int/media/uploaded_images/ACTIVITIES/plant_protect_products/FSSA-Adjuvants_FN_Malta.pdf",
     "emergency": "",
-    "language": "English"
+    "language": "English",
+    "notes": "The former MCCAA page was removed during their website redesign. This is Malta's official list of authorised PPPs as published on the EPPO registry page (eppo.int > Activities > Plant protection products > Registered products)."
   },
   {
     "country": "Uruguay",
