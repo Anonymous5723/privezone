@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "check": "node --check src/index.js && node --check src/monitor.js && node --check src/report.js && node --check src/store.js && node --check src/anthropic-client.js && node --check src/competitors.js"
+    "dry-run": "node src/index.js --dry-run",
+    "check": "for f in src/*.js; do node --check \"$f\" || exit 1; done"
   },
   "engines": {
     "node": ">=20"

@@ -3,7 +3,7 @@
  * tools to research a single competitor, then returns structured findings.
  */
 
-import { client, MODEL } from './anthropic-client.js';
+import { getClient, MODEL } from './anthropic-client.js';
 
 const TOOLS = [
   { type: 'web_search_20260209', name: 'web_search', max_uses: 8 },
@@ -98,6 +98,7 @@ const normaliseFinding = (finding) => ({
  * @returns {Promise<Array<Object>>}
  */
 export const analyzeCompetitor = async (competitor, knownSummary = '') => {
+  const client = await getClient();
   const messages = [{ role: 'user', content: buildPrompt(competitor, knownSummary) }];
 
   let response = await client.messages.create({
@@ -129,3 +130,20 @@ export const analyzeCompetitor = async (competitor, knownSummary = '') => {
   const findings = Array.isArray(parsed.findings) ? parsed.findings : [];
   return findings.map(normaliseFinding).filter((f) => f.title && f.url);
 };
+
+/**
+ * Offline stub used by --dry-run. Exercises the full pipeline (diff, snapshot,
+ * report) without calling the API, returning one clearly-labelled sample finding.
+ * @param {{name: string, website: string}} competitor
+ * @returns {Promise<Array<Object>>}
+ */
+export const mockAnalyzeCompetitor = async (competitor) => [
+  {
+    category: 'new_product',
+    title: `[SAMPLE] ${competitor.name} — dry-run placeholder`,
+    summary: 'Sample finding generated offline to verify the pipeline. No API call was made and no credits were used.',
+    url: `${competitor.website.replace(/\/?$/, '')}#dry-run-sample`,
+    date: '',
+    confidence: 'low',
+  },
+];

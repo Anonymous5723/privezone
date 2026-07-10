@@ -11,15 +11,18 @@
  */
 
 import { loadCompetitors } from './competitors.js';
-import { analyzeCompetitor } from './monitor.js';
+import { analyzeCompetitor, mockAnalyzeCompetitor } from './monitor.js';
 import { loadKnownProducts, summariseKnownProducts } from './known-products.js';
 import { loadPreviousFindings, saveFindings, diffFindings } from './store.js';
 import { renderReport, writeReport } from './report.js';
 
 const main = async () => {
+  const dryRun = process.argv.includes('--dry-run');
   const competitors = await loadCompetitors();
   const knownProducts = await loadKnownProducts();
-  console.log(`Monitoring ${competitors.length} competitor(s)…\n`);
+  console.log(
+    `Monitoring ${competitors.length} competitor(s)${dryRun ? ' (dry-run — no API calls)' : ''}…\n`,
+  );
 
   const results = [];
 
@@ -27,7 +30,9 @@ const main = async () => {
     process.stdout.write(`• ${competitor.name} … `);
     try {
       const knownSummary = summariseKnownProducts(knownProducts.get(competitor.name) ?? []);
-      const current = await analyzeCompetitor(competitor, knownSummary);
+      const current = dryRun
+        ? await mockAnalyzeCompetitor(competitor)
+        : await analyzeCompetitor(competitor, knownSummary);
       const previous = await loadPreviousFindings(competitor.name);
       const { fresh, total } = diffFindings(previous, current);
       await saveFindings(competitor.name, current);

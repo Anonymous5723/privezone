@@ -101,6 +101,16 @@ Report written to reports/report-2026-07-10T....md
 
 The first run establishes a baseline (everything is "new"); subsequent runs highlight only what changed. Run it on whatever cadence suits the team (e.g. a weekly cron job).
 
+### Dry run (no API key, no cost)
+
+To verify the pipeline — config loading, diffing, snapshots, and report generation — without making any API calls:
+
+```bash
+node src/index.js --dry-run       # or: npm run dry-run
+```
+
+Each competitor gets one clearly-labelled `[SAMPLE]` finding so you can see a complete report and confirm everything is wired up. No key is required and no credits are used.
+
 ---
 
 ## Notes & limitations
