@@ -1,0 +1,47 @@
+[
+  {
+    "name": "CBC / Biogard",
+    "website": "https://www.biogard.org/",
+    "notes": "Division of CBC (Europe); distributes Shin-Etsu Isomate/Isonet mating-disruption dispensers across the EU. Track new Isomate/Isonet products and registrations."
+  },
+  {
+    "name": "Shin-Etsu",
+    "website": "https://www.shinetsu.co.jp/en/products/specialty-chemicals-business/",
+    "notes": "Japanese manufacturer of the Isomate/Isonet pheromone dispensers. Track new semiochemical formulations and dispenser technologies."
+  },
+  {
+    "name": "Andermatt Biocontrol",
+    "website": "https://www.andermattbiocontrol.com/",
+    "notes": "Swiss biocontrol company; pheromone lures, traps and mating disruption (e.g. Mister C for codling moth)."
+  },
+  {
+    "name": "M2i Biocontrol",
+    "website": "http://www.m2i-lifesciences.com/",
+    "notes": "French pheromone-based biocontrol manufacturer (e.g. Cydia Pro Press). Distribution partnership with Bayer — watch for joint launches."
+  },
+  {
+    "name": "SEDQ",
+    "website": "https://sedq.es/en/",
+    "notes": "Spanish semiochemicals company (Cryptotec, Flypack Dacus Trap, Praystec). Track mating disruption and Attract & Kill products."
+  },
+  {
+    "name": "Semios",
+    "website": "https://semios.com/",
+    "notes": "Canadian precision-ag company; automated pheromone dispensers and trap networks (e.g. Semios CRS Eco). Track active-dispenser products and EPA registrations."
+  },
+  {
+    "name": "Bayer",
+    "website": "https://www.cropscience.bayer.com/",
+    "notes": "Distributes pheromone biocontrol (Vynyty Citrus, M2i products) alongside conventional insecticides (Decis, Movento). Track biocontrol partnerships and Attract & Kill products."
+  },
+  {
+    "name": "Lithos Crop Protect",
+    "website": "https://www.lithosprotect.at/en",
+    "notes": "Austrian company; sprayable pheromone (pherolit-d / NERMADY) for Diabrotica in corn. Distribution agreement with Syngenta — track EU registrations."
+  },
+  {
+    "name": "Syngenta Biologicals",
+    "website": "https://www.syngentabiologicals.com/",
+    "notes": "Distributes Lithos Crop Protect's sprayable Diabrotica pheromone in Europe. Track biocontrol/pheromone launches and partnerships."
+  }
+]

@@ -3,14 +3,14 @@
     "country": "Switzerland",
     "code": "ch",
     "database": "https://www.psm.admin.ch/fr/suche?lang=fr&ao=1&q=&produkttyp=&bezeichnung=&kategorie=C9FE4A13-A36D-4464-BF1F-65DCB3462CE0&inhaber=&wirkstoff1=&wirkstoff2=&anwendungsgebiet=&kultur=&schaderreger=",
-    "emergency": "",
+    "emergency": "https://www.blv.admin.ch/fr/homologation-durgence-produits-phytosanitaires",
     "language": "French"
   },
   {
     "country": "Netherlands",
     "code": "nl",
     "database": "https://english.ctgb.nl/",
-    "emergency": "",
+    "emergency": "https://english.ctgb.nl/plant-protection/applicationtypes-plant-protection-products/120-day-derogation-for-an-emergency-situation?utm_source=chatgpt.com",
     "language": "English"
   },
   {
@@ -24,14 +24,14 @@
     "country": "Austria",
     "code": "at",
     "database": "https://psmregister.baes.gv.at/psmregister/faces/main;jsessionid=AWI2nuZ2NnBnSaOrNI7q34nUjqb6YGwiQs1CSs_3sB7MT46hnKZv!-934073747?_adf.ctrl-state=pd4izu9un_39",
-    "emergency": "",
+    "emergency": "https://www.baes.gv.at/en/registration",
     "language": "German"
   },
   {
     "country": "Germany",
     "code": "de",
     "database": "https://www.bvl.bund.de/DE/Arbeitsbereiche/04_Pflanzenschutzmittel/01_Aufgaben/02_ZulassungPSM/01_ZugelPSM/01_OnlineDatenbank/psm_onlineDB_node.html",
-    "emergency": "",
+    "emergency": "https://www.bvl.bund.de/DE/Arbeitsbereiche/04_Pflanzenschutzmittel/01_Aufgaben/02_ZulassungPSM/01_ZugelPSM/02_Notfallzulassungen/psm_ZugelPSM_notfallzulassungen_node.html",
     "language": "German"
   },
   {
@@ -67,23 +67,22 @@
     "country": "Greece",
     "code": "gr",
     "database": "https://1click.minagric.gr/oneClickUI/frmFytoPro.zul?lang=en",
-    "emergency": "",
+    "emergency": "https://www.minagric.gov.gr/en/farmer-menu-2/plant-protection/plantprotproducts-menu/2151-aplication-forms",
     "language": "Greek",
     "notes": "Listado: ΚΑΤΑΛΟΓΟΣ ΦΥΤΟΠΡΟΣΤΑΤΕΥΤΙΚΩΝ ΠΡΟΪΟΝΤΩΝ ΚΑΙ ΒΙΟΚΤΟΝΩΝ ΚΑΤΑ ΚΑΤΗΓΟΡΙΑ ή ΔΡΑΣΤΙΚΟ · AE: ΚΑΤΑΛΟΓΟΣ ΕΓΚΡΙΣΕΩΝ ΚΥΚΛΟΦΟΡΙΑΣ ΓΙΑ 120 ΗΜΕΡΕΣ"
   },
   {
     "country": "Malta",
     "code": "mt",
-    "database": "https://www.eppo.int/media/uploaded_images/ACTIVITIES/plant_protect_products/FSSA-Adjuvants_FN_Malta.pdf",
-    "emergency": "",
-    "language": "English",
-    "notes": "The former MCCAA page was removed during their website redesign. This is Malta's official list of authorised PPPs as published on the EPPO registry page (eppo.int > Activities > Plant protection products > Registered products)."
+    "database": "https://mccaa.org.mt/Section/Content?contentId=1158",
+    "emergency": "https://www.servizz.gov.mt/en/services/web-02180",
+    "language": "English"
   },
   {
     "country": "Uruguay",
     "code": "uy",
     "database": "https://www.mgap.gub.uy/profit/productosweb.aspx",
-    "emergency": "",
+    "emergency": "https://www.gub.uy/ministerio-ganaderia-agricultura-pesca/institucional/normativa/resolucion-n-149026-declaracion-emergencia-agropecuaria",
     "language": "Spanish"
   },
   {
@@ -104,35 +103,35 @@
     "country": "Chile",
     "code": "cl",
     "database": "https://app.powerbi.com/view?r=eyJrIjoiNzAxNTc2MjEtYmQ0ZS00YzZkLWJlMGYtNjZhZDE1YzhmYWViIiwidCI6Ijc3ZWNkYTc1LTU4NjQtNDIyYS1hNTM1LTZlYTY3MTU0MDI5YyIsImMiOjR9",
-    "emergency": "",
+    "emergency": "https://www.sag.gob.cl/ambitos-de-accion/proceso-de-evaluacion-y-autorizacion-de-plaguicidas",
     "language": "Spanish"
   },
   {
     "country": "Peru",
     "code": "pe",
     "database": "https://servicios.senasa.gob.pe/SIGIAWeb/sigia_consulta_cultivo.html",
-    "emergency": "",
+    "emergency": "https://www.gob.pe/senasa",
     "language": "Spanish"
   },
   {
     "country": "Turkey",
     "code": "tr",
     "database": "https://bku.tarimorman.gov.tr/Arama/Index",
-    "emergency": "",
+    "emergency": "https://www.tarimorman.gov.tr/",
     "language": "Turkish"
   },
   {
     "country": "Israel",
     "code": "il",
     "database": "https://data.gov.il/dataset/673/resource/cffe0c50-6856-4187-9315-51bc113cb718",
-    "emergency": "",
+    "emergency": "https://www.gov.il/en/service/pesticides-approval-licensing-import-new",
     "language": "Hebrew"
   },
   {
     "country": "Australia",
     "code": "au",
     "database": "https://www.apvma.gov.au/",
-    "emergency": "",
+    "emergency": "https://portal.apvma.gov.au/permits",
     "language": "English"
   },
   {
@@ -146,7 +145,7 @@
     "country": "US-EPA",
     "code": "us",
     "database": "https://ordspub.epa.gov/ords/pesticides/f?p=PPLS:1",
-    "emergency": "",
+    "emergency": "https://www.epa.gov/pesticide-registration/pesticide-emergency-exemptions",
     "language": "English"
   },
   {
