@@ -2,4 +2,6 @@ node_modules/
 .env
 data/
 reports/
+library/data/
+library/dashboard.html
 *.log

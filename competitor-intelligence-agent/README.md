@@ -20,17 +20,24 @@ competitor-intelligence-agent/
 ├── .env.example              # ANTHROPIC_API_KEY template
 ├── config/
 │   ├── competitors.json      # the watchlist — edit this
-│   └── known-products.json   # baseline of already-tracked products (see below)
+│   ├── known-products.json   # competitor product DATABASE (baseline)
+│   └── suterra-products.json # Suterra's own products (for threat analysis)
 ├── src/
 │   ├── index.js              # CLI entry point
 │   ├── competitors.js        # loads + validates the watchlist
-│   ├── known-products.js     # loads the tracked-products baseline
+│   ├── known-products.js     # loads the competitor product database
 │   ├── anthropic-client.js   # Claude client + model config
 │   ├── monitor.js            # researches one competitor → findings
 │   ├── store.js              # snapshots + "what's new" diffing
+│   ├── library.js            # persistent per-competitor dossiers
+│   ├── overlap.js            # threat cross-reference vs Suterra products
+│   ├── dashboard.js          # builds the HTML dashboard
 │   └── report.js             # renders the Markdown report
+├── library/
+│   ├── data/                 # accumulated dossiers (git-ignored)
+│   └── dashboard.html        # the browsable dashboard (git-ignored)
 ├── data/                     # per-competitor snapshots (git-ignored)
-└── reports/                  # generated reports (git-ignored)
+└── reports/                  # generated Markdown reports (git-ignored)
 ```
 
 ---
@@ -110,6 +117,27 @@ node src/index.js --dry-run       # or: npm run dry-run
 ```
 
 Each competitor gets one clearly-labelled `[SAMPLE]` finding so you can see a complete report and confirm everything is wired up. No key is required and no credits are used.
+
+---
+
+## Database vs Library vs Dashboard
+
+The tool separates three layers:
+
+| Layer | File(s) | What it is |
+| ----- | ------- | ---------- |
+| **Competitor Database** | `config/known-products.json` | The static baseline of competitor products (from the intelligence spreadsheet). Edit when the master sheet changes. |
+| **Competitor Library** | `library/data/*.json` | A **living knowledge base** — one growing dossier per competitor. Each run merges new findings (deduplicated, timestamped), so the tool builds institutional memory instead of throwaway reports. |
+| **Dashboard** | `library/dashboard.html` | A single self-contained web page the marketing team opens in any browser — searchable, offline, no server. Shows each competitor's products, logged findings, and threat overlaps. |
+
+### Threat analysis (automatic, no API cost)
+
+`config/suterra-products.json` holds Suterra's own products. On every run — **including `--dry-run`** — the agent cross-references each competitor product against them:
+
+- **Direct threat** (red): same target pest **and** same country as a Suterra product — a competitor moving on your market.
+- **Overlap** (amber): same target pest in a different country — a competitor to watch.
+
+This runs deterministically on the product data, so it costs nothing and works offline. Open `library/dashboard.html` after any run to browse the results.
 
 ---
 
