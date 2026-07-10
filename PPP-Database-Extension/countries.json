@@ -2,7 +2,7 @@
   {
     "country": "Switzerland",
     "code": "ch",
-    "database": "https://www.psm.admin.ch/fr/kategorien/7300",
+    "database": "https://www.psm.admin.ch/fr/suche?lang=fr&ao=1&q=&produkttyp=&bezeichnung=&kategorie=C9FE4A13-A36D-4464-BF1F-65DCB3462CE0&inhaber=&wirkstoff1=&wirkstoff2=&anwendungsgebiet=&kultur=&schaderreger=",
     "emergency": "",
     "language": "French"
   },
@@ -30,7 +30,7 @@
   {
     "country": "Germany",
     "code": "de",
-    "database": "https://apps2.bvl.bund.de/psm/jsp/index.jsp",
+    "database": "https://www.bvl.bund.de/DE/Arbeitsbereiche/04_Pflanzenschutzmittel/01_Aufgaben/02_ZulassungPSM/01_ZugelPSM/01_OnlineDatenbank/psm_onlineDB_node.html",
     "emergency": "",
     "language": "German"
   },
@@ -96,7 +96,7 @@
   {
     "country": "Mexico",
     "code": "mx",
-    "database": "https://siipris03.cofepris.gob.mx/Resoluciones/Consultas/ConWebRegPlaguicida.asp",
+    "database": "https://www.gob.mx/cofepris/acciones-y-programas/plaguicidas-nutrientes-vegetales-y-organismos-geneticamente-modificados",
     "emergency": "",
     "language": "Spanish"
   },
@@ -152,7 +152,7 @@
   {
     "country": "Brasil",
     "code": "br",
-    "database": "https://agrofit.agricultura.gov.br/agrofit_cons/principal_agrofit_cons",
+    "database": "https://www.gov.br/agricultura/pt-br/assuntos/insumos-agropecuarios/insumos-agricolas/agrotoxicos/agrofit",
     "emergency": "",
     "language": "Portuguese"
   },

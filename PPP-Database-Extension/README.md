@@ -97,7 +97,7 @@ Each entry has the following structure:
 | **V2**  | Website status checker — detect broken or moved database URLs            |
 | **V3**  | Automatic URL updater — suggest corrected links when a URL changes       |
 | **V4**  | Excel export — export the country list for reporting                     |
-| **V5**  | AI competitor monitoring — track competitor product registrations        |
+| **V5**  | AI competitor monitoring — automatically watch competitor websites and detect new products, new pheromones, Attract & Kill products and partnerships |
 | **V6**  | Patent monitoring — follow relevant patent filings per market            |
 | **V7**  | Competitive Intelligence Dashboard — unified view across V2–V6 signals   |
 
