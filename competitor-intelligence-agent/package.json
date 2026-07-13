@@ -1,0 +1,20 @@
+{
+  "name": "ppp-competitor-intelligence-agent",
+  "version": "1.0.0",
+  "description": "Suterra internal tool: AI-powered competitive-intelligence agent that monitors competitor websites for new products, pheromones, Attract & Kill products, patents, and partnerships.",
+  "type": "module",
+  "bin": {
+    "ci-agent": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dry-run": "node src/index.js --dry-run",
+    "check": "for f in src/*.js; do node --check \"$f\" || exit 1; done"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.110.0"
+  }
+}

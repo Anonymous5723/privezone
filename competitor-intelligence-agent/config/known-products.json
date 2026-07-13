@@ -1,0 +1,182 @@
+[
+  {
+    "competitor": "CBC / Biogard",
+    "product": "Isomate P 2026 Plus",
+    "pest": "Synanthedon myopaeformis",
+    "crop": "Tree Fruit",
+    "productType": "Semiochemical",
+    "country": "IT - Italy",
+    "status": "Exceptional Authorization",
+    "activeIngredients": "(Z,Z)-3,13-Octadecadienil acetato 808 g/kg, (E,Z)-3,13-Octadecadienil acetato 43 g/kg"
+  },
+  {
+    "competitor": "Andermatt Biocontrol",
+    "product": "Mister C",
+    "pest": "Cydia pomonella",
+    "crop": "Tree Fruit",
+    "productType": "Semiochemical",
+    "country": "BE - Belgium",
+    "status": "Registered",
+    "activeIngredients": "(E,E)-8,10-Dodecadienol (20.9%)"
+  },
+  {
+    "competitor": "M2i Biocontrol",
+    "product": "Cydia Pro Press",
+    "pest": "Cydia pomonella",
+    "crop": "Tree Fruit",
+    "productType": "Semiochemical",
+    "country": "ES - Spain",
+    "status": "Registered",
+    "activeIngredients": "100 g/kg (E,E) 8,10 dodecadienol-1-ol"
+  },
+  {
+    "competitor": "CBC / Biogard",
+    "product": "IsoMate C LR Max TT",
+    "pest": "Adoxophyes orana Cydia pomonella Pandemis heparana",
+    "crop": "Tree Fruit",
+    "productType": "Semiochemical",
+    "country": "BE - Belgium",
+    "status": "Registered",
+    "activeIngredients": "(E,E)-8,10-Dodecadienol 373 g/kg + Dodecanol 59 g/kg + Tetradecanol 14 g/kg + (Z)-9-Tetradecenil Acetate76 g/kg + (Z)-11-Tetradecenil Acetate 371 g/kg"
+  },
+  {
+    "competitor": "Bayer",
+    "product": "Vynyty Citrus",
+    "pest": "Aonidiella aurantii Delottococcus aberiae Planococcus citri",
+    "crop": "Citrus",
+    "productType": "Semiochemical",
+    "country": "ES - Spain",
+    "status": "Exceptional Authorization",
+    "activeIngredients": "Piretrinas (170 mg/trap) + Pheromones (3-methyl-6-isopropenyl-9-decenyl acetate + (1R, 3R)-cis-2,2-dimethyl-3-isopropenyl cyclobutane metanol acetate + (4, 5, 5-trimethyl-3-methylencyclopent -1-en-1-yl) methyl) acetate) 0,8%"
+  },
+  {
+    "competitor": "Semios",
+    "product": "Semios CRS Eco",
+    "pest": "Aonidiella aurantii",
+    "crop": "Citrus",
+    "productType": "Semiochemical",
+    "country": "US - USA Federal",
+    "status": "Registered",
+    "activeIngredients": "(3S,6R)-3-Methyl-6-isopropenyl-9-decen-1-yl acetate 2.75%, (3S,6S)-3-Methyl-6-isopropenyl-9-decen-1-yl acetate 2.75%"
+  },
+  {
+    "competitor": "SEDQ",
+    "product": "Cryptotec 2026",
+    "pest": "Cryptoblabes gnidiella",
+    "crop": "Vines",
+    "productType": "Semiochemical",
+    "country": "IT - Italy",
+    "status": "Exceptional Authorization",
+    "activeIngredients": "(Z)-11-hexadecenal (165mg) + (Z)-13-octadecenal (165mg)"
+  },
+  {
+    "competitor": "CBC / Biogard",
+    "product": "IsoMate OFM Rosso Flex",
+    "pest": "Grapholita lobarzewskii Grapholita molesta",
+    "crop": "Tree Fruit",
+    "productType": "Semiochemical",
+    "country": "BE - Belgium",
+    "status": "Exceptional Authorization",
+    "activeIngredients": "Acétate de (E)-8-Dodecen-1-yle, 43 g/kg, Acétate de (Z)-8-Dodecen-1-yle, 822 g/kg, (Z)-8-Dodecen-1-ol 9 g/kg"
+  },
+  {
+    "competitor": "CBC / Biogard",
+    "product": "IsoMate A/OFM",
+    "pest": "Anarsia lineatella Grapholita molesta",
+    "crop": "Tree Fruit",
+    "productType": "Semiochemical",
+    "country": "PT - Portugal",
+    "status": "Registered",
+    "activeIngredients": "(E)-5-Decenol 1.5% + (E)-5-Decenil Acetate 24.3 + (E)-8-Dodecenil Acetate 2.6% + (Z)-8-Dodecenol 0.5% + (Z)-8-Dodecenil Acetate 43.4% (290 mg ai/dispenser)"
+  },
+  {
+    "competitor": "SEDQ",
+    "product": "Flypack Dacus Trap PFnPE",
+    "pest": "Bactrocera oleae",
+    "crop": "Olives",
+    "productType": "Semiochemical",
+    "country": "IT - Italy",
+    "status": "Registered",
+    "activeIngredients": "Deltamethrin 0.015%"
+  },
+  {
+    "competitor": "CBC / Biogard",
+    "product": "Mister P",
+    "pest": "Prays citri Prays oleae",
+    "crop": "Citrus Olives",
+    "productType": "Semiochemical",
+    "country": "ES - Spain",
+    "status": "Registered",
+    "activeIngredients": "Z-7-tetradecenal 54 g/kg"
+  },
+  {
+    "competitor": "CBC / Biogard",
+    "product": "Isonet PF",
+    "pest": "Planococcus ficus",
+    "crop": "Vines",
+    "productType": "Semiochemical",
+    "country": "ES - Spain",
+    "status": "Registered",
+    "activeIngredients": "Lavandulyl Senecionate, 89.4% w/w"
+  },
+  {
+    "competitor": "Bayer",
+    "product": "Decis protech",
+    "pest": "",
+    "crop": "Commercial",
+    "productType": "Insecticide",
+    "country": "FR - France",
+    "status": "Exceptional Authorization",
+    "activeIngredients": "Delthametrine (15 g/L)"
+  },
+  {
+    "competitor": "SEDQ",
+    "product": "PRAYSTEC",
+    "pest": "Prays citri Prays oleae",
+    "crop": "Citrus Olives",
+    "productType": "Semiochemical",
+    "country": "PT - Portugal",
+    "status": "Registered",
+    "activeIngredients": "(Z)-7-tetradecenal 150 mg/diffuseur"
+  },
+  {
+    "competitor": "SEDQ",
+    "product": "PRAYSTEC",
+    "pest": "Prays citri",
+    "crop": "Citrus",
+    "productType": "Semiochemical",
+    "country": "GR - Greece",
+    "status": "Registered",
+    "activeIngredients": "(Z)-7-tetradecenal 150 mg/diffuseur"
+  },
+  {
+    "competitor": "Lithos Crop Protect",
+    "product": "NERMADY 2026",
+    "pest": "Diabrotica virgifera",
+    "crop": "Other",
+    "productType": "Semiochemical",
+    "country": "IT - Italy",
+    "status": "Exceptional Authorization",
+    "activeIngredients": "8-Methyl-2-decanol propionate (0.004 g)"
+  },
+  {
+    "competitor": "Bayer",
+    "product": "Movento 48 SC 2026",
+    "pest": "",
+    "crop": "Other",
+    "productType": "Insecticide",
+    "country": "FR - France",
+    "status": "Exceptional Authorization",
+    "activeIngredients": "Spirotetramat 4.53 g"
+  },
+  {
+    "competitor": "Bayer",
+    "product": "Movento 48 SC 2026",
+    "pest": "",
+    "crop": "Other",
+    "productType": "Insecticide",
+    "country": "IT - Italy",
+    "status": "Exceptional Authorization",
+    "activeIngredients": "Spirotetramat 4.53 g"
+  }
+]

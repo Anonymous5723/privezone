@@ -1,0 +1,110 @@
+[
+  {
+    "product": "CheckMate CM-F",
+    "pest": "Cydia pomonella",
+    "crop": "Tree Fruit",
+    "productType": "Semiochemical",
+    "country": "PT - Portugal",
+    "status": "Registered",
+    "activeIngredients": "(E,E)-8,10-Dodecadienol, 14.4% w/v"
+  },
+  {
+    "product": "CheckMate CM-F",
+    "pest": "Cydia pomonella",
+    "crop": "Tree Fruit",
+    "productType": "Semiochemical",
+    "country": "GR - Greece",
+    "status": "Registered",
+    "activeIngredients": "(E,E)-8,10-Dodecadienol, 14.4% w/v"
+  },
+  {
+    "product": "CheckMate DBM-O",
+    "pest": "Plutella xylostella",
+    "crop": "Veggies",
+    "productType": "Semiochemical",
+    "country": "US - USA Federal",
+    "status": "Registered",
+    "activeIngredients": "(Z)-11-Hexadecenil Acetate 4.95% + (Z)-11-Hexadecenal 4.95%"
+  },
+  {
+    "product": "Blockade",
+    "pest": "Planococcus ficus",
+    "crop": "Vines",
+    "productType": "Semiochemical",
+    "country": "TR - Turkey",
+    "status": "Registered",
+    "activeIngredients": "19.35 % w/w (189.63 g/L)"
+  },
+  {
+    "product": "Subvert",
+    "pest": "Lobesia botrana",
+    "crop": "Vines",
+    "productType": "Semiochemical",
+    "country": "TR - Turkey",
+    "status": "Registered",
+    "activeIngredients": "18.85% w/w"
+  },
+  {
+    "product": "Biolure Fruit Fly",
+    "pest": "Ceratitis capitata",
+    "crop": "Citrus",
+    "productType": "Semiochemical",
+    "country": "GT - Guatemala",
+    "status": "Registered",
+    "activeIngredients": "Ammonium acetate 20.23 % w/w, Putrescine 8.56 % w/w, Trymethylamine hydrochloride 0.29 % w/w"
+  },
+  {
+    "product": "Biolure Fruit Fly",
+    "pest": "Ceratitis capitata",
+    "crop": "Citrus",
+    "productType": "Semiochemical",
+    "country": "LB - Lebanon",
+    "status": "Registered",
+    "activeIngredients": "Ammonium acetate 6.19g, Putrescine 0.05g, Trymethylamine hydrochloride 2.81g"
+  },
+  {
+    "product": "BioMagnet AMBER",
+    "pest": "Ceratitis capitata",
+    "crop": "Citrus",
+    "productType": "Semiochemical",
+    "country": "LB - Lebanon",
+    "status": "Registered",
+    "activeIngredients": "Deltamethrin 0.31 g/Kg"
+  },
+  {
+    "product": "Puffer NOW Gold",
+    "pest": "Amyelois transitella",
+    "crop": "Nuts",
+    "productType": "Semiochemical",
+    "country": "US - USA Federal",
+    "status": "Registered",
+    "activeIngredients": "(Z,Z)-11,13-hexadecadienal 2% w/w"
+  },
+  {
+    "product": "CheckMate Gold",
+    "pest": "Amyelois transitella",
+    "crop": "Nuts",
+    "productType": "Semiochemical",
+    "country": "US - USA Federal",
+    "status": "Registered",
+    "activeIngredients": "(Z,Z)-11-13-Hexadecadienal 2.63% w/w"
+  },
+  {
+    "product": "Boira",
+    "pest": "Anarsia lineatella",
+    "crop": "Tree Fruit",
+    "productType": "Semiochemical",
+    "country": "GR - Greece",
+    "status": "Registered",
+    "activeIngredients": "(E)-5-Decenil Acetate 14.32% w/w + (E)-5-Decenol 3.57% w/w"
+  },
+  {
+    "product": "Depur",
+    "pest": "Planococcus ficus",
+    "crop": "Vines",
+    "productType": "Semiochemical",
+    "country": "ES - Spain",
+    "status": "Registered",
+    "activeIngredients": "Lavandulyl Senecionate, 19.35 % w/w"
+  }
+]
